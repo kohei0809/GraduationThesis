@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Style file for Graduation paper (for Win and Mac)
+%    Written by Toshiharu Sugawara
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 使い方
+%
+%  \documentstyle[12pt,a4j]{jarticle}
+%  \usepackage{gradthesis}
+%
+%  \title{日本語のタイトル}{page}
+%  \etitle{英語のタイトル}
+%  \author{氏~~名}
+%  \studentid{学籍番号}
+%  \university{早稲田大学}
+%  \faculty{理工学部}
+%  \department{コンピュータネットワーク工学科}
+%  \advisor{菅原 俊治}
+%  \type{卒業論文}
+%  \nendo{2007}
+%  \hizuke{2008年2月4日}
+%
+%  \begin{document}
+%  \maketitle
+%  \section{***}
+%  ...
+%  \end{document}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newlength{\myleftmargin} \newlength{\mytopmargin}
+%\newlength{\mybottommargin} \newlength{\afourheight}
+%\newlength{\afourwidth}
+%\setlength{\myleftmargin}{20mm}%\addtolength{\myleftmargin}{1pt}
+%\setlength{\mytopmargin}{30mm}%\addtolength{\mytopmargin}{1pt}
+%\setlength{\mybottommargin}{25mm}%\addtolength{\mybottommargin}{1pt}
+%\setlength{\afourheight}{296mm}
+%\setlength{\afourwidth}{210mm}
+%\setlength{\topmargin}{-1in}
+%\setlength{\headheight}{0in}
+%\setlength{\headsep}{0in}
+%\addtolength{\topmargin}{\mytopmargin}
+%\setlength{\oddsidemargin}{-1in}
+%\addtolength{\oddsidemargin}{\myleftmargin}
+%\setlength{\textheight}{\afourheight}
+%\setlength{\textwidth}{\afourwidth}
+%\addtolength{\textheight}{-\mytopmargin}
+%\addtolength{\textheight}{-\mybottommargin}
+%\addtolength{\textwidth}{-2\myleftmargin}
+%\setlength{\columnsep}{7mm}
+
+%% A4 (210 x 297 mm)
+\setlength{\voffset}{-1in}
+\setlength{\hoffset}{-1in}
+\setlength{\headheight}{5mm}
+\setlength{\headsep}{5mm}
+\setlength{\topmargin}{20mm}
+\setlength{\oddsidemargin}{25mm}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\textwidth}{160mm}
+\setlength{\textheight}{240mm}
+\setlength{\footskip}{13mm}
+
+%% 図とキャプション及び本文との間隔等の設定（バランスが悪い場合は調整する）
+\setlength{\abovecaptionskip}{10pt}
+\setlength{\belowcaptionskip}{-5pt}
+\setlength{\floatsep}{30pt}
+\setlength{\textfloatsep}{40pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\title#1#2{\def\@title{#1}\relax\def\tskip{\vspace{#2cm}}}
+\def\university#1{\def\@university{#1}}
+\def\faculty#1{\def\@faculty{#1}}
+\def\department#1{\def\@department{#1}}
+\def\etitle#1{\def\@etitle{#1}}
+\def\advisor#1{\def\@advisor{#1}}
+\def\nendo#1{\def\@nendo{#1}}
+\def\studentid#1{\def\@studentid{#1}}
+\def\hizuke#1{\def\@hizuke{#1}}
+\def\type#1{\def\@type{#1}}
+\def\email#1{\def\@email{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\maketitle}{\par
+ \begingroup
+ \if@twocolumn
+   \ifnum \col@number=\@ne \@maketitle
+   \else \twocolumn[\@maketitle]%
+   \fi
+ \else
+   \newpage
+   \global\@topnum\z@
+   \@maketitle
+ \fi
+\endgroup
+
+\global\let\maketitle\relax
+\global\let\p@thanks\relax
+\global\let\@thanks\@empty
+\global\let\@author\@empty
+\global\let\@date\@empty
+\global\let\@title\@empty
+\global\let\title\relax
+\global\let\author\relax
+\global\let\date\relax
+\global\let\and\relax
+}
+
+\def\@maketitle{%
+\newpage\null
+\vskip 2em%
+\begin{center}%
+ \thispagestyle{empty}\vspace{6mm}{\LARGE \@nendo 年度\ \ \ \@type\\[3cm]}%
+ {\Huge\@title \tskip\par}%
+ %{\Huge\@etitle \tskip\par}%
+ {\LARGE\@author\\[1cm]}%
+ {\Large \@university\ \@faculty\\ \@department\\[1cm]
+\begin{tabular}{l p{1cm} l}%
+ 学籍番号 & & \@studentid\\[5mm]%
+ 提出日 & & \@hizuke\\[5mm]%
+ 指導教授 & & \@advisor\\[5mm]%
+\end{tabular}}%
+\end{center}%
+  \cleardoublepage%
+  \pagenumbering{roman}\setcounter{page}{1}%
+  \tableofcontents%
+  \cleardoublepage%
+  \setlength{\baselineskip}{18pt}%
+  \pagenumbering{arabic}\setcounter{page}{1}%
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Hline{\noalign{\hrule height 0.4mm}} %%% thick \hline
+\def\slashbr{%
+ \bgroup\catcode '57=\active\@slashbr}
+{\catcode '57=\active
+ \gdef\@slashbr#1{%
+ \def/{\linebreak[0]\char'57
+       \linebreak[0]}#1\egroup}}
+
+
+%%%% Initialization
+\title{}
+\author{}
+\date{}
+\etitle{}
+\university{早稲田大学}
+\faculty{}
+\department{}
+\nendo{}
+\studentid{書くこと}
+\hizuke{}
+\type{卒業論文}
+\faculty{理工学部}
+\department{コンピュータネットワーク工学科}
+\advisor{菅原 俊治}
+\type{卒業論文}
+\nendo{2007}
+
+\email{}
+\usepackage{fancyhdr}
+\pagestyle{fancy}%
+\rhead[]{\leftmark}
+\lhead[\leftmark]{}
+\cfoot{\thepage}
+%%% End of LaTeX style file

@@ -1,0 +1,90 @@
+\documentclass[12pt,a4j,twoside]{jarticle}
+
+\usepackage{gradthesis}
+\usepackage{amsmath}
+\usepackage[dvipdfmx]{graphicx}
+
+\title{未定}{5}
+\etitle{hoge}
+\author{松本~航平}
+\studentid{1W193102}
+\university{早稲田大学}
+\faculty{基幹理工学部}
+\department{情報理工学科}
+\type{卒業論文}
+\nendo{2022}
+\hizuke{2022/}
+\advisor{菅原~俊治}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  本研究では,
+\end{abstract}
+
+\vspace*{1cm}
+\section{序論}
+
+\section{関連研究}
+
+\section{モデルの定義}
+本研究は
+
+\subsection{環境}
+%後で書く
+
+\subsection{エージェント}
+%後で書く
+
+\subsection{評価指標}
+%後で書く
+
+
+\section{準備}
+この章では,
+
+\subsection{Adaptive meta target decision strategy (AMTDS)}
+%後で書く
+
+\subsubsection{目標決定戦略}
+%後で書く
+
+\begin{description}
+  \item[Random selection (R)]\mbox{}\\
+  環境全体のノード集合$V$からランダムに$v^i_{tar}$を選ぶ.
+
+  \item[Probabilistic greedy selection (PGS)]\mbox{} \\
+  環境全体のノード集合$V$内のノード$v$におけるイベント発生量の推定値$EL^i_t(v)$の上位$N_g$個のノードから,ランダムに1つ$v^i_{tar}$を選ぶ.
+  上位$N_g$個の中からランダムに選択する理由は,$v^i_{tar}$の偏りを防ぐためである.
+  また,学習初期における$v^i_{tar}$の偏りを防ぐため,$N_g$番目のノードと$EL^i_t(v)$の値が同じノードが存在する場合,
+  そのノードをすべて含めた中から$v^i_{tar}$を選ぶ.
+  \item[Prioritizing unvisited interval (PI)]\mbox{} \\
+  環境全体のノード集合$V$内のノード$v$における訪問間隔$I^i_t(v)$の上位$N_i$個のノードから,ランダムに1つ$v^i_{tar}$を選ぶ.
+  上位$N^i$個の中からランダムに選択する理由は,$v^i_{tar}$の偏りを防ぐためである.
+  また,学習初期における$v^i_{tar}$の偏りを防ぐため,$N_i$番目のノードと$I^i_t(v)$の値が同じノードが存在する場合,
+  そのノードをすべて含めた中から$v^i_{tar}$を選ぶ.
+
+  \item[Balanced neighbor-preferential selection (BNPS)]\mbox{} \\
+  近隣のノードにイベント発生量が多いと判断したとき,近隣を優先的に巡回する.
+  $v^i_{tar}$の決定時にエージェントの現在地$v^i_t$との距離が$d_{rad}$以下のノード集合を近領域$V^i_{area}$とする.
+  ここで,$V^i_{area}$における1ステップあたりのイベント処理量の期待値$EV^i_t$は以下の式で求められる.
+  \[
+  EV^i_t = \frac{\displaystyle \sum_{v \in V^i_{area}}EL^i_t(v)}{|V^i_{area}|}  
+  \] 
+  エージェント$i$は近領域内のイベントを処理するか判断するための閾値$EV_{threshold}$と$EV^i_t$の値を比較し,
+  $EV^i_t > EV_{threshold}$の間はPGSによって近領域内から$v^i_{tar}$を選ぶ.
+  その後,$EV^i_t \le EV_{threshold}$となった場合,環境全体を対象とし,PGSで$v^i_{tar}$を選ぶ.
+  環境全体から$v^i_{tar}$を選択した後,$V^i_{area}$を更新する.
+  更新後の$V^i_{area}$の1ステップあたりのイベント処理量の期待値を$EV^i_{t+1}$とし,$EV_{threshold}$の値を以下の式に従って更新する.
+  \[
+  EV_{threshold} \gets EV_{threshold} + \alpha(EV^i_{t+1} - EV_{threshold})
+  \]
+  ここで,$\alpha(0</alpha<1)$は学習率である.また,$EV_{threshold}$の初期値は初めに$V^i_{area}$を設定した際の$EV^i_t$の値である.
+
+  \subsubsection{経路生成戦略}
+  経路生成戦略に関しても
+        
+\end{description}
+
+\end{document}
