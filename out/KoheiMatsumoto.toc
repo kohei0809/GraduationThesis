@@ -1,10 +1,37 @@
-\contentsline {section}{\numberline {1}序論}{1}{}%
+\contentsline {section}{\numberline {1}研究背景}{1}{}%
 \contentsline {section}{\numberline {2}関連研究}{1}{}%
 \contentsline {section}{\numberline {3}モデルの定義}{1}{}%
 \contentsline {subsection}{\numberline {3.1}環境}{1}{}%
-\contentsline {subsection}{\numberline {3.2}エージェント}{1}{}%
-\contentsline {subsection}{\numberline {3.3}評価指標}{1}{}%
-\contentsline {section}{\numberline {4}準備}{1}{}%
-\contentsline {subsection}{\numberline {4.1}Adaptive meta target decision strategy (AMTDS)}{1}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}目標決定戦略}{1}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}経路生成戦略}{2}{}%
+\contentsline {subsection}{\numberline {3.2}エージェント}{2}{}%
+\contentsline {subsection}{\numberline {3.3}評価指標}{3}{}%
+\contentsline {section}{\numberline {4}準備}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Adaptive meta target decision strategy (AMTDS)}{3}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}目標決定戦略}{4}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}経路生成戦略}{5}{}%
+\contentsline {subsection}{\numberline {4.2}AMTDS with learning of dirt accumulation (AMTDS/LD)}{5}{}%
+\contentsline {subsection}{\numberline {4.3}AMTDS for energy saving and cleanliness (AMTDS/ESC)}{6}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}要求充足の判断}{6}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}自己重要度評価}{8}{}%
+\contentsline {subsubsection}{\numberline {4.3.3}帰還動作 (Homing)}{9}{}%
+\contentsline {subsubsection}{\numberline {4.3.4}待機動作 (Pausing)}{9}{}%
+\contentsline {section}{\numberline {5}提案手法}{9}{}%
+\contentsline {subsection}{\numberline {5.1}AMTDS for energy saving under the requirement (AMTDS/ER)}{9}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}HomingとPausingの組み合わせ}{10}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}補正係数$K$の導入}{10}{}%
+\contentsline {subsubsection}{\numberline {5.1.3}未来のイベント発生量の予測}{10}{}%
+\contentsline {subsection}{\numberline {5.2}AMTDS for energy saving under the requirement with learning of event probabilities (AMTDS/ERL)}{10}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}イベント発生量の予測に使用するノードの範囲の変更}{11}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}補正係数$K^i$の更新方法の変更}{11}{}%
+\contentsline {section}{\numberline {6}評価実験}{11}{}%
+\contentsline {subsection}{\numberline {6.1}実験環境}{11}{}%
+\contentsline {subsection}{\numberline {6.2}AMTDS/ERについての実験結果}{14}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}実験1: 性能評価}{14}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}実験2: 環境の変化による性能の違い}{17}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}実験3: エージェント数減少による性能の変化}{23}{}%
+\contentsline {subsubsection}{\numberline {6.2.4}実験4: $K^i$の降順にエージェント数を減少させたときの性能の変化}{23}{}%
+\contentsline {subsection}{\numberline {6.3}AMTDS/ERLについての実験結果}{23}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}実験5: 性能評価}{23}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}実験6: 環境の変化による性能の違い}{30}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}実験7: エージェント数減少による性能の変化}{30}{}%
+\contentsline {subsubsection}{\numberline {6.3.4}実験8: $K^i$の降順にエージェント数を減少させたときの性能の変化}{30}{}%
+\contentsline {section}{\numberline {7}結論}{30}{}%
