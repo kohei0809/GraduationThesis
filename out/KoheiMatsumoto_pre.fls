@@ -2,8 +2,8 @@ PWD c:/Users/Owner/Desktop/Œ¤‹†/‘²˜_
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/eptex/platex.fmt
-INPUT c:/Users/Owner/Desktop/Œ¤‹†/‘²˜_/KoheiMatsumoto.tex
-OUTPUT out/KoheiMatsumoto.log
+INPUT c:/Users/Owner/Desktop/Œ¤‹†/‘²˜_/KoheiMatsumoto_pre.tex
+OUTPUT out/KoheiMatsumoto_pre.log
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
@@ -189,10 +189,10 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
-INPUT out/KoheiMatsumoto.aux
-INPUT out/KoheiMatsumoto.aux
-INPUT out/KoheiMatsumoto.aux
-OUTPUT out/KoheiMatsumoto.aux
+INPUT out/KoheiMatsumoto_pre.aux
+INPUT out/KoheiMatsumoto_pre.aux
+INPUT out/KoheiMatsumoto_pre.aux
+OUTPUT out/KoheiMatsumoto_pre.aux
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
@@ -222,13 +222,13 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-OUTPUT out/KoheiMatsumoto.dvi
+OUTPUT out/KoheiMatsumoto_pre.dvi
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT out/KoheiMatsumoto.toc
-INPUT out/KoheiMatsumoto.toc
-INPUT out/KoheiMatsumoto.toc
+INPUT out/KoheiMatsumoto_pre.toc
+INPUT out/KoheiMatsumoto_pre.toc
+INPUT out/KoheiMatsumoto_pre.toc
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -244,7 +244,7 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT out/KoheiMatsumoto.toc
+OUTPUT out/KoheiMatsumoto_pre.toc
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
@@ -257,8 +257,103 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT out/KoheiMatsumoto.bbl
-INPUT out/KoheiMatsumoto.bbl
-INPUT out/KoheiMatsumoto.bbl
-INPUT out/KoheiMatsumoto.bbl
-INPUT out/KoheiMatsumoto.aux
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin8.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin6.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
+INPUT ./figures/Flowchart.png
+INPUT ./figures/Flowchart.png
+INPUT figures/Flowchart.png
+INPUT extractbb -B cropbox -O figures/Flowchart.png
+INPUT ./figures/Graph_Office.png
+INPUT ./figures/Graph_Office.png
+INPUT figures/Graph_Office.png
+INPUT extractbb -B cropbox -O figures/Graph_Office.png
+INPUT ./figures/ds_graph_3600_ave_ER_Office_600.png
+INPUT ./figures/ds_graph_3600_ave_ER_Office_600.png
+INPUT figures/ds_graph_3600_ave_ER_Office_600.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ER_Office_600.png
+INPUT ./figures/cs_graph_3600_ave_ER_Office_600.png
+INPUT ./figures/cs_graph_3600_ave_ER_Office_600.png
+INPUT figures/cs_graph_3600_ave_ER_Office_600.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ER_Office_600.png
+INPUT ./figures/CorrectionScatter_Office_ER.png
+INPUT ./figures/CorrectionScatter_Office_ER.png
+INPUT figures/CorrectionScatter_Office_ER.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_ER.png
+INPUT ./figures/al_graph_ER_Office_top.png
+INPUT ./figures/al_graph_ER_Office_top.png
+INPUT figures/al_graph_ER_Office_top.png
+INPUT extractbb -B cropbox -O figures/al_graph_ER_Office_top.png
+INPUT ./figures/al_graph_ER_Office_worst.png
+INPUT ./figures/al_graph_ER_Office_worst.png
+INPUT figures/al_graph_ER_Office_worst.png
+INPUT extractbb -B cropbox -O figures/al_graph_ER_Office_worst.png
+INPUT ./figures/Graph_Complex.png
+INPUT ./figures/Graph_Complex.png
+INPUT figures/Graph_Complex.png
+INPUT extractbb -B cropbox -O figures/Graph_Complex.png
+INPUT ./figures/ds_graph_3600_ave_ER_Complex_600.png
+INPUT ./figures/ds_graph_3600_ave_ER_Complex_600.png
+INPUT figures/ds_graph_3600_ave_ER_Complex_600.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ER_Complex_600.png
+INPUT ./figures/cs_graph_3600_ave_ER_Complex_600.png
+INPUT ./figures/cs_graph_3600_ave_ER_Complex_600.png
+INPUT figures/cs_graph_3600_ave_ER_Complex_600.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ER_Complex_600.png
+INPUT ./figures/CorrectionScatter_Complex_ER.png
+INPUT ./figures/CorrectionScatter_Complex_ER.png
+INPUT figures/CorrectionScatter_Complex_ER.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Complex_ER.png
+INPUT ./figures/al_graph_ER_Complex_top.png
+INPUT ./figures/al_graph_ER_Complex_top.png
+INPUT figures/al_graph_ER_Complex_top.png
+INPUT extractbb -B cropbox -O figures/al_graph_ER_Complex_top.png
+INPUT ./figures/al_graph_ER_Complex_worst.png
+INPUT ./figures/al_graph_ER_Complex_worst.png
+INPUT figures/al_graph_ER_Complex_worst.png
+INPUT extractbb -B cropbox -O figures/al_graph_ER_Complex_worst.png
+INPUT ./figures/ds_graph_3600_ave_ERL_Office_1000.png
+INPUT ./figures/ds_graph_3600_ave_ERL_Office_1000.png
+INPUT figures/ds_graph_3600_ave_ERL_Office_1000.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ERL_Office_1000.png
+INPUT ./figures/cs_graph_3600_ave_ERL_Office_1000.png
+INPUT ./figures/cs_graph_3600_ave_ERL_Office_1000.png
+INPUT figures/cs_graph_3600_ave_ERL_Office_1000.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ERL_Office_1000.png
+INPUT ./figures/CorrectionScatter_Office_ERL.png
+INPUT ./figures/CorrectionScatter_Office_ERL.png
+INPUT figures/CorrectionScatter_Office_ERL.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_ERL.png
+INPUT ./figures/al_graph_ERL_Office_top.png
+INPUT ./figures/al_graph_ERL_Office_top.png
+INPUT figures/al_graph_ERL_Office_top.png
+INPUT extractbb -B cropbox -O figures/al_graph_ERL_Office_top.png
+INPUT ./figures/al_graph_ERL_Office_worst.png
+INPUT ./figures/al_graph_ERL_Office_worst.png
+INPUT figures/al_graph_ERL_Office_worst.png
+INPUT extractbb -B cropbox -O figures/al_graph_ERL_Office_worst.png
+INPUT ./figures/ds_graph_3600_ave_ERL_Complex_1000.png
+INPUT ./figures/ds_graph_3600_ave_ERL_Complex_1000.png
+INPUT figures/ds_graph_3600_ave_ERL_Complex_1000.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ERL_Complex_1000.png
+INPUT ./figures/cs_graph_3600_ave_ERL_Complex_1000.png
+INPUT ./figures/cs_graph_3600_ave_ERL_Complex_1000.png
+INPUT figures/cs_graph_3600_ave_ERL_Complex_1000.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ERL_Complex_1000.png
+INPUT ./figures/CorrectionScatter_Complex_ERL.png
+INPUT ./figures/CorrectionScatter_Complex_ERL.png
+INPUT figures/CorrectionScatter_Complex_ERL.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Complex_ERL.png
+INPUT ./figures/al_graph_ERL_Complex_top.png
+INPUT ./figures/al_graph_ERL_Complex_top.png
+INPUT figures/al_graph_ERL_Complex_top.png
+INPUT extractbb -B cropbox -O figures/al_graph_ERL_Complex_top.png
+INPUT ./figures/al_graph_ERL_Complex_worst.png
+INPUT ./figures/al_graph_ERL_Complex_worst.png
+INPUT figures/al_graph_ERL_Complex_worst.png
+INPUT extractbb -B cropbox -O figures/al_graph_ERL_Complex_worst.png
+INPUT out/KoheiMatsumoto_pre.bbl
+INPUT out/KoheiMatsumoto_pre.bbl
+INPUT out/KoheiMatsumoto_pre.bbl
+INPUT out/KoheiMatsumoto_pre.bbl
+INPUT out/KoheiMatsumoto_pre.aux

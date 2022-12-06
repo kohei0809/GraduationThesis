@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  15 NOV 2022 19:17
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  6 DEC 2022 17:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -207,9 +207,9 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 42.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 42.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 37.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -220,6 +220,20 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 [1
 
 ]
+Overfull \hbox (31.02707pt too wide) in paragraph at lines 100--100
+[]\OT1/cmr/bx/n/14.4 AMTDS for en-ergy sav-ing un-der the re-quire-ment (AMTDS/ER) 
+ []
+
+
+Overfull \hbox (3.21034pt too wide) in paragraph at lines 108--108
+[]\OT1/cmr/bx/n/14.4 AMTDS for en-ergy sav-ing un-der the re-quire-ment with learn-
+ []
+
+
+Overfull \hbox (48.13824pt too wide) in paragraph at lines 119--153
+[][]  [] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -228,6 +242,8 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [2]
+Overfull \vbox (80.96492pt too high) has occurred while \output is active []
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -243,292 +259,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[4]
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 208.
+[4] (out/KoheiMatsumoto.bbl
 
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-[5]
-File: figures/Flowchart.png Graphic file (type bmp)
-<figures/Flowchart.png>
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[6]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[7]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[8]
-Overfull \hbox (31.02707pt too wide) in paragraph at lines 340--340
-[]\OT1/cmr/bx/n/14.4 AMTDS for en-ergy sav-ing un-der the re-quire-ment (AMTDS/ER) 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[9]
-Overfull \hbox (3.21034pt too wide) in paragraph at lines 371--371
-[]\OT1/cmr/bx/n/14.4 AMTDS for en-ergy sav-ing un-der the re-quire-ment with learn-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[10]
-File: figures/Graph_Office.png Graphic file (type bmp)
-<figures/Graph_Office.png>
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[11]
-Overfull \hbox (48.13824pt too wide) in paragraph at lines 438--472
-[][]  [] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[12]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[13]
-File: figures/ds_graph_3600_ave_ER_Office_600.png Graphic file (type bmp)
-<figures/ds_graph_3600_ave_ER_Office_600.png>
-File: figures/cs_graph_3600_ave_ER_Office_600.png Graphic file (type bmp)
-<figures/cs_graph_3600_ave_ER_Office_600.png>
-File: figures/CorrectionScatter_Office_ER.png Graphic file (type bmp)
-<figures/CorrectionScatter_Office_ER.png>
-File: figures/al_graph_ER_Office_top.png Graphic file (type bmp)
-<figures/al_graph_ER_Office_top.png>
-File: figures/al_graph_ER_Office_worst.png Graphic file (type bmp)
-<figures/al_graph_ER_Office_worst.png>
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[14]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[15]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[16]
-File: figures/Graph_Complex.png Graphic file (type bmp)
-<figures/Graph_Complex.png>
-File: figures/ds_graph_3600_ave_ER_Complex_600.png Graphic file (type bmp)
-<figures/ds_graph_3600_ave_ER_Complex_600.png>
-File: figures/cs_graph_3600_ave_ER_Complex_600.png Graphic file (type bmp)
-<figures/cs_graph_3600_ave_ER_Complex_600.png>
-File: figures/CorrectionScatter_Complex_ER.png Graphic file (type bmp)
-<figures/CorrectionScatter_Complex_ER.png>
-File: figures/al_graph_ER_Complex_top.png Graphic file (type bmp)
-<figures/al_graph_ER_Complex_top.png>
-File: figures/al_graph_ER_Complex_worst.png Graphic file (type bmp)
-<figures/al_graph_ER_Complex_worst.png>
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[17]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[18]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[19]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[20]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[21]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[22]
-File: figures/ds_graph_3600_ave_ERL_Office_1000.png Graphic file (type bmp)
-<figures/ds_graph_3600_ave_ERL_Office_1000.png>
-File: figures/cs_graph_3600_ave_ERL_Office_1000.png Graphic file (type bmp)
-<figures/cs_graph_3600_ave_ERL_Office_1000.png>
-File: figures/CorrectionScatter_Office_ERL.png Graphic file (type bmp)
-<figures/CorrectionScatter_Office_ERL.png>
-File: figures/al_graph_ERL_Office_top.png Graphic file (type bmp)
-<figures/al_graph_ERL_Office_top.png>
-File: figures/al_graph_ERL_Office_worst.png Graphic file (type bmp)
-<figures/al_graph_ERL_Office_worst.png>
-
-Overfull \hbox (14.6822pt too wide) in paragraph at lines 763--772
-[]\JY1/mc/m/n/12 次に\OT1/cmr/m/n/12 , \JY1/mc/m/n/12 環境全体ではなく\OT1/cmr/m/n/12 , \JY1/mc/m/n/12 エ ージ ェ ントごとについて見ていく\OT1/cmr/m/n/12 . AMTDS/ERL \JY1/mc/m/n/12 も \OT1/cmr/m/n/12 AMTDS/ER
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[23]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[24]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[25]
-File: figures/ds_graph_3600_ave_ERL_Complex_1000.png Graphic file (type bmp)
-<figures/ds_graph_3600_ave_ERL_Complex_1000.png>
-File: figures/cs_graph_3600_ave_ERL_Complex_1000.png Graphic file (type bmp)
-<figures/cs_graph_3600_ave_ERL_Complex_1000.png>
-File: figures/CorrectionScatter_Complex_ERL.png Graphic file (type bmp)
-<figures/CorrectionScatter_Complex_ERL.png>
-File: figures/al_graph_ERL_Complex_top.png Graphic file (type bmp)
-<figures/al_graph_ERL_Complex_top.png>
-File: figures/al_graph_ERL_Complex_worst.png Graphic file (type bmp)
-<figures/al_graph_ERL_Complex_worst.png>
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[26]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[27]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[28]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[29]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[30]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[31] (out/KoheiMatsumoto.bbl
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 7.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 13.
 )
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -537,16 +271,16 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[32
+[5
 
 ] (out/KoheiMatsumoto.aux) ) 
 Here is how much of TeX's memory you used:
- 2658 strings out of 475530
- 41911 string characters out of 5794171
- 393851 words of memory out of 5000000
- 24254 multiletter control sequences out of 15000+600000
- 487131 words of font info for 100 fonts, out of 8000000 for 9000
+ 2487 strings out of 475530
+ 36214 string characters out of 5794171
+ 392807 words of memory out of 5000000
+ 24113 multiletter control sequences out of 15000+600000
+ 486406 words of font info for 97 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 55i,13n,69p,414b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,13n,69p,274b,351s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/KoheiMatsumoto.dvi (36 pages, 104116 bytes).
+Output written on out/KoheiMatsumoto.dvi (9 pages, 18760 bytes).

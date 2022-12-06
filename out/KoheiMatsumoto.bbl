@@ -1,22 +1,3 @@
-\begin{thebibliography}{1}
-
-\bibitem{Wu2019}
-Lingying Wu, Ayumi Sugiyama, and Toshiharu Sugawara.
-\newblock Energy-efficient strategies for multi-agent continuous cooperative
-  patrolling problems.
-\newblock {\em Procedia Computer Science}, Vol. 159, pp. 465--474, 2019.
-
-\bibitem{Yoneda2013}
-Keisuke Yoneda, Chihiro Kato, and Toshiharu Sugawara.
-\newblock Autonomous learning of target decision strategies without
-  communications for continuous coordinated cleaning tasks.
-\newblock In {\em 2013 IEEE/WIC/ACM International Joint Conferences on Web
-  Intelligence (WI) and Intelligent Agent Technologies (IAT)}, Vol.~2, pp.
-  216--223, 2013.
-
-\bibitem{sugiyama2015}
-杉山歩未, 菅原俊治.
-\newblock 動的環境におけるマルチエージェント巡回清掃の自律的な戦略学習の提案.
-\newblock 電子情報通信学会論文誌 D, Vol.~98, No.~6, pp. 862--872, 2015.
+\begin{thebibliography}{}
 
 \end{thebibliography}
