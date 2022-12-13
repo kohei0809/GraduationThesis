@@ -256,7 +256,7 @@ $i$と$j$が以下の式を満たすとき，互いに通信可能である．
   m(v^i, v^j) < d_{co}
 \end{equation}
 %
-また，同様の目的から，時間面の制約である最低通信間隔$B(>0)$が存在する．
+加えて，同様の目的から，時間面の制約である最低通信間隔$B(>0)$が存在する．
 $i$は$j$と最後に通信した時刻$T^{i, j}_{lst}$を保持しており，$T^{i, j}_{lst} + B$まで通信を行うことはできない．
 \par
 
@@ -406,9 +406,44 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   %
 
   \subsection{AMTDS with learning of dirt accumulation (AMTDS/LD)}
+  \label{subsec:AMTDS/LD}
+  AMTDSでは，エージェントが環境内のすべてのノード$v$において，
+  イベント発生確率$p(v)$をあらかじめ把握しているという仮定を導入した．
+  しかし，実際の利用を想定すると，イベント発生確率が既知であることはまれである．
+  特に，本研究のような清掃問題においては，イベントであるごみの発生確率を，
+  エージェントが巡回しながら自ら学習するほうがより実用的である．
+  そこで，AMTDSに環境のイベント発生確率の学習を加えた，
+  AMTDS with learning of dirt accumulation (AMTDS/LD) \cite{sugiyama2015}が提案された．
+  AMTDS/LDでは，$p^i(v)$の学習アルゴリズムの提案が行われた．
+  以下でこのアルゴリズムについて説明する．
+  \par
+
+  まず，1ステップ終わるごとにエージェント$i$はすべてのノードについて，
+  そのノードで最後にイベントが処理された時刻$t^v_{vis}$から現在の時刻$t$までの訪問間隔$I^i_t(v)$を以下の式に従って更新する．
+  %
+  \begin{equation}
+    I^i_t(v) = t - t^v_{vis}
+  \end{equation}
+  %
+  その後，$I^i_t(v)$と現在時刻$t$でエージェント$i$が処理したイベント量$L_t(v)$を用いて，
+  $i$の$v$における重要度$p^i(v)$を以下の式に従って更新する．
+  %
+  \begin{equation}
+    p^i(v) \gets (1 - \beta)p^i(v) + \beta \dfrac{L_t(v)}{I^i_t(v)}
+  \end{equation}
+  %
+  ここで，$\beta(0 < \beta \leq 1)$は学習率である．
+  AMTDS/LDでは各エージェントが独立した$p^i(v)$の値を保持しているため，それに伴い，
+  イベント発生量の推定値$EL^i_t(v)$もそれぞれ異なる．
+  また，同じノード上であってもそのノードへの訪問頻度によって，エージェントのイベントの発生しやすさの認識が異なる．
+  このことによって，エージェント間の通信を用いずに$p^i(v)$を用いた間接的な分業が可能になる．
+  それにより，AMTDSと比べて競合を回避し，効率も向上した．
+
 
   \subsection{AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}
-  
+  \red{後で書く}
+
+
   \subsection{AMTDS for energy saving and cleanliness (AMTDS/ESC)}
   
   \subsubsection{要求充足の判断}
