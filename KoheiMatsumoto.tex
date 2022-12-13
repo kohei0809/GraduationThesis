@@ -206,20 +206,21 @@ $i$が1ステップで隣接するノードに移動したとき，$\BatteryLeve
 %
 \par
 
-$b^i(t)$が0になるとそのエージェントは移動できなくなってしまうので,自身のバッテリ残量が0になる前に戻らなければならない.
-そこで,以下の式に示すように,エージェント$i$はノード$v$から充電基地$v^i_{base}$までの移動に必要な最小バッテリ量であるポテンシャル$\mathcal{P}^i(v)$を計算する.
+$b^i(t)$が0になるとそのエージェントは移動できなくなってしまうので，自身のバッテリ残量が0になる前に戻らなければならない．
+そこで，以下の式に示すように，エージェント$i$はノード$v$から充電基地$v^i_{base}$までの移動に必要な最小バッテリ量であるポテンシャル$\mathcal{P}^i(v)$を計算する．
 %
 \begin{equation}
   \mathcal{P}^i(v) = d(v, v^i_{base}) \times B^i_{drain}
 \end{equation}
 %
-エージェント$i$は目標ノード$v^i_{tar}$を後の章で説明する目標決定戦略によって決定した際,実際に移動する前に,現在のバッテリ残量で$v^i_{tar}$に到達し,その後充電基地に戻ることができるかを,以下の式を用いて判定する.
+エージェント$i$は目標ノード$v^i_{tar}$を後の章で説明する目標決定戦略によって決定した際，実際に移動する前に，
+現在のバッテリ残量で$v^i_{tar}$に到達し，その後充電基地に戻ることができるかを，以下の式を用いて判定する．
 %
 \begin{equation}
   b^i(t) \leq \mathcal{P}^i(v) + d(v^i_t, v^i_{tar}) \times B^i_{drain}
 \end{equation}
 %
-この条件を満たさない場合,以下のように目標ノード$v^i_{tar}$を更新し,充電基地に戻る.
+この条件を満たさない場合，以下のように目標ノード$v^i_{tar}$を更新し，充電基地に戻る．
 %
 \begin{equation}
   v^i_{tar} \gets v^i_{base}
@@ -230,8 +231,8 @@ $b^i(t)$が0になるとそのエージェントは移動できなくなって�
 $(\BatteryMax-\BatteryLevel_i)\times k_{charge}$ステップかかる．
 \par
 
-エージェント$i$は,すべてのノード$v$に対し,$v$のイベント発生確率の予測値を表す重要度$p^i(v) (0 \leq p^i(v) \leq 1)$を持つ.
-$p^i(v)$は各エージェントが独立して保持しており,その値はエージェントごとに異なる.
+エージェント$i$は，すべてのノード$v$に対し，$v$のイベント発生確率の予測値を表す重要度$p^i(v) (0 \leq p^i(v) \leq 1)$を持つ．
+$p^i(v)$は各エージェントが独立して保持しており，その値はエージェントごとに異なる．
 $i$が$v$上にいない場合，現在の蓄積イベント数$L_t(v)$は知ることができない．
 そこで，エージェントは時刻$t$の$p(v)$から期待値$E^i(L_t(v))$を以下の式に従って計算する．
 %
@@ -267,8 +268,8 @@ $i$は$j$と最後に通信した時刻$T^{i, j}_{lst}$を保持しており，$
 \par
 
 \subsection{評価指標}
-評価指標は,扱うMACPPの種類によって異なるが,本研究では評価指標として，
-以下の式で定められるイベント残存時間の総和$D_{t_s,t_e}$と,エージェントの総エネルギー消費量$C_{t_s,t_e}$を用いる.
+評価指標は，扱うMACPPの種類によって異なるが，本研究では評価指標として，
+以下の式で定められるイベント残存時間の総和$D_{t_s,t_e}$と，エージェントの総エネルギー消費量$C_{t_s,t_e}$を用いる．
 %
 \begin{align}
   D_{t_s,t_e} &= \sum_{v \in V} \sum^{t_e}_{t=t_s+1} L_t(v)\\
@@ -279,62 +280,134 @@ $i$は$j$と最後に通信した時刻$T^{i, j}_{lst}$を保持しており，$
 $\En_t(i)$は$t$におけるエージェント$i$の消費エネルギーを表す．
 したがって，$i$が隣接ノードに移動したとき$\En_t(i)=1$，
 それ以外は$\En_t(i)=0$となる．
-例えば、$D_{t_s,t_e}$は清掃問題において，掃除機をかけずに放置した埃の累積時間や，
+例えば，$D_{t_s,t_e}$は清掃問題において，掃除機をかけずに放置した埃の累積時間や，
 セキュリティパトロールにおいて，チェックせずに放置したセキュリティ場所の累積時間や数を表し，
-MACPPではこれを減らすことが目的となる.
+MACPPではこれを減らすことが目的となる．
 \par
-一般に,$D_{t_s,t_e}$と$C_{t_s,t_e}$の値はどちらも小さい方が良いとされるが,両者はトレードオフの関係である.
-つまり,$D_{t_s,t_e}$と$C_{t_s,t_e}$の値をどちらも最小にすることは困難である.
-したがって,\cite{Wu2019}と同様に1stepにおけるイベント量の要求値$D_{req}$を設定した.
-ここで,本研究では清掃問題を扱っているため,$D_{t_s,t_e}$が$D_{req}$付近にして,$C_{t_s,t_e}$をより小さくすることを目指す.
-また,本研究では単純化のため,これ以降,$D_{t_s,t_e},C_{t_s,t_e}$を$D(s),C(s)$と表す.
-
+一般に，$D_{t_s,t_e}$と$C_{t_s,t_e}$の値はどちらも小さい方が良いとされるが，両者はトレードオフの関係である．
+つまり，$D_{t_s,t_e}$と$C_{t_s,t_e}$の値をどちらも最小にすることは困難である．
+したがって，\cite{Wu2019}と同様に1stepにおけるイベント量の要求値$\Dreq$を設定した．
+エージェントは以下の式を満たせるように協調を行う．
+%
+\begin{equation}\label{eq:condition}
+  D_{t_s,t_e}\leq \Dreq \times (t_e - t_s)
+\end{equation}
+%
+本研究では，品質要求(式(\ref{eq:condition}))を満たしつつ，$C_{t_s, t_e}$をできるだけ小さくすることが目的である．
+なお，本研究では単純化のため，これ以降，$D_{t_s,t_e}, C_{t_s,t_e}$を$D(s), C(s)$と表す．
 
 
 \section{準備}
+この章では，提案手法の基になったAMTDS，AMTDS/LD，AMTDS/EDC，AMTDS/ESCについて説明する．
+これらの手法では，エージェントは目標ノード$v^i_{tar}$を決定する目標決定戦略と，それまでの経路を生成する経路生成戦略に従い，環境内を巡回する．
+$v^i_{tar}$に到着した後，再び目標戦略に従って新しい目標ノードを決定するといったサイクルを各エージェントが繰り返し，継続的な環境巡回を行う．
 
 \subsection{Adaptive meta target decision strategy (AMTDS)}
 \label{subsec:AMTDS}
+この節では，AMTDS/LD，AMTDS/ESCなどの手法のベースとなったAdaptive meta target decision strategy (AMTDS) \cite{Yoneda2013}について説明する．
+AMTDSは単純な複数の目標決定戦略の中から，強化学習アルゴリズムであるQ学習によって，各エージェントが自身にとって最適な戦略を選択するメタ戦略学習である．
+また，この手法では環境内のすべてのノード$v$におけるイベント発生確率$p(v)$は既知であるという仮定を導入しており，$p^i(v) = p(v)$とする．
+\par
+
+エージェント$i$はAMTDSによって目標決定戦略$s \in S$を選択し，$s$に従って目標ノード$v^i_{tar}$を決定する．
+その後，経路生成戦略に従って$v^i_{tar}$に移動する．
+ここで，$S$はエージェントが選択可能な目標決定戦略の集合である．
+目標決定戦略については\ref{target_strategy}，経路生成戦略については\ref{route_strategy}で詳細を説明する．
+$v^i_{tar}$に到着後，$v^i_{tar}$の決定時刻$t_0$から$d_{travel}$ステップ後に$v^i_{tar}$に到着するまでの1ステップあたりのイベント処理量を以下の式で計算する．
+%
+\begin{equation}
+  \label{eq:reward_AMTDS}
+  u_{t_0,t_0+d_{travel}} = \dfrac{\displaystyle\sum_{t_0+1 \leq t \leq t_0+d_{travel}} L_t(v^i_t)}{d_{travel}}
+\end{equation}
+%
+さらに，これを報酬として，選択した戦略$s$のQ値$Q^i(s)$を以下の式に従って更新する．
+%
+\begin{equation}
+  Q^i(s) \gets (1-\alpha)Q^i(s) + \alpha \times u_{t_0,t_0+d_{travel}}
+\end{equation}
+%
+ここで，$\alpha (0 < \alpha \leq 1)$は学習率である．
+$Q^i(s)$の更新後，$i$は次に選択する目標決定戦略$s_{next}$を$\varepsilon$-Greedy法によって決定する．
+$\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダムに選択し，確率$1 - \varepsilon$で以下の式に従って選択する．
+%
+\begin{equation}
+  s_{next} \gets \argmax_{s} Q^i(s)
+\end{equation}
+%
 
 \subsubsection{目標決定戦略}
 \label{target_strategy}
-
+\cite{Yoneda2013}では，各エージェントに以下の4つの基本的な目標決定戦略を$S$として与えている．
+それぞれの戦略は単独でも使用可能な独立したものとなっている．
+単独での使用を想定し，競合回避のためにランダム性を取り入れたものも存在する．
+%
 \begin{description}
   \item[Random selection (R)]\mbox{}\\
-  環境全体のノード集合$V$からランダムに$v^i_{tar}$を選ぶ.
+  環境全体のノード集合$V$からランダムに$v^i_{tar}$を選ぶ．
 
   \item[Probabilistic greedy selection (PGS)]\mbox{} \\
-  環境全体のノード集合$V$内のノード$v$におけるイベント発生量の推定値$EL^i_t(v)$の上位$N_g$個のノードから,ランダムに1つ$v^i_{tar}$を選ぶ.
-  この際に,学習や訪問をする$v^i_{tar}$の偏りを防ぐため,$N_g$番目のノードと$EL^i_t(v)$の値が同じノードが存在する場合,
-  そのノードをすべて含めた後,その中から$v^i_{tar}$をランダムに選んでいる.
+  環境全体のノード集合$V$内のノード$v$におけるイベント発生量の推定値$EL^i_t(v)$の上位$N_g$個のノードから，
+  ランダムに1つ$v^i_{tar}$を選ぶ．
+  この際に，学習や訪問をする$v^i_{tar}$の偏りを防ぐため，$N_g$番目のノードと$EL^i_t(v)$の値が同じノードが存在する場合，
+  そのノードをすべて含めた後，その中から$v^i_{tar}$をランダムに選んでいる．
 
   \item[Prioritizing unvisited interval (PI)]\mbox{} \\
-  環境全体のノード集合$V$内のノード$v$における訪問間隔$I^i_t(v)$の上位$N_i$個のノードから,ランダムに1つ$v^i_{tar}$を選ぶ.
-  この際に,学習や訪問をする$v^i_{tar}$の偏りを防ぐため,$N_i$番目のノードと$I^i_t(v)$の値が同じノードが存在する場合,
-  そのノードをすべて含めた後,その中から$v^i_{tar}$をランダムに選んでいる.
+  環境全体のノード集合$V$内のノード$v$における訪問間隔$I^i_t(v)$の上位$N_i$個のノードから，ランダムに1つ$v^i_{tar}$を選ぶ．
+  この際に，学習や訪問をする$v^i_{tar}$の偏りを防ぐため，$N_i$番目のノードと$I^i_t(v)$の値が同じノードが存在する場合，
+  そのノードをすべて含めた後，その中から$v^i_{tar}$をランダムに選んでいる．
   
   \item[Balanced neighbor-preferential selection (BNPS)]\mbox{} \\
-  近隣のノードにイベント発生量が多いとエージェントが判断したとき,近隣を優先的に巡回する.
-  $v^i_{tar}$の決定時にエージェントの現在地$v^i_t$との距離が$d_{rad}$以下のノード集合を近領域$V^i_{area}$とする.
-  ここで,$V^i_{area}$における1ステップあたりのイベント処理量の期待値$EV^i_t$は以下の式で求められる.
+  近隣のノードにイベント発生量が多いとエージェントが判断したとき，近隣を優先的に巡回する．
+  $v^i_{tar}$の決定時にエージェントの現在地$v^i_t$との距離が$d_{rad}$以下のノード集合を近領域$V^i_{area}$とする．
+  ここで，$V^i_{area}$における1ステップあたりのイベント処理量の期待値$EV^i_t$は以下の式で求められる．
   \begin{equation}
     EV^i_t = \frac{\displaystyle \sum_{v \in V^i_{area}}EL^i_t(v)}{|V^i_{area}|}  
   \end{equation}
-  エージェント$i$は近領域内のイベントを処理するか判断するための閾値$EV_{threshold}$と$EV^i_t$の値を比較し,
-  $EV^i_t > EV_{threshold}$の間はPGSによって近領域内から$v^i_{tar}$を選ぶ.
-  その後,$EV^i_t \le EV_{threshold}$となった場合,環境全体を対象とし,PGSで$v^i_{tar}$を選ぶ.
-  環境全体から$v^i_{tar}$を選択した後,$V^i_{area}$を更新する.
-  更新後の$V^i_{area}$の1ステップあたりのイベント処理量の期待値を$EV^i_{t+1}$とし,$EV_{threshold}$の値を以下の式に従って更新する.
+  エージェント$i$は近領域内のイベントを処理するか判断するための閾値$EV_{threshold}$と$EV^i_t$の値を比較し，
+  $EV^i_t > EV_{threshold}$の間はPGSによって近領域内から$v^i_{tar}$を選ぶ．
+  その後，$EV^i_t \le EV_{threshold}$となった場合，環境全体を対象とし，PGSで$v^i_{tar}$を選ぶ．
+  環境全体から$v^i_{tar}$を選択した後，$V^i_{area}$を更新する．
+  更新後の$V^i_{area}$の1ステップあたりのイベント処理量の期待値を$EV^i_{t+1}$とし，
+  $EV_{threshold}$の値を以下の式に従って更新する．
   \begin{equation}
     EV_{threshold} \gets EV_{threshold} + \alpha(EV^i_{t+1} - EV_{threshold})
   \end{equation}
-  ここで,$\alpha(0 < \alpha < 1)$は学習率である.また,$EV_{threshold}$の初期値は初めに$V^i_{area}$を設定した際の$EV^i_t$の値である.
+  ここで，$\alpha(0 < \alpha < 1)$は学習率である．
+  また，$EV_{threshold}$の初期値は初めに$V^i_{area}$を設定した際の$EV^i_t$の値である．
 \end{description}
 
 \subsubsection{経路生成戦略}
   \label{route_strategy}
-  
+  経路生成戦略は{\em gradual path generation} (GPG)を用いる．
+  GPGでは，まず$v^i_{tar}$までの最短経路をダイクストラ法を用いて生成し，
+  その経路近辺でイベントが発生しやすいノードを経由するように経路を変更する．
+  これにより，最短経路に従うよりも効率を高めることができる．
+  しかし，経由するノードの増加によって$v^i_{tar}$への到着時間が遅れてしまい，逆に効率が下がってしまう．
+  そのため，経由するノードに一定の制約をかけなければならない．
+  そこで，GPGでは経由可能なノード$v$を以下の式を満たすものとする．
+  %
+  \begin{equation}
+    \begin{cases}
+      d(v^i_t, v) \leq d_{myopia} \\
+      d(v, v^i_{tar}) < k_{att}(d(v^i_t, v^i_{tar})) \\
+      d(v^i_t, v) + d(v, v^i_{tar}) \leq k_{rover}d(v^i_t, v^i_{tar}) \\
+      \mathcal{P}^i(v^i_{tar}) + B^i_{drain} \times (d(v^i_t, v) + d(v, v^i_{tar})) \leq b^i(t)
+    \end{cases}
+  \end{equation}
+  %
+  ここで，$d_{myopia}$はエージェントが現在地とするノードから経由地点とできるノードまでの距離の閾値であり，
+  $k_{att} (0 < k_{att} < 1)$は$v^i_{tar}$へ引き付ける力を表す係数である．
+  また，$k_{rover} (1 < k_{rover})$は経由地点を追加した新しい経路の距離の，最短距離からの増加率である．
+  これらの条件を満たすノード集合を$V^i_{sub}$とすると，経由するノード$v^i_{subgoal}$は以下の式で決められる．
+  %
+  \begin{equation}
+    v^i_{subgoal} \gets \argmax_{v \in V^i_{sub}} EL^i_t(v)
+  \end{equation}
+  %
+
   \subsection{AMTDS with learning of dirt accumulation (AMTDS/LD)}
+
+  \subsection{AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}
   
   \subsection{AMTDS for energy saving and cleanliness (AMTDS/ESC)}
   

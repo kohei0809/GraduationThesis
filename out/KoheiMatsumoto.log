@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  12 DEC 2022 14:50
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  13 DEC 2022 15:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -284,6 +284,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [4]
+Overfull \hbox (14.16913pt too wide) in paragraph at lines 301--304
+[]\JY1/mc/m/n/12 この章では ， 提案手法の基にな っ た \OT1/cmr/m/n/12 AMTDS\JY1/mc/m/n/12 ， \OT1/cmr/m/n/12 AMTDS/LD\JY1/mc/m/n/12 ， \OT1/cmr/m/n/12 AMTDS/EDC\JY1/mc/m/n/12 ， \OT1/cmr/m/n/12 AMTDS/ESC
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -292,17 +296,28 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [5]
-Overfull \hbox (31.02707pt too wide) in paragraph at lines 351--351
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[6]
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 381.
+
+Overfull \hbox (31.02707pt too wide) in paragraph at lines 424--424
 []\OT1/cmr/bx/n/14.4 AMTDS for en-ergy sav-ing un-der the re-quire-ment (AMTDS/ER) 
  []
 
 
-Overfull \hbox (3.21034pt too wide) in paragraph at lines 359--359
+Overfull \hbox (3.21034pt too wide) in paragraph at lines 432--432
 []\OT1/cmr/bx/n/14.4 AMTDS for en-ergy sav-ing un-der the re-quire-ment with learn-
  []
 
 
-Overfull \hbox (48.13824pt too wide) in paragraph at lines 370--404
+Overfull \hbox (48.13824pt too wide) in paragraph at lines 443--477
 [][]  [] 
  []
 
@@ -313,17 +328,9 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[6]
-Overfull \vbox (80.96492pt too high) has occurred while \output is active []
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
 [7]
+Overfull \vbox (103.43385pt too high) has occurred while \output is active []
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -331,7 +338,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[8] (out/KoheiMatsumoto.bbl
+[8]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[9] (out/KoheiMatsumoto.bbl
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 7.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -359,7 +374,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[9
+[10
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -376,14 +391,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[10] (out/KoheiMatsumoto.aux) ) 
+[11] (out/KoheiMatsumoto.aux) ) 
 Here is how much of TeX's memory you used:
- 3034 strings out of 475530
- 44920 string characters out of 5794171
- 399385 words of memory out of 5000000
- 24625 multiletter control sequences out of 15000+600000
+ 3036 strings out of 475530
+ 44951 string characters out of 5794171
+ 403385 words of memory out of 5000000
+ 24627 multiletter control sequences out of 15000+600000
  488477 words of font info for 105 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 55i,12n,69p,274b,369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,12n,69p,274b,371s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/KoheiMatsumoto.dvi (14 pages, 53332 bytes).
+Output written on out/KoheiMatsumoto.dvi (15 pages, 61792 bytes).
