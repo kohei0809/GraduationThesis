@@ -3,45 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: KoheiMatsumoto.aux
 The style file: junsrt.bst
 Database file #1: ref.bib
-You've used 13 entries,
+Warning--empty journal in Satish2017
+You've used 15 entries,
             2270 wiz_defined-function locations,
-            636 strings with 7426 characters,
-and the built_in function-call counts, 5592 in all, are:
-= -- 472
-> -- 176
-< -- 20
-+ -- 67
-- -- 54
-* -- 295
-:= -- 663
-add.period$ -- 44
-call.type$ -- 13
-change.case$ -- 13
+            648 strings with 7859 characters,
+and the built_in function-call counts, 6262 in all, are:
+= -- 532
+> -- 193
+< -- 21
++ -- 74
+- -- 59
+* -- 323
+:= -- 744
+add.period$ -- 51
+call.type$ -- 15
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 337
-empty$ -- 520
-format.name$ -- 108
-if$ -- 1413
+cite$ -- 16
+duplicate$ -- 380
+empty$ -- 585
+format.name$ -- 118
+if$ -- 1581
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 12
-newline$ -- 67
-num.names$ -- 15
-pop$ -- 95
+int.to.str$ -- 15
+missing$ -- 14
+newline$ -- 77
+num.names$ -- 17
+pop$ -- 111
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 281
+skip$ -- 316
 stack$ -- 0
-substring$ -- 360
-swap$ -- 133
-text.length$ -- 20
+substring$ -- 400
+swap$ -- 145
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 46
-width$ -- 15
-write$ -- 151
-is.kanji.str$ -- 175
+warning$ -- 1
+while$ -- 51
+width$ -- 17
+write$ -- 173
+is.kanji.str$ -- 196
+(There was 1 warning)

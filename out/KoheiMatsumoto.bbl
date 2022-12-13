@@ -92,4 +92,18 @@ Keisuke Yoneda, Chihiro Kato, and Toshiharu Sugawara.
 Ehsan Latif, Yikang Gui, Aiman Munir, and Ramviyas Parasuraman.
 \newblock Energy-aware multi-robot task allocation in persistent tasks, 2021.
 
+\bibitem{Yamauchi2022}
+Tomoki Yamauchi, Yuki Miyashita, and Toshiharu Sugawara.
+\newblock {Standby-Based Deadlock Avoidance Method for Multi-Agent Pickup and
+  Delivery Tasks}.
+\newblock In {\em {Proceedings of the 21st International Conference on
+  Autonomous Agents and Multiagent Systems}}, pp. 1427--1435, Richland, SC,
+  2022. IFAAMAS.
+
+\bibitem{Satish2017}
+Hang Ma Jiaoyang Li~TK Satish and Kumar~Sven Koenig.
+\newblock Lifelong multi-agent path finding for online pickup and delivery
+  tasks.
+\newblock 2017.
+
 \end{thebibliography}
