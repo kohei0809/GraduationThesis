@@ -441,12 +441,14 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \red{後で書く}
 
   
+
   \begin{figure}
     \centering
     \includegraphics[width=0.6\hsize]{figures/Flowchart.eps}
     \caption{エージェントの行動選択}
     \label{fig:flowchart}
   \end{figure}
+
 
   \subsection{AMTDS for energy saving and cleanliness (AMTDS/ESC)}
   AMTDSやAMTDS/LD，AMTDS/EDCでは，イベント残存時間をより小さくすることが求められた．
@@ -541,6 +543,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   したがって，自己重要度が低いと，エージェントのエネルギー節約行動が促進される．
 
   \subsubsection{帰還動作 ({\em Homing})}
+  \label{sec:Homing}
   {\em Homing}とは，バッテリ残量にかかわらず，巡回を中止して充電基地に戻ることで，エネルギーを節約する動作のことである．
   エージェント$i$は，充電残量が少なくなり，以下の式を満たしたとき，
   $\HomingCheck$ステップ移動するごとに要求充足度(式(\ref{eq:fulfill}))をチェックする．
@@ -558,6 +561,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   なお，充電基地から遠い地点を巡回しているエージェントがこのチェックをする前に充電基地に帰還することもありうる．
 
   \subsubsection{待機動作 ({\em Pausing})}
+  \label{sec:Pausing}
   {\em Pausing}とは，充電完了後，エージェントはすぐに巡回を再開せずに，待機する動作のことである．
   エージェント$i$が時刻$t$に充電が完了したとき，要求充足度(式(\ref{eq:fulfill}))をチェックし，
   満たす場合は一定の休止時間$\PausingInt$ステップ充電基地で待機する．
@@ -565,16 +569,148 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   
 
   \section{提案手法}
+  AMTDS/ESCでは，要求値$\Dreq$とエネルギー節約行動の導入によって，
+  品質要求を満たしつつ，エネルギー消費量を削減することができた．
+  しかし，{\em Homing}と{\em Pausing}の2つのエネルギー節約行動のうち，どちらか片方しか行うことができなかった．
+  また，全てのエージェントが同一の視点で要求充足の判断を行っていたため，
+  環境の状態の推定が不十分であり，要求条件を満たす上で不必要な巡回を行っているため，
+  エネルギーを余分に消費してしまっている．
+  これらの問題を解消するため，本研究では，
+  AMTDS for energy saving under the requirement (AMTDS/ER)と，
+  AMTDS/EDCに加えたAMTDS for energy saving under the requirement with communications (AMTDS/ERC)
+  を提案する．
+  以下では，ベースとしている手法との違いに絞って説明する．
   
   \subsection{AMTDS for energy saving under the requirement (AMTDS/ER)}
+  この節では，AMTDS/ESCをベースに，エージェントがそれぞれの視点で将来の環境状態を予測する方法を学習し，
+  充電基地についた際に，未来の環境状態を予測し，待機時間を動的に決定する手法である，AMTDS/ERについて説明する．
+  また，エージェント数を減らす手法についても説明する\red{ここをもっとちゃんと書く}
   
-  \subsubsection{HomingとPausingの組み合わせ}
+
+  \subsubsection{未来のイベント量の予測}
+  \label{sec:predict}
+  AMTDS/ERでは，\ref{sec:changeEnergySaving}で詳しく説明するが，
+  {\em Pausing}による待機時間を可変に変更する．
+  その際に，未来のイベント量の予測をする必要があるため，その方法について説明する．
+  \par
+
+  エージェント$i$は，将来の時刻$t_c+T$における$\forall v\in V$の期待値$E^i(L_{t_c+T}(v))$を，
+  以下の式に従って求める．
+  %
+  \begin{equation}\label{eq:estimation}
+    E^i(L_{t_c+T}(v)) = p(v) \times \{(t_c+T)-t^v_{vis}\}
+  \end{equation}
+  %
+  ここで，$T>0$は$i$がどの程度先の未来を推定するかを指定するパラメータである．
   
-  \subsubsection{補正係数$K$の導入}
+  \subsubsection{予測の自律的補正学習}
+  \ref{sec:predict}で説明した未来のイベント量の予測を行った後，
+  エージェント$i$は式(\ref{eq:fulfill})を確認する．
+  しかし，この式(\ref{eq:fulfill})は$T$に対して単調増加であるため，
+  この推定は，均一な作業量に基づく理想的な場合であり，
+  他エージェントによる努力(巡回)は無視されている．
+  特に，$i$がエネルギー節約や充電のために巡回を停止していても，
+  他エージェントは要求値$\Dreq$を維持しようとする．
+  さらに，各エージェントは異なる特徴を持つ場所を訪問するため，
+  他エージェントによる努力は，個々の視点によって明らかに異なる．
+  したがって，エージェントは，エネルギー節約行動中における他エージェントの
+  努力の可能性を学習する必要がある．
+  \par
+
+  これを調整するために，学習パラメータ$K^i$を$\forall i\in \AgentSet$に導入する．
+  そして，エージェント$i$は，式(\ref{eq:fulfill})の代わりに，
+  以下の式を用いて要求条件を満たしているかを判断する．
+  % 
+  \begin{equation}\label{eq:revised}
+    \sum_{v \in V} E^i(L_{t_c+T}(v)) \div K^i \leq \Dreq
+  \end{equation} 
+  %
+  さらに，$K^i$は個々に次の式に従って更新される．
+  %
+  \begin{equation}
+    \begin{cases}
+      K^i \gets (1 - \alpha_k)K^i + \alpha_k\dfrac{\Dreq}{E^i(D_t)}
+      K^i & (E^i(D_t) \leq \Dreq \textrm{ のとき})\\
+      K^i \gets K^i - \left( \dfrac{E^i(D_t)}{\Dreq} - 1 \right) 
+      & (E^i(D_t) > \Dreq \textrm{ のとき})
+    \end{cases}
+    \label{eq:ParameterK}
+  \end{equation}
+  %
+  ここで，$t$におけるイベント量の推定値は$E^i(D_t)=\sum_{v\in V} E^i(L_t(v))$で定義され，
+  $\alpha_k>0$は学習率である．
+  $K^i$がいつ更新されるかは，\ref{sec:changeEnergySaving}で説明する．
+
+
+  \begin{algorithm}
+    \caption{{\sf PLength}: To decide pausing time-length.}\label{alg:PausingTime}
+    \begin{algorithmic}[1]
+      \REQUIRE $\PausingInt > 0$, $\PauseTimeFactor=0$, $T_\PauseTimeFactor > 0$
+      \WHILE {$\PauseTimeFactor \leq T_\PauseTimeFactor$} 
+      \STATE $T\leftarrow (\PauseTimeFactor+1)\cdot\PausingInt$ // $T$ is
+      used in Formula~(\ref{eq:revised})
+      \IF {Formula~(\ref{eq:revised}) holds}
+      \STATE $\PauseTimeFactor \leftarrow \PauseTimeFactor+1$
+      \ELSE
+      \STATE break
+      \ENDIF
+      \ENDWHILE
+      \STATE // エージェントは待機時間$\PauseTimeFactor\cdot\PausingInt$の{\em Pausing}を行う
+      \STATE // もし$\PauseTimeFactor=0$の場合, エージェントは即座に充電基地を出発し，巡回を再開する
+      \STATE return $\PauseTimeFactor\cdot\PausingInt$.
+    \end{algorithmic}
+  \end{algorithm}
+
+
+  \subsubsection{エネルギー節約行動の修正}
+  \label{sec:changeEnergySaving}
+  ここでは，より多くのエネルギーを削減するための，
+  \ref{sec:Homing}と\ref{sec:Pausing}で説明したエネルギー節約行動の修正点について説明する．
+  AMTDS/ESCでは，時刻$t$に充電が完了すると，エージェント$i$が要求条件(式(\ref{eq:fulfill}))を満たす場合，
+  $i$は固定の待機時間$PausingInt$ステップ{\em Pausing}を行っていた．
+  \par
+
+  しかし，提案手法では，エージェントは推定状態の条件に応じて可変の待機時間をとる．
+  $i$は以下で説明する可変長の{\em Pausing}を確率$P_i(t)$で行い，$t$で充電を完了する．
+  ただし，例外として，$i$は{\em Homing}によって充電基地$v_{base}$に戻ったときのみ，
+  $P_i(t)$を計算せずに，常に可変長の{\em Pausing}を行う．
+  これは，{\em Homing}のみでは，エージェントによる，「イベント処理$\rightarrow$充電$\rightarrow$イベント処理$\rightarrow\cdots$」
+  のサイクルが短縮しただけで，エネルギー消費量にはあまり影響しない．
+  既に環境が要求条件を満たしていて，自分は余力があっても充電基地に戻るべきと判断し{\em Homing}を行っているため，
+  {\em Pausing}を行うことは自然であり，エネルギー消費量の減少が見込める．
+  \par
+
+  可変長の{\em Pausing}について説明する．
+  まず，$i$は待機時間を以下のように決定する(Algorithm~\ref{alg:PausingTime}の\textsf{PLength}参照)．
+  初期状態では，エージェント$i$は$\PauseTimeFactor=0$，$T=\PausingInt$と設定する．
+  時刻$t$にバッテリが満充電になると，$i$は要求充足度をチェックし(式(\ref{eq:revised}))，
+  満たしていない場合は，$i$は直ちに充電基地から出発し，巡回を再開する．
+  つまり，待機時間は0となる．
+  満たしている場合は，$\PauseTimeFactor$を1だけインクリメントし，
+  $T \leftarrow (\PauseTimeFactor+1)\cdot \PausingInt$とセットする．
+  次に，$i$は再び要求度をチェックし，待機時間を決定するか，
+  $\PauseTimeFactor=T_\PauseTimeFactor$となるまでこの操作を繰り返す．
+  ただし，$T_\PauseTimeFactor$はこの反復の最大値である．
+  その後，$i$は$\PauseTimeFactor\cdot\PausingInt$ステップだけ{\em Pausing}を行う．
+  エージェントはこの可変長の{\em Pausing}の後は，必ず充電基地を出発する．
+  \par
+
+  前述したように，エージェント$i$が{\em Homing}で充電基地に戻る場合，AMTDS/ESCとは異なり，
+  充電完了後に必ず可変長の{\em Pausing}を行う．
+  この際に，上記のアルゴリズムによって待機時間が0になる可能性もなる．
+  以下では，可変長の{\em Pausing}を単に{\em Pausing}と呼ぶ．
+
+  \subsubsection{不要なエージェントの排除}
+
+
+
   
-  \subsubsection{未来のイベント発生量の予測}
+
+
+
+
   
-  \subsection{AMTDS for energy saving under the requirement with learning of  event probabilities (AMTDS/ERL)}
+  \subsection{AMTDS for energy saving under the requirement with communications (AMTDS/ERC)}
   
   \subsubsection{イベント発生量の予測に使用するノードの範囲の変更}
   
@@ -649,7 +785,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   \subsubsection{実験3: エージェント数減少による性能の変化}
 
-  \subsubsection{実験4: $K^i$の降順にエージェント数を減少させたときの性能の変化}
+  \subsubsection{実験4: $\Dreq$の変化による性能の変化}
 
   \subsection{AMTDS/ERCについての実験結果}
   \label{result_ERC}

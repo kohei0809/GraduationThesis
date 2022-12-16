@@ -67,40 +67,50 @@
 \newlabel{Imp}{{25}{11}}
 \newlabel{pi(t)}{{26}{11}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}帰還動作 ({\em  Homing})}{11}{}\protected@file@percent }
+\newlabel{sec:Homing}{{4.4.3}{11}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4}待機動作 ({\em  Pausing})}{11}{}\protected@file@percent }
+\newlabel{sec:Pausing}{{4.4.4}{11}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}提案手法}{12}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}AMTDS for energy saving under the requirement (AMTDS/ER)}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}HomingとPausingの組み合わせ}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}補正係数$K$の導入}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}未来のイベント発生量の予測}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}AMTDS for energy saving under the requirement with learning of event probabilities (AMTDS/ERL)}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}イベント発生量の予測に使用するノードの範囲の変更}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}補正係数$K^i$の更新方法の変更}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}評価実験}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}実験環境}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}AMTDS/ERについての実験結果}{12}{}\protected@file@percent }
-\newlabel{result_ER}{{6.2}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}実験1: 性能評価}{12}{}\protected@file@percent }
-\newlabel{ex:ER1}{{6.2.1}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}実験2: 環境の変化による性能の違い}{12}{}\protected@file@percent }
-\newlabel{ex:ER2}{{6.2.2}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}実験3: エージェント数減少による性能の変化}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.4}実験4: $K^i$の降順にエージェント数を減少させたときの性能の変化}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}AMTDS/ERCについての実験結果}{12}{}\protected@file@percent }
-\newlabel{result_ERC}{{6.3}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.1}実験5: 性能評価}{12}{}\protected@file@percent }
-\newlabel{ex:ERC1}{{6.3.1}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.2}実験6: 環境の変化による性能の違い}{12}{}\protected@file@percent }
-\newlabel{ex:ERC2}{{6.3.2}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.3}実験7: エージェント数減少による性能の変化}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.4}実験8: $K^i$の降順にエージェント数を減少させたときの性能の変化}{12}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}結論}{12}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces エージェントに関するパラメータ}}{13}{}\protected@file@percent }
-\newlabel{tb:1}{{1}{13}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces 目標決定戦略のパラメーター}}{13}{}\protected@file@percent }
-\newlabel{tb:2}{{2}{13}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces エネルギー節約行動に関するパラメーター}}{13}{}\protected@file@percent }
-\newlabel{tb:3}{{3}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}未来のイベント量の予測}{12}{}\protected@file@percent }
+\newlabel{sec:predict}{{5.1.1}{12}}
+\newlabel{eq:estimation}{{28}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}予測の自律的補正学習}{12}{}\protected@file@percent }
+\newlabel{eq:revised}{{29}{13}}
+\newlabel{eq:ParameterK}{{30}{13}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces {\sf  PLength}: To decide pausing time-length.}}{13}{}\protected@file@percent }
+\newlabel{alg:PausingTime}{{1}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}エネルギー節約行動の修正}{13}{}\protected@file@percent }
+\newlabel{sec:changeEnergySaving}{{5.1.3}{13}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces エージェントに関するパラメータ}}{15}{}\protected@file@percent }
+\newlabel{tb:1}{{1}{15}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces 目標決定戦略のパラメーター}}{15}{}\protected@file@percent }
+\newlabel{tb:2}{{2}{15}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces エネルギー節約行動に関するパラメーター}}{15}{}\protected@file@percent }
+\newlabel{tb:3}{{3}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}不要なエージェントの排除}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}AMTDS for energy saving under the requirement with communications (AMTDS/ERC)}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}イベント発生量の予測に使用するノードの範囲の変更}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}補正係数$K^i$の更新方法の変更}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}評価実験}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}実験環境}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}AMTDS/ERについての実験結果}{16}{}\protected@file@percent }
+\newlabel{result_ER}{{6.2}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}実験1: 性能評価}{16}{}\protected@file@percent }
+\newlabel{ex:ER1}{{6.2.1}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}実験2: 環境の変化による性能の違い}{16}{}\protected@file@percent }
+\newlabel{ex:ER2}{{6.2.2}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}実験3: エージェント数減少による性能の変化}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.4}実験4: ${D_{\it  req}}$の変化による性能の変化}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}AMTDS/ERCについての実験結果}{16}{}\protected@file@percent }
+\newlabel{result_ERC}{{6.3}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.1}実験5: 性能評価}{16}{}\protected@file@percent }
+\newlabel{ex:ERC1}{{6.3.1}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.2}実験6: 環境の変化による性能の違い}{16}{}\protected@file@percent }
+\newlabel{ex:ERC2}{{6.3.2}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.3}実験7: エージェント数減少による性能の変化}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.4}実験8: $K^i$の降順にエージェント数を減少させたときの性能の変化}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}結論}{16}{}\protected@file@percent }
 \bibstyle{junsrt}
 \bibdata{ref}
 \bibcite{Kim2016}{1}
@@ -119,4 +129,4 @@
 \bibcite{Yamauchi2022}{14}
 \bibcite{Satish2017}{15}
 \bibcite{sugiyama2015}{16}
-\gdef \@abspage@last{19}
+\gdef \@abspage@last{22}
