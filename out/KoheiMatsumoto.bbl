@@ -106,9 +106,18 @@ Hang Ma Jiaoyang Li~TK Satish and Kumar~Sven Koenig.
   tasks.
 \newblock 2017.
 
-\bibitem{sugiyama2015}
-杉山歩未, 菅原俊治.
-\newblock 動的環境におけるマルチエージェント巡回清掃の自律的な戦略学習の提案.
-\newblock 電子情報通信学会論文誌 D, Vol.~98, No.~6, pp. 862--872, 2015.
+\bibitem{Sugiyama2015meta}
+Ayumi Sugiyama and Toshiharu Sugawara.
+\newblock Meta-strategy for cooperative tasks with learning of environments in
+  multi-agent continuous tasks.
+\newblock In {\em Proceedings of the 30th Annual ACM Symposium on Applied
+  Computing}, pp. 494--500, 2015.
+
+\bibitem{Sugiyama2019}
+Ayumi Sugiyama, Vourchteang Sea, and Toshiharu Sugawara.
+\newblock Emergence of divisional cooperation with negotiation and re-learning
+  and evaluation of flexibility in continuous cooperative patrol problem.
+\newblock {\em Knowledge and Information Systems}, Vol.~60, No.~3, pp.
+  1587--1609, 2019.
 
 \end{thebibliography}

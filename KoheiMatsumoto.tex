@@ -411,7 +411,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   特に，本研究のような清掃問題においては，イベントであるごみの発生確率を，
   エージェントが巡回しながら自ら学習するほうがより実用的である．
   そこで，AMTDSに環境のイベント発生確率の学習を加えた，
-  AMTDS with learning of dirt accumulation (AMTDS/LD) \cite{sugiyama2015}が提案された．
+  AMTDS with learning of dirt accumulation (AMTDS/LD) \cite{Sugiyama2015meta}が提案された．
   AMTDS/LDでは，$p^i(v)$の学習アルゴリズムの提案が行われた．
   以下でこのアルゴリズムについて説明する．
   \par
@@ -439,8 +439,158 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   \subsection{AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}
   \red{後で書く}
-
+  AMTDS/LDでは，エージェント間の交渉を用いずに，$p^i(v)$による間接的なコミュニケーションを用いて，
+  エージェント間の分業を促進した．
+  しかし，間接的なコミュニケーションでの効率改善には限界があり，エージェントが停止した場合などの環境変化に対応できない．
+  そのため，エージェントに責任ノード集合$V^i_R$を導入し，そのサイズを調整するエージェント間の交渉をAMTDS/LDに追加した，
+  AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC) \cite{Sugiyama2019}
+  が提案された．
+  領域分割の手法と大きく異なる点は，AMTDS/EDCでは，エージェントの責任ノードを交渉によって直接決定するのではなく，
+  それぞれの環境学習によって，各自が判断する点である．
+  このことにより，エージェントの交換する情報が少なくなり，交渉の複雑さを抑制することができる．
+  この手法により，環境の変化に対する頑健性を高め，全体の効率をさらに改善した．
+  この節では，新たに導入した$V^i_R$と，エージェント間で行う交渉について説明する．
   
+  \subsubsection{エージェント間の交渉に用いる情報}
+  \label{communicationInformation}
+  前述のとおり，AMTDS/EDCでは，エージェント$i$は自身の責任ノード集合$V^i_R(\subset V)$を持ち，
+  $V^i_R$はそのエージェントの重要度$p^i(v)$の降順に$N^i_R$個のノード集合と定める．
+  $V^i_R$，$N^i_R$の初期値はそれぞれ$V$，$|V|$と定める．
+  AMTDSやAMTDS/LDとは異なり，AMTDS/EDCでは，PGSやBNPSを用いて次の目標ノード$v^i_{tar}$を決定する際，
+  環境全体のノード集合$V$ではなく，$V^i_R$を用いる。
+  これにより，選択対象のノードを減らし，分業をさらに促進することができる．
+  エージェントが充電基地に戻るまでの間に，充電基地に戻るまでの環境の学習により，
+  $p^i(v)$の値がエージェント間の交渉により$N^i_R$の値が更新されている．
+  このため，$i$は充電基地に戻った際，自身の責任ノードの集合$V^i_R$を
+  更新された$p^i(v)$，$N^i_R$を用いて再定義する．
+  ここで，$p^i(v)$の値が同じノードが複数ある場合，ランダムに並べられる．
+  \par
+
+  エージェントは交渉に用いる次の2つの情報を計算する．
+  1つは，エージェントの責任ノード集合の重要度の総和$p^i_{sum}$である．
+  $p^i_{sum}$の値は以下の式で計算される．
+  %
+  \begin{equation}
+    p^i_{sum} = \sum_{v \in V^i_R} p^i(v)
+  \end{equation}
+  %
+  この値は，責任ノードのイベント発生確率の総和であるため，
+  この値が大きいほどそのエージェントはタスクを多く持っているといえる．
+  \par
+
+  もう1つは，エージェントの責任ノード集合$V^i_R$の重心$C^i = (x^i_c, y^i_c)$である．
+  $C^i$は以下の式で$x^i_c, y^i_c$を計算し，これに最も近いノードを重心ノードと定める．
+  %
+  \begin{eqnarray}
+    x^i_c = \sum_{v \in V^i_R} \dfrac{p^i(v)}{p^i_{sum}}x_v \\
+    y^i_c = \sum_{v \in V^i_R} \dfrac{p^i(v)}{p^i_{sum}}y_v
+  \end{eqnarray}
+  %
+  最短距離$d(v_i, v_j)$に関して，$d(C^i, v) < d(C^j, v)$のとき，
+  ノード$v$を訪れるコストは，エージェント$i$の方がエージェント$j$よりも小さい，
+  つまり，この場合は，$i$が$v$を担当した方が移動のコストが少なく，望ましいといえる．
+
+  \subsubsection{エージェント間の交渉}
+  各エージェントは\ref{communicationInformation}で示した情報を用いて，
+  エージェント間でNegotiation for Balancing Tasks (公平性のための交渉)と
+  Negotiation for Trade-Off of Reaponsibility (改善のための交渉)の
+  2種類の交渉を行う．
+  エージェント間の交渉は，通信コストの抑制のため，1対1の通信のみとし，
+  マネージャーなどを介した複数のエージェント間での交渉は用いない．
+  エージェントは以下に述べる2種類の交渉を行うことで，$V^i_R$の改善による性能向上と，
+  $p^i(v)$の最適化による分業の促進を図る．
+  以下で，2種類の交渉について詳細に説明する．
+  %
+  \begin{description}
+    \item[Negotiation for Balancing Tasks (公平性のための交渉)]\mbox{}\\
+      この交渉は，エージェント間のタスクを公平にし，
+      一部のエージェントへのタスクの偏りを抑制することを目的としている．
+      このため，交渉相手のエージェントよりも自身の重要度の総和が大きい場合，
+      自身の担当ノードの重要度の小さいノードの重要度の一部を相手に受け渡す．
+      具体的な手段としては，まずエージェント$i$と$j$が以下の式を満たすかを判断する．
+      %
+      \begin{equation}
+        1 + T_c < \dfrac{P^i_{sum}}{p^j_{sum}}
+      \end{equation}
+      %
+      この式を満たした場合，$i$と$j$は公平性のための交渉を行う．
+      ここで，$T_c(0 < T_c \ll 1)$はエージェント間のタスクの差の閾値である．
+      $i$は，$i$よりも$j$の方が距離が近いノードを$p^i(v)$の降順に並べた
+      ノード集合$V^{i, j}_R$を以下の式で定義する．
+      %
+      \begin{equation}
+        V^{i, j}_R = {v \in V^i_R|d(C^i, v) > d(C^j, v)}  
+      \end{equation}
+      %
+      $i$は$V^{i, j}_R$から，$p^i(v)$の小さい$e_g$個のノードにおいて，
+      以下の式に従って$i$の重要度の一部を$j$に受け渡す．
+      %
+      \begin{eqnarray}
+        p^j(v) \gets p^j(v) + p^i(v) \times \delta \\
+        p^i(v) \gets p^i(v) \times \delta
+      \end{eqnarray}
+      %
+      ここで，$\delta(0 < \delta < 1)$は重要度を受け渡す割合である．
+      また，$i$から$j$に受け渡す個数を表す$e_g$を，以下の式に従って求める．
+      %
+      \begin{equation}
+        e_g = \min(N^{i, j}_R - 1, N^i_{gmax}, \lfloor \dfrac{p^i_{sum}}{p^j_{sum}} \times \gamma \rfloor)
+      \end{equation}
+      %
+      ここで，$N^i_{gmax}(0 < N^i_{gmax} < N^i_R)$は，
+      急激な変化を抑制するための受け渡すノード数の上限であり，
+      $\gamma$は受け渡すノード数を調整するためのパラメータである．
+      重要度の受け渡し後，$i$と$j$のノード集合のサイズ$N^i_R$，$N^j_R$を以下の式に従って更新する．
+      %
+      \begin{eqnarray}
+        N^i_R \gets N^i_R - e_g \\
+        N^j_R \gets \min(|V|, N^j_R+e_g)
+      \end{eqnarray}
+      %
+
+    \item[Negotiation for Trade-Off of Reaponsibility (改善のための交渉)]\mbox{}\\
+      この交渉は，エージェントのタスクを交換し，
+      全体への影響を抑えながらエージェントの巡回コストを減らし，
+      全体の効率を高めることを目的としている．
+      このため，自身とほぼ同じ重要度を持つエージェントに対し，
+      自身よりも移動距離が短いノードをお互いに受け渡す．
+      具体的な手順としては，まずエージェント$i$と$j$が以下の式を満たすかを判断する．
+      %
+      \begin{equation}
+        1 - T_c < \dfrac{p^i_{sum}}{p^j_{sum}} < 1 + T_c
+      \end{equation}
+      %
+      この式を満たした場合，$i$と$j$は改善のための交渉を行う，
+      ここで，$T_c(0 < T_C \ll 1)$はエージェント間のタスクの差の基準値である．
+      $i$の重要度の一部を$j$受け渡す．
+      $i$から$j$に受け渡す個数を示す$e_g$は以下の式に従って求められる．
+      %
+      \begin{equation}
+        e_g = \min(N^i_R-1, N^i_{cmax})
+      \end{equation}
+      %
+      ここで，$N^i_{cmax}(0 < N^i_{cmax} < N^i_R)$は，
+      急激な変化を抑制するための受け渡すノード数の上限である．
+      この交渉は責任ノードの調整をする目的で行うことから，
+      $N-i_{cmax}$の値は$N^i_{gmax}$よりも小さい．
+      重要度の受け渡し後，公平性のための交渉と同様に，
+      $N^i_R$，$N^j_R$を更新する．
+      この交渉は双方向に行われるため，$j$から$i$にも責任ノードの一部が受け渡される．
+
+  \end{description}
+  %
+  この手法により，AMTDS/LDに比べ，タスクが均一化されたことや，
+  エージェントの担当領域の偏りが増し，分業が促進されたことで，
+  全体としての効率は向上した．
+  これは，エージェントのタスク量が同等になったことで，
+  カバーしきれないタスクが減少したことに加え，
+  エージェントの担当領域の偏りの増加により，移動コストが減少したためである．
+  また，この手法により，エージェントが自律的に複数エージェントのチームを組み，
+  より広い領域を巡回するgeneralistsと，
+  より狭い領域を巡回するspecialistsに分かれた．
+  このことにより，AMTDS/LDに比べ，環境の変化に対し，
+  より柔軟に対応できるようになった．
+
 
   \begin{figure}
     \centering
