@@ -30,13 +30,13 @@
 \contentsline {subsection}{\numberline {6.1}実験環境}{18}{}%
 \contentsline {subsection}{\numberline {6.2}AMTDS/ERについての実験結果・考察}{19}{}%
 \contentsline {subsubsection}{\numberline {6.2.1}実験1: 性能評価}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.2}行動の解析}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.3}実験2: 異なる環境による性能評価}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.4}実験3: ${D_{\it req}}$の変化による性能の変化}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.5}実験4: エージェント数減少による性能の変化}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.6}実験5: 不要なエージェントの停止}{19}{}%
-\contentsline {subsection}{\numberline {6.3}AMTDS/ERCについての実験結果}{19}{}%
-\contentsline {subsubsection}{\numberline {6.3.1}実験5: 性能評価}{19}{}%
-\contentsline {subsubsection}{\numberline {6.3.2}実験6: 環境の変化による性能の違い}{19}{}%
-\contentsline {subsubsection}{\numberline {6.3.3}実験7: エージェント数減少による性能の変化}{19}{}%
-\contentsline {section}{\numberline {7}結論}{19}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}実験2: 異なる環境による性能評価}{19}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}行動の解析}{22}{}%
+\contentsline {subsubsection}{\numberline {6.2.4}実験3: ${D_{\it req}}$の変化による性能の変化}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.5}実験4: エージェント数減少による性能の変化}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.6}実験5: 不要なエージェントの停止}{24}{}%
+\contentsline {subsection}{\numberline {6.3}AMTDS/ERCについての実験結果}{24}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}実験5: 性能評価}{24}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}実験6: 環境の変化による性能の違い}{24}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}実験7: エージェント数減少による性能の変化}{24}{}%
+\contentsline {section}{\numberline {7}結論}{24}{}%

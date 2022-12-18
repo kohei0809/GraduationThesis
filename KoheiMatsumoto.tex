@@ -68,8 +68,7 @@
 \end{abstract}
 
 \vspace*{1cm}\par
-\section{序論}
-\label{sec:introduction}
+\section{序論}\label{sec:introduction}
 \red{後で追記する}
 \par
 
@@ -149,8 +148,7 @@ MACPPとその応用に関する研究は数多く行われている\cite{Hattor
 そこで，本研究では，個々の視点からの学習を導入することで，品質要求を満たしながら，さらにエネルギー消費を削減した．
 さらに，複数のエージェントを停止する手法を提案し，消費エネルギーの削減を図った．
 
-\section{モデルの定義}
-\label{sec:MACPP_model}
+\section{モデルの定義}\label{sec:MACPP_model}
 本研究は，\cite{Wu2019}で提案された清掃問題におけるエネルギー節約手法である，
 {\em adaptive meta-target decision strategy for energy saving and cleanliness} (AMTDS/ESC)
 の拡張である．
@@ -301,8 +299,7 @@ MACPPではこれを減らすことが目的となる．
 これらの手法では，エージェントは目標ノード$v^i_{tar}$を決定する目標決定戦略と，それまでの経路を生成する経路生成戦略に従い，環境内を巡回する．
 $v^i_{tar}$に到着した後，再び目標戦略に従って新しい目標ノードを決定するといったサイクルを各エージェントが繰り返し，継続的な環境巡回を行う．
 
-\subsection{Adaptive meta target decision strategy (AMTDS)}
-\label{subsec:AMTDS}
+\subsection{Adaptive meta target decision strategy (AMTDS)}\label{subsec:AMTDS}
 この節では，AMTDS/LD，AMTDS/ESCなどの手法のベースとなったAdaptive meta target decision strategy (AMTDS) \cite{Yoneda2013}について説明する．
 AMTDSは単純な複数の目標決定戦略の中から，強化学習アルゴリズムであるQ学習によって，各エージェントが自身にとって最適な戦略を選択するメタ戦略学習である．
 また，この手法では環境内のすべてのノード$v$におけるイベント発生確率$p(v)$は既知であるという仮定を導入しており，$p^i(v) = p(v)$とする．
@@ -314,8 +311,7 @@ AMTDSは単純な複数の目標決定戦略の中から，強化学習アルゴ
 目標決定戦略については\ref{target_strategy}，経路生成戦略については\ref{route_strategy}で詳細を説明する．
 $v^i_{tar}$に到着後，$v^i_{tar}$の決定時刻$t_0$から$d_{travel}$ステップ後に$v^i_{tar}$に到着するまでの1ステップあたりのイベント処理量を以下の式で計算する．
 %
-\begin{equation}
-  \label{eq:reward_AMTDS}
+\begin{equation}\label{eq:reward_AMTDS}
   u_{t_0,t_0+d_{travel}} = \dfrac{\displaystyle\sum_{t_0+1 \leq t \leq t_0+d_{travel}} L_t(v^i_t)}{d_{travel}}
 \end{equation}
 %
@@ -334,8 +330,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 \end{equation}
 %
 
-\subsubsection{目標決定戦略}
-\label{target_strategy}
+\subsubsection{目標決定戦略}\label{target_strategy}
 \cite{Yoneda2013}では，各エージェントに以下の4つの基本的な目標決定戦略を$S$として与えている．
 それぞれの戦略は単独でも使用可能な独立したものとなっている．
 単独での使用を想定し，競合回避のためにランダム性を取り入れたものも存在する．
@@ -376,8 +371,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 \end{description}
 %
 
-\subsubsection{経路生成戦略}
-  \label{route_strategy}
+\subsubsection{経路生成戦略}\label{route_strategy}
   経路生成戦略は{\em gradual path generation} (GPG)を用いる．
   GPGでは，まず$v^i_{tar}$までの最短経路をダイクストラ法を用いて生成し，
   その経路近辺でイベントが発生しやすいノードを経由するように経路を変更する．
@@ -405,8 +399,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \end{equation}
   %
 
-  \subsection{AMTDS with learning of dirt accumulation (AMTDS/LD)}
-  \label{subsec:AMTDS/LD}
+  \subsection{AMTDS with learning of dirt accumulation (AMTDS/LD)}\label{subsec:AMTDS/LD}
   AMTDSでは，エージェントが環境内のすべてのノード$v$において，
   イベント発生確率$p(v)$をあらかじめ把握しているという仮定を導入した．
   しかし，実際の利用を想定すると，イベント発生確率が既知であることはまれである．
@@ -452,8 +445,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   この手法により，環境の変化に対する頑健性を高め，全体の効率をさらに改善した．
   この節では，新たに導入した$V^i_R$と，エージェント間で行う交渉について説明する．
   
-  \subsubsection{エージェント間の交渉に用いる情報}
-  \label{communicationInformation}
+  \subsubsection{エージェント間の交渉に用いる情報}\label{communicationInformation}
   前述のとおり，AMTDS/EDCでは，エージェント$i$は自身の責任ノード集合$V^i_R(\subset V)$を持ち，
   $V^i_R$はそのエージェントの重要度$p^i(v)$の降順に$N^i_R$個のノード集合と定める．
   $V^i_R$，$N^i_R$の初期値はそれぞれ$V$，$|V|$と定める．
@@ -623,22 +615,19 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   エージェントは，不要と思われる行動を排除するために，{\em Homing}または{\em Pausing}の2つのエネルギー節約行動をとる．
   以下でそれぞれの詳細を説明する．
 
-  \subsubsection{要求充足の判断}
-  \label{subsec:judge}
+  \subsubsection{要求充足の判断}\label{subsec:judge}
   エージェントは，環境の現状を把握し，必要なタスクの品質と比較することで，エネルギー消費を抑える必要がある．
   しかし，どのエージェントも実際の状態を把握することができないため，定期的に推定を行う必要がある．
   そこで，エージェント$i$は，自身が持っている$p^i(v)$を用いて，
   以下の式に従って，時刻$t$における総イベント量$E^i(V_t)$を推定する．
   %
-  \begin{equation}
-    \label{eq:fulfill}
+  \begin{equation}\label{eq:fulfill}
     E^i(V_t) = \sum_{v \in V} E^i(L_t(v))
   \end{equation}
   %
   その後，要求条件を満たしているのかを判断するために，以下の式を用いている．
   %
-  \begin{equation}
-    \label{eq:requirement}
+  \begin{equation}\label{eq:requirement}
     E^i(V_t) \leq D_{req}
   \end{equation}
   %
@@ -693,8 +682,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   %
   したがって，自己重要度が低いと，エージェントのエネルギー節約行動が促進される．
 
-  \subsubsection{帰還動作 ({\em Homing})}
-  \label{sec:Homing}
+  \subsubsection{帰還動作 ({\em Homing})}\label{sec:Homing}
   {\em Homing}とは，バッテリ残量にかかわらず，巡回を中止して充電基地に戻ることで，エネルギーを節約する動作のことである．
   エージェント$i$は，充電残量が少なくなり，以下の式を満たしたとき，
   $\HomingCheck$ステップ移動するごとに要求充足度(式(\ref{eq:fulfill}))をチェックする．
@@ -711,8 +699,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   また，{\em Homing}中はイベント処理は行うが，要求充足の判定や自己重要度の計算は行わない．
   なお，充電基地から遠い地点を巡回しているエージェントがこのチェックをする前に充電基地に帰還することもありうる．
 
-  \subsubsection{待機動作 ({\em Pausing})}
-  \label{sec:Pausing}
+  \subsubsection{待機動作 ({\em Pausing})}\label{sec:Pausing}
   {\em Pausing}とは，充電完了後，エージェントはすぐに巡回を再開せずに，待機する動作のことである．
   エージェント$i$が時刻$t$に充電が完了したとき，要求充足度(式(\ref{eq:fulfill}))をチェックし，
   満たす場合は一定の休止時間$\PausingInt$ステップ充電基地で待機する．
@@ -738,8 +725,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   また，エージェント数を減らす手法についても説明する\red{ここをもっとちゃんと書く}
   
 
-  \subsubsection{未来のイベント量の予測}
-  \label{sec:predict}
+  \subsubsection{未来のイベント量の予測}\label{sec:predict}
   AMTDS/ERでは，\ref{sec:changeEnergySaving}項で詳しく説明するが，
   {\em Pausing}による待機時間を可変に変更する．
   その際に，未来のイベント量の予測をする必要があるため，その方法について説明する．
@@ -778,14 +764,13 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   %
   さらに，$K^i$は個々に次の式に従って更新される．
   %
-  \begin{equation}
+  \begin{equation}\label{eq:ParameterK}
     \begin{cases}
       K^i \gets (1 - \alpha_k)K^i + \alpha_k\dfrac{\Dreq}{E^i(D_t)}
       K^i & (E^i(D_t) \leq \Dreq \textrm{ のとき})\\
       K^i \gets K^i - \left( \dfrac{E^i(D_t)}{\Dreq} - 1 \right) 
       & (E^i(D_t) > \Dreq \textrm{ のとき})
     \end{cases}
-    \label{eq:ParameterK}
   \end{equation}
   %
   ここで，$t$におけるイベント量の推定値は$E^i(D_t)=\sum_{v\in V} E^i(L_t(v))$で定義され，
@@ -813,8 +798,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \end{algorithm}
 
 
-  \subsubsection{エネルギー節約行動の修正}
-  \label{sec:changeEnergySaving}
+  \subsubsection{エネルギー節約行動の修正}\label{sec:changeEnergySaving}
   ここでは，より多くのエネルギーを削減するための，
   \ref{sec:Homing}項と\ref{sec:Pausing}項で説明したエネルギー節約行動の修正点について説明する．
   AMTDS/ESCでは，時刻$t$に充電が完了すると，エージェント$i$が要求条件(式(\ref{eq:fulfill}))を満たす場合，
@@ -947,7 +931,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   
   \section{評価実験}
   この章では，提案手法である，AMTDS/ERやAMTDS/ERCと，
-  エージェントがエネルギー節約行動をとらない手法であるAMTDS\cite{Yoneda2013}やAMTDS/EDC\cite{Sugiyama2019}や，
+  エージェントがエネルギー節約行動をとらない手法であるAMTDS\cite{Yoneda2013}とAMTDS/EDC\cite{Sugiyama2019}や，
   エージェントがエネルギー節約行動を調整するパラメータを学習しない手法であるAMTDS/ESC\cite{Wu2019}を比較する実験を行い，
   提案手法の有効性を検証する．
   評価指標$D(s)$と$C(s)$を調査することにより，提案手法が他の手法と比べて，
@@ -1001,7 +985,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   図\ref{subfig:env2}の環境$G_2=(V_2, E_2)$は4つの部屋があるが，各部屋の大きさは少し広くなっている．
   イベント発生確率も図\ref{subfig:env1}と同様に，色を使って式(\ref{eq:prob})で指定する．
-  この環境は図\ref{subfig:env1}と比べると，環境全体のイベント発生量は少ないが，
+  この環境は図\ref{subfig:env1}と比べると，イベント発生確率の総和は少ないが，
   その分エージェントがエネルギー節約行動を行う必要がある．
   \par
   
@@ -1017,21 +1001,164 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   本実験では，1回の試行ステップ数は評価実験によって異なるが，全ての評価実験の$D(s)$と$C(s)$の値は，
   独立した50回の試行による平均値である．
 
-
-
+  \subsection{AMTDS/ERについての実験結果・考察}\label{result_ER}
+  提案手法であるAMTDS/ERとについての評価実験を，エネルギー節約行動を行わないAMTDSや，
+  エネルギー節約行動を調整するパラメータを学習しないAMTDS/ESCと比較しながら行った．
+  この節では，複数の条件下での実験結果を，評価指標である$D(s)$や$C(s)$，さらには，必要に応じて他の指標とも比較していく．
 
   
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_ER_Office_600.png}
+    \caption{$D(s)$の時間推移(実験1)}
+    \label{fig:ds_ER_Office}
+    \vspace{12pt}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_ER_Office_600.png}
+    \caption{$C(s)$の時間推移(実験1)}
+    \label{fig:cs_ER_Office}
+  \end{figure}
   
-  \subsection{AMTDS/ERについての実験結果・考察}
-  \label{result_ER}
+
+  \subsubsection{実験1: 性能評価}\label{ex:ER1}
+  図\ref{fig:ds_ER_Office}，\ref{fig:cs_ER_Office}は，環境1で実験を行い，
+  それぞれ3600ステップごとのイベント残存時間の総和$D(s)$と，エージェントの総エネルギー消費量$C(s)$の時間推移を示したものである．
+  なお，図\ref{fig:ds_ER_Office}では，$\Dreq=600$なので，エージェントは$D(s)\leq 2160000$ ($=3600\Dreq$)を保つことが
+  要求条件であることに注意されたい．
+  図\ref{fig:ds_ER_Office}に示すように，全ての手法が品質要求を満たしていることがわかる．
+  特に，従来手法であるAMTDSとAMTDS/ESCは，$D(s)$が要求値よりもかなり小さい値を維持している．
+  \par
+
+  しかし，これは要求値以上の巡回による過剰なエネルギー消費を示唆しており，
+  これを図\ref{fig:cs_ER_Office}で確認することができる．
+  この図から，提案手法AMTDS/ERは，AMTDSに比べて$D(s)$は約$40.3\%$増加しているが，
+  $C(s)$を約$30.9\%$削減することができた．
+  なお，このデータは2,000,000ステップから3,000,000ステップの平均値である．
+  AMTDS/ESCもエネルギー消費量を削減することはできたが，その削減効果は限られており，
+  AMTDS/ERはAMTDS/ESCよりも，$D(s)$を約$26.2\%$増加させ，$C(s)$を約$24.0\%$削減することができた．
+  これは，学習パラメータ$K^i$の導入により，各エージェントがエネルギー節約行動中の他のエージェントの巡回による効果を，
+  ある程度予測できるようになったためであると考えられる．
+
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_ER_Complex_600.png}
+    \caption{$D(s)$の時間推移(実験2)}
+    \label{fig:ds_ER_Complex}
+    \vspace{12pt}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_ER_Complex_600.png}
+    \caption{$C(s)$の時間推移(実験2)}
+    \label{fig:cs_ER_Complex}
+  \end{figure}
   
-  \subsubsection{実験1: 性能評価}
-  \label{ex:ER1}
+
+  \subsubsection{実験2: 異なる環境による性能評価}\label{ex:ER2}
+  図\ref{fig:ds_ER_Office}，\ref{fig:cs_ER_Office}は，環境2で実験を行い，
+  それぞれ3600ステップごとの$D(s)$と，$C(s)$の時間推移を示したものである．
+  実験2でも，実験1と同様な結果がみられる．
+  前述のように，環境2では，イベント発生確率の総和は環境1よりはるかに小さく，
+  エージェントは実験1よりも多くのエネルギーを削減するために，
+  より多くのエネルギー節約行動を行うことができるかを確認する．
+  図\ref{fig:ds_ER_Complex}と図\ref{fig:cs_ER_Complex}より，エージェントは，
+  要求条件を満たしながらエネルギー節約行動を徐々に増加させ，エネルギー消費を削減したことが分かり，
+  期待通りの行動をとることができた．
+  これにより，AMTDS/ERはAMTDS/ESCよりも，エネルギーを約半分しか消費していないことが分かる．
+
+
+  \begin{figure}
+    \begin{minipage}{1.0\columnwidth}
+      \centering
+      \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_ER.png}
+      \caption{エージェントごとの$K^i$と待機時間の関係(実験1)}
+      \label{fig:cscatter_ER_Office}
+    \end{minipage}
+    \\[7pt]
+    \begin{minipage}{1.0\columnwidth}
+      \centering
+      \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Complex_ER.png}
+      \caption{エージェントごとの$K^i$と待機時間の関係(実験2)}
+      \label{fig:cscatter_ER_Complex}
+    \end{minipage}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}[t]{0.48\columnwidth}
+      \centering
+      \includegraphics[keepaspectratio, width=\linewidth]{figures/al_graph_ER_Office_top.png}\\
+      \subcaption{$K^i$の上位4体}
+      \label{fig:al_ER_Office_top}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\columnwidth}
+      \centering
+      \includegraphics[keepaspectratio, width=\linewidth]{figures/al_graph_ER_Office_worst.png}\\
+      \subcaption{$K^i$下位4体}
+      \label{fig:al_ER_Office_least}
+    \end{minipage}
+    \caption{エージェントごとのイベント処理量の時間推移(実験1)}
+    \label{fig:al_ER_Office}
+  \end{figure}~\begin{figure}[t]
+      \begin{minipage}[t]{0.48\columnwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=\linewidth]{figures/al_graph_ER_Complex_top.png}\\
+        \subcaption{$K^i$上位4体}
+        \label{fig:al_ER_Complex_top}
+      \end{minipage}
+    \hfill
+      \begin{minipage}[t]{0.48\columnwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=\linewidth]{figures/al_graph_ER_Complex_worst.png}\\
+        \subcaption{$K^i$下位4体}
+        \label{fig:al_ER_Complex_least}
+      \end{minipage}
+      \caption{エージェントごとのイベント処理量の時間推移(実験2)}
+      \label{fig:al_ER_Complex}
+    \end{figure}
+
 
   \subsubsection{行動の解析}\label{sec:expAnalsis}
-  
-  \subsubsection{実験2: 異なる環境による性能評価}\label{ex:ER2}
+  この項では，実験1と実験2でのエージェントの行動を解析し，提案手法であるAMTDS/ERを定性的に評価する．
+  まず，エージェントのエージェントのエネルギー節約行動の特徴，特に各エージェントの学習パラメータ$K^i$の値に一部影響される，
+  {\em Pausing}による待機時間の総和を解析する．
+  図\ref{fig:cscatter_ER_Office}と図\ref{fig:cscatter_ER_Complex}に，
+  2,000,000ステップから3,000,000ステップでの総待機時間を計算し，
+  $\forall i\in\AgentSet$の$K^i$との関係をプロットした．
+  なお，これらの散布図は，実験と実験2からランダムに選んだ1つの実験施行で得られたデータを用いており，
+  特別な意図はない．
+  \par
 
+  これらのグラフから，エージェントが$K^i$の値が比較的大きく(例えば$K^i\geq 10$)，総待機時間が大きいものと，
+  $K^i$の値が小さく(例えば$K^i\leq 3$)，総待機時間が比較的小さいものとに大別できることが分かる．
+  前者のグループをEnergy saveグループ(ES-groupと呼ぶ)，後者のグループをBusyグループ(B-groupと呼ぶ)と名付けることにする．
+  まず，$2,000,000 \sim 3,000,000$の間の長さは1,000,000であるので，
+  800,000ステップ以上{\em Pausing}を行ったES-groupのエージェントはほとんど環境を巡回していないことが分かる．
+  200,000ステップ以下は{\em Pausing}を行っていないことになるが，$k_{charge} = 3$より，
+  このエージェントの実際の巡回は50,000ステップ以下である．
+  \par
+
+  一方，B-groupのほとんどのエージェントは，{\em Pausing}を行わなかった．
+  なお，{\em Homing}は残量に関係なく充電基地に戻るだけであり，充電時間を短縮することができる．
+  そのため，{\em Homing}は直接的にはエネルギー節約に貢献しなかった．
+  B-groupのエージェントは，要求条件を満たすために必要な巡回をほとんど行ったのに対し，
+  ES-groupのエージェントは待機時間を増やしており，このような分化が個人学習により発生したことが分かる．
+  \par
+
+  ここで図\ref{fig:al_ER_Office_top}と図\ref{fig:al_ER_Complex_top}は，ES-groupに属し$K^i$の値が大きい上位4体を，
+  図\ref{fig:al_ER_Office_least}と図\ref{fig:al_ER_Complex_least}は，B-groupに属す$K^i$の値が小さい下位4体の行動である．
+  これらの図から，どちらの環境でも，Pausingを時間と共に多くとるようになり，
+  散発的にのみ行動してイベントを処理するようになったグループと，充電時間を除いて継続的に行動し，
+  イベント処理数を時間と共に増加させたグループの行動の違いが分かる．
+  \par
+
+  なお，実験1と比べ実験2のほうが，推移の分散が大きい．これは環境の大きさに比べ，
+  B-groupのエージェント数が相対的に小さいことによるものと考えられる．
+  実際に，図\ref{fig:cscatter_ER_Office}と図\ref{fig:cscatter_ER_Complex}におけるB-groupの数の最頻値 (mode) を調べると，
+  実験1では12体，実験2では7体のエージェントがこれに対応している．
+  相対的にエージェント数が多い実験2では，多くのエージェントがES-groupとなり，
+  多くのエネルギー抑制行動がとられたことを反映している．
+  なお，上記の最頻値は，エージェント間の分業の結果により，1体ほど前後することがある．
+  
   \subsubsection{実験3: $\Dreq$の変化による性能の変化}\label{ex:ER3}
 
   \subsubsection{実験4: エージェント数減少による性能の変化}\label{ex:ER4}
@@ -1040,14 +1167,11 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   
 
-  \subsection{AMTDS/ERCについての実験結果}
-  \label{result_ERC}
+  \subsection{AMTDS/ERCについての実験結果}\label{result_ERC}
   
-  \subsubsection{実験5: 性能評価}
-  \label{ex:ERC1}
+  \subsubsection{実験5: 性能評価}\label{ex:ERC1}
   
-  \subsubsection{実験6: 環境の変化による性能の違い}
-  \label{ex:ERC2}  
+  \subsubsection{実験6: 環境の変化による性能の違い}\label{ex:ERC2}  
   
   \subsubsection{実験7: エージェント数減少による性能の変化}
 
