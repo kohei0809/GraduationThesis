@@ -69,7 +69,7 @@
 
 \vspace*{1cm}\par
 \section{序論}\label{sec:introduction}
-\red{後で追記する}
+\red{後で追記する}\\
 \par
 
 近年，ロボット技術が発達し，巡回パトロールや清掃などといった，人間が日常的に繰り返す作業や，
@@ -121,8 +121,7 @@ MACPPの研究では，複数のエージェントが協力・協調すること
 \par
 
 \section{関連研究}
-\red{後で，杉山さんの研究も追加する、領域分解についても追加(SMASH参考)}
-
+\red{後で，杉山さんの研究も追加する、領域分解についても追加(SMASH参考)}\\
 MACPPとその応用に関する研究は数多く行われている\cite{Hattori2021,Tevyashov2022,Wiandt2018,Othmani2017,Zhou2019}．
 例えば， \cite{Othmani2017}では，{\em edge Markov evolution graphs}を用いた動的環境変化のモデルを提案した．
 また，\cite{Zhou2019}では，巡回問題をベイズ適応型遷移分離部分観測可能マルコフ決定過程として定式化し，
@@ -133,7 +132,7 @@ MACPPとその応用に関する研究は数多く行われている\cite{Hattor
 効率性のみを考慮したものである．
 \cite{Yoneda2013}では，Q学習によって決定される計画戦略のもと，
 複数のエージェントが定期的に充電しながら協調して巡回するAMTDS({\em adaptive meta-target decision strategy})という手法を提案している．
-さらに，\red{ここから杉山さんの研究}．
+さらに，\red{ここから杉山さんの研究}．\\
 しかし，この研究もエネルギー消費量の削減を考慮せず，巡回の効率化を目的とした学習のみを行うものである．
 \par
 
@@ -722,7 +721,8 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \subsection{AMTDS for energy saving under the requirement (AMTDS/ER)}
   この節では，AMTDS/ESCをベースに，エージェントがそれぞれの視点で将来の環境状態を予測する方法を学習し，
   充電基地についた際に，未来の環境状態を予測し，待機時間を動的に決定する手法である，AMTDS/ERについて説明する．
-  また，エージェント数を減らす手法についても説明する\red{ここをもっとちゃんと書く}
+  また，エージェント数を減らす手法についても説明する
+  \\ \red{ここをもっとちゃんと書く}
   
 
   \subsubsection{未来のイベント量の予測}\label{sec:predict}
@@ -837,7 +837,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   \subsection{不要なエージェントの停止}\label{sec:deactivation}
   エネルギー消費抑制の観点からは，要求条件を満たした上で，環境巡回に必要なエージェント数が十分であれば，
-  たとえ必要最小台数までではなくとも，エージェントを一時的に休止するだけでなく，
+  たとえ必要最小数までではなくとも，エージェントを一時的に休止するだけでなく，
   一部のエージェントの巡回を停止することが有効である．
   さらに，これらの停止したエージェントは，他の場所で使えたり，エージェントが故障した場合のバックアップとして使用することができる．
   しかし，複雑でイベント発生確率の分布が一様でない環境では，どのエージェントを停止すれば要求条件を満たしたままでいられるかや，
@@ -863,8 +863,8 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   本実験では，不要なエージェントの停止手法として，
   関数\textsf{PLength}が呼び出された回数を比較して停止する手法(CountStop)と，
   エージェントの待機時間を比較して停止する手法(TimeStop)の2つの手法を提案する．
-  \red{英語名については要検討}
-  \red{エージェントの停止の手法についての説明、icaartと最新のやつどちらも書く}
+  \\ \red{英語名については要検討}\\
+  \red{エージェントの停止の手法についての説明、icaartと最新のやつどちらも書く}\\
 
 
   \subsubsection{CountStop}\label{sec:CountStop}
@@ -1204,6 +1204,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   相対的にエージェント数が多い実験2では，多くのエージェントがES-groupとなり，
   多くのエネルギー抑制行動がとられたことを反映している．
   なお，上記の最頻値は，エージェント間の分業の結果により，1体ほど前後することがある．
+  以上より，提案手法のAMTDS/ERは，環境と品質要求を考慮した2つのグループの構成比に分かれることができる手法であるといえる．
 
 
   \begin{figure}
@@ -1211,30 +1212,119 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
     \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_ER_Office_600&1000.png}
     \caption{$D(s)$の時間推移(実験3)}
     \label{fig:ds_ER_ChangeRequirement}
-    \vspace{12pt}
+    \hfill
     \centering
     \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_ER_Office_600&1000.png}
     \caption{$C(s)$の時間推移(実験3)}
     \label{fig:cs_ER_ChangeRequirement}
   \end{figure}
+
+  \begin{figure}
+    \centering
+    \begin{minipage}{0.85\columnwidth}
+      \centering
+      \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_ChangeRequirement_2m.png}
+      \caption{エージェントごとの$K^i$と待機時間の関係(実験3：2,000,000)}
+      \label{fig:cscatter_ChangeRequirement_2m}
+    \end{minipage}
+    \vskip\baselineskip
+    \begin{minipage}{0.85\columnwidth}
+      \centering
+      \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_ChangeRequirement_4m.png}
+      \caption{エージェントごとの$K^i$と待機時間の関係(実験3：4,000,000)}
+      \label{fig:cscatter_ChangeRequirement_4m}
+    \end{minipage}
+    \vskip\baselineskip
+    \begin{minipage}{0.85\columnwidth}
+      \centering
+      \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_ChangeRequirement_6m.png}
+      \caption{エージェントごとの$K^i$と待機時間の関係(実験3：6,000,000)}
+      \label{fig:cscatter_ChangeRequirement_6m}
+    \end{minipage}
+  \end{figure}
+
+  \begin{figure}
+    \centering
+    \begin{minipage}{0.85\columnwidth}
+      \centering
+      \includegraphics[width=0.75\hsize]{figures/al_graph_ER_ChangeRequirement_dual.png}
+      \caption{エージェントのイベント処理数の時間推移(全期間ともグループ変更)}
+      \label{fig:al_ChangeRequirement_dual}
+    \end{minipage}
+    \vskip\baselineskip
+    \begin{minipage}{0.85\columnwidth}
+      \centering
+      \includegraphics[width=0.75\hsize]{figures/al_graph_ER_ChangeRequirement_first.png}
+      \caption{エージェントのイベント処理数の時間推移(P1$\sim$P2でグループ変更)}
+      \label{fig:al_ChangeRequirement_first}
+    \end{minipage}
+    \vskip\baselineskip
+    \begin{minipage}{0.85\columnwidth}
+      \centering
+      \includegraphics[width=0.75\hsize]{figures/al_graph_ER_ChangeRequirement_second.png}
+      \caption{エージェントのイベント処理数の時間推移(P2$\sim$P3でグループ変更)}
+      \label{fig:al_ChangeRequirement_second}
+    \end{minipage}
+  \end{figure}
+
   
   \subsubsection{実験3: $\Dreq$の変化による性能の変化}\label{ex:ER3}
-  \red{途中}
   この項では，要求値$\Dreq$が途中で変化した際に，提案手法は対応できるのかを検証する．
   図\ref{fig:ds_ER_ChangeRequirement}，\ref{fig:cs_ER_ChangeRequirement}は環境2で実験を行い，
   それぞれ3,600ステップごとの$D(s)$と$C(s)$の時間推移を示したものである
-  なお，$\Dreq$は$0 \sim 2,000,000$ステップと$4,000,000 \sim 6,000,000$ステップでは1,000であり，
-  $4,000,000 \sim 6,000,000$ステップでは600と設定している．
-  つまり，エージェントは$0 \sim 2,000,000$ステップと$4,000,000 \sim 6,000,000$ステップでは$D(s) \leq 3,600,000 (= 3600\Dreq)$
-  を保ち，$4,000,000 \sim 6,000,000$ステップでは$D(s) \leq 2,160,000 (= 3600\Dreq)$を保つことが要求条件であることに注意されたい．
+  ここで，$0 \sim 2,000,000$ステップの期間をP1，$4,000,000 \sim 6,000,000$ステップの期間をP2，
+  $4,000,000 \sim 6,000,000$ステップの期間をP3として，
+  $\Dreq$はP1とP3では1,000であり，P2では600と設定している．
+  つまり，エージェントはP1とP3では$D(s) \leq 3,600,000 (= 3600\Dreq)$を保ち，
+  P2では$D(s) \leq 2,160,000 (= 3600\Dreq)$を保つことが要求条件であることに注意されたい．
   図\ref{fig:ds_ER_ChangeRequirement}より，提案手法であるAMTDS/ERは，
   途中で品質要求が変化してもしっかり対応できていることがわかる．
   従来手法であるAMTDS/ESCも$\Dreq$が変化した際に$D(s)$を変化させているが，
   その変化量は$\Dreq$の変化量と比べると小さい．
+  このことから，エネルギー節約行動を調整する学習パラメータ$K^i$の導入により，
+  品質要求の変化にも対応できたといえる．
   \par
 
   次に，$\Dreq$が変化したときの各エージェントの学習パラメータ$K^i$と，
-  {\em Pausing}による待機時間の関係をまとめた散布図が図
+  {\em Pausing}による待機時間の関係をまとめた散布図が図\ref{fig:cscatter_ChangeRequirement_2m}
+  $\sim$\ref{fig:cscatter_ChangeRequirement_6m}である．
+  なお，それぞれは2,000,000ステップ，4,000,000ステップ，6,000,000ステップ時点での$K^i$の値と，
+  直前1,000,000ステップにおける待機時間の総和をプロットしてある．
+  これらの図より，品質要求によってプロットの散らばりぐらいが異なることが分かる．
+  $\Dreq$が小さくなると厳しくなった品質要求を満たすために，$K^i$の値が小さくなり，
+  待機時間が短くなって巡回を多く行うようになったエージェントが存在し，
+  $\Dreq$が大きくなると品質要求に対して巡回が過剰であるため，$K^i$の値が大きくなり，
+  待機時間が長くなったエージェントが存在することが分かる．
+  また，それぞれの図でのB-goupとES-groupのエージェント数は，
+  図\ref{fig:cscatter_ChangeRequirement_2m}では6体と14体，
+  図\ref{fig:cscatter_ChangeRequirement_4m}では11体と9体，
+  図\ref{fig:cscatter_ChangeRequirement_6m}では6体と14体であった．
+  \par
+
+  さらに，図\ref{fig:al_ChangeRequirement_dual}$\sim$\ref{fig:al_ChangeRequirement_second}に，
+  P1$\sim$P3の期間でB-groupとES-groupのうち，属するグループを変更したエージェントのイベント処理数の時間推移を示す．
+  なお，図\ref{fig:al_ChangeRequirement_dual}はP1$\sim$P2とP2$\sim$P3のどちらでも属するグループを変更したエージェントであり，
+  図\ref{fig:al_ChangeRequirement_first}はP1$\sim$P2で，
+  図\ref{fig:al_ChangeRequirement_second}はP1$\sim$P2で属するグループを変更したエージェントを示している．
+  まず，図\ref{fig:al_ChangeRequirement_dual}にプロットしたエージェントは，P1$\sim$P2ではES-groupからB-groupに，
+  P2$\sim$P3ではB-groupからES-groupに変更した．
+  これは，イベント処理数の時間推移からも確認することができる．
+  P1とP3ではES-groupに属しているため，図\ref{fig:al_ER_Office_top}のように，時間とともに待機時間が増え，イベント処理数が減少しているが，
+  P2ではB-groupに属しているため，図\ref{fig:al_ER_Office_least}のように，ES-groupの分もイベント処理している．
+  次に，図\ref{fig:al_ChangeRequirement_first}にプロットしたエージェントは，P1$\sim$P2でES-groupからB-groupに変更した．
+  実際に，図\ref{fig:fig:al_ChangeRequirement_first}では，P1はイベント処理数が減少しているが，
+  P2とP3ではES-groupの分もイベントを処理するようになり，イベント処理数を増加させている．
+  さらに，図\ref{fig:al_ChangeRequirement_second}にプロットしたエージェントは，P2$\sim$P3でB-groupからES-groupひ変更した．
+  これまでと同様に，図\ref{fig:al_ChangeRequirement_second}より，P1ではイベント処理数を増加させ，
+  P2では品質要求が厳しくなったことによって，B-groupに属するエージェントが増えたため，
+  イベント処理数はP1よりは少ないが，一定量を維持し，
+  P3ではイベント処理数が減少していることを確認することができる．
+  \par
+
+  以上より，提案手法であるAMTDS/ERは，品質要求が世中で変化しても対応でき，
+  それに応じて2つのグループの構成比を変化させることができる手法であるといえる．
+  
+
 
   \subsubsection{実験4: エージェント数減少による性能の変化}\label{ex:ER4}
 
@@ -1258,7 +1348,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   品質要求を満たす上で不要なエージェントを停止する実験を停止なしのAMTDS/ERと比較していく．
 
   \subsubsection{実験5: CountStopによる不要なエージェントの停止}\label{ex:ER5}
-  \red{図はICAARTに使えるように英語にする．}
+  \red{図はICAARTに使えるように英語にする．}\\
   この項では，\ref{sec:expAnalsis}での分析に基づき，
   \ref{sec:CountStop}項で述べたCountStopによる不要なエージェントの停止手法を評価するために，
   実験1と同じ設定で実験を行った．
@@ -1342,7 +1432,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   図\ref{fig:cscatter_CountStop_Office}での7つの赤いプロットが停止エージェントに対応する．
   この図より，停止エージェントは$K^i$の値が比較的大きく，
   非停止エージェントは非常に短い待機時間で巡回を続けていることが分かる．
-  このことから，この環境では13台のエージェントで要求品質を満たすことができたと考えられる．
+  このことから，この環境では13体のエージェントで要求品質を満たすことができたと考えられる．
   \par
 
   図\ref{fig:transition_early}と図\ref{fig:transition_notSuspend}は，
@@ -1365,7 +1455,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   
 
   \subsubsection{実験6: TimeStopによる不要なエージェントの停止}\label{ex:ER6}
-  \red{図はICAARTに使えるように英語にする．}
+  \red{図はICAARTに使えるように英語にする．}\\
 
 
   \subsection{AMTDS/ERCについての実験結果}\label{result_ERC}

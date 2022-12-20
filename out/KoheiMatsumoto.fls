@@ -437,6 +437,30 @@ INPUT ./figures/cs_graph_3600_ave_ER_Office_600&1000.png
 INPUT ./figures/cs_graph_3600_ave_ER_Office_600&1000.png
 INPUT figures/cs_graph_3600_ave_ER_Office_600&1000.png
 INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ER_Office_600&1000.png
+INPUT ./figures/CorrectionScatter_ChangeRequirement_2m.png
+INPUT ./figures/CorrectionScatter_ChangeRequirement_2m.png
+INPUT figures/CorrectionScatter_ChangeRequirement_2m.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_ChangeRequirement_2m.png
+INPUT ./figures/CorrectionScatter_ChangeRequirement_4m.png
+INPUT ./figures/CorrectionScatter_ChangeRequirement_4m.png
+INPUT figures/CorrectionScatter_ChangeRequirement_4m.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_ChangeRequirement_4m.png
+INPUT ./figures/CorrectionScatter_ChangeRequirement_6m.png
+INPUT ./figures/CorrectionScatter_ChangeRequirement_6m.png
+INPUT figures/CorrectionScatter_ChangeRequirement_6m.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_ChangeRequirement_6m.png
+INPUT ./figures/al_graph_ER_ChangeRequirement_dual.png
+INPUT ./figures/al_graph_ER_ChangeRequirement_dual.png
+INPUT figures/al_graph_ER_ChangeRequirement_dual.png
+INPUT extractbb -B cropbox -O figures/al_graph_ER_ChangeRequirement_dual.png
+INPUT ./figures/al_graph_ER_ChangeRequirement_first.png
+INPUT ./figures/al_graph_ER_ChangeRequirement_first.png
+INPUT figures/al_graph_ER_ChangeRequirement_first.png
+INPUT extractbb -B cropbox -O figures/al_graph_ER_ChangeRequirement_first.png
+INPUT ./figures/al_graph_ER_ChangeRequirement_second.png
+INPUT ./figures/al_graph_ER_ChangeRequirement_second.png
+INPUT figures/al_graph_ER_ChangeRequirement_second.png
+INPUT extractbb -B cropbox -O figures/al_graph_ER_ChangeRequirement_second.png
 INPUT ./figures/ds_graph_3600_ave_CountStop_Office_600.png
 INPUT ./figures/ds_graph_3600_ave_CountStop_Office_600.png
 INPUT figures/ds_graph_3600_ave_CountStop_Office_600.png
