@@ -22,21 +22,26 @@
 \contentsline {subsubsection}{\numberline {5.1.1}未来のイベント量の予測}{14}{}%
 \contentsline {subsubsection}{\numberline {5.1.2}予測の自律的補正学習}{15}{}%
 \contentsline {subsubsection}{\numberline {5.1.3}エネルギー節約行動の修正}{15}{}%
-\contentsline {subsubsection}{\numberline {5.1.4}不要なエージェントの排除}{16}{}%
-\contentsline {subsection}{\numberline {5.2}AMTDS for energy saving under the requirement with communications (AMTDS/ERC)}{17}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}イベント発生量の予測に使用するノードの範囲の変更}{17}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}補正係数$K^i$の更新方法の変更}{17}{}%
+\contentsline {subsection}{\numberline {5.2}不要なエージェントの停止}{16}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}CountStop}{17}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}TimeStop}{17}{}%
+\contentsline {subsection}{\numberline {5.3}AMTDS for energy saving under the requirement with communications (AMTDS/ERC)}{17}{}%
+\contentsline {subsubsection}{\numberline {5.3.1}イベント発生量の予測に使用するノードの範囲の変更}{17}{}%
+\contentsline {subsubsection}{\numberline {5.3.2}補正係数$K^i$の更新方法の変更}{17}{}%
 \contentsline {section}{\numberline {6}評価実験}{17}{}%
-\contentsline {subsection}{\numberline {6.1}実験環境}{18}{}%
-\contentsline {subsection}{\numberline {6.2}AMTDS/ERについての実験結果・考察}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.1}実験1: 性能評価}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.2}実験2: 異なる環境による性能評価}{19}{}%
-\contentsline {subsubsection}{\numberline {6.2.3}行動の解析}{22}{}%
-\contentsline {subsubsection}{\numberline {6.2.4}実験3: ${D_{\it req}}$の変化による性能の変化}{24}{}%
-\contentsline {subsubsection}{\numberline {6.2.5}実験4: エージェント数減少による性能の変化}{24}{}%
-\contentsline {subsubsection}{\numberline {6.2.6}実験5: 不要なエージェントの停止}{24}{}%
-\contentsline {subsection}{\numberline {6.3}AMTDS/ERCについての実験結果}{24}{}%
-\contentsline {subsubsection}{\numberline {6.3.1}実験5: 性能評価}{24}{}%
-\contentsline {subsubsection}{\numberline {6.3.2}実験6: 環境の変化による性能の違い}{24}{}%
-\contentsline {subsubsection}{\numberline {6.3.3}実験7: エージェント数減少による性能の変化}{24}{}%
-\contentsline {section}{\numberline {7}結論}{24}{}%
+\contentsline {subsection}{\numberline {6.1}実験環境}{19}{}%
+\contentsline {subsection}{\numberline {6.2}AMTDS/ERについての実験結果・考察}{20}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}実験1: 性能評価}{20}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}実験2: 異なる環境による性能評価}{20}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}行動の解析}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.4}実験3: ${D_{\it req}}$の変化による性能の変化}{25}{}%
+\contentsline {subsubsection}{\numberline {6.2.5}実験4: エージェント数減少による性能の変化}{25}{}%
+\contentsline {subsection}{\numberline {6.3}不要なエージェントの停止}{25}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}実験5: CountStopによる不要なエージェントの停止}{28}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}停止エージェントと非停止エージェントの行動の解析}{30}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}実験6: TimeStopによる不要なエージェントの停止}{30}{}%
+\contentsline {subsection}{\numberline {6.4}AMTDS/ERCについての実験結果}{30}{}%
+\contentsline {subsubsection}{\numberline {6.4.1}実験5: 性能評価}{30}{}%
+\contentsline {subsubsection}{\numberline {6.4.2}実験6: 環境の変化による性能の違い}{30}{}%
+\contentsline {subsubsection}{\numberline {6.4.3}実験7: エージェント数減少による性能の変化}{30}{}%
+\contentsline {section}{\numberline {7}結論}{30}{}%
