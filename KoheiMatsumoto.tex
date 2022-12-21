@@ -251,7 +251,7 @@ $p^i(v)$は各エージェントが独立して保持しており，その値は
 $i$が$v$上にいない場合，現在の蓄積イベント数$L_t(v)$は知ることができない．
 そこで，エージェントは時刻$t$の$p(v)$から期待値$E^i(L_t(v))$を以下の式に従って計算する．
 %
-\begin{equation}
+\begin{equation}\label{eq:EL}
   E^i(L_t(v)) = p^i(v) \times (t - t^v_{vis})
 \end{equation}
 %
@@ -448,7 +448,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   このことによって，エージェント間の通信を用いずに$p^i(v)$を用いた間接的な分業が可能になる．
   それにより，AMTDSと比べて競合を回避し，効率も向上した．
 
-  \subsection{AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}
+  \subsection{AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}\label{sec:AMTDS/EDC}
   AMTDS/LDでは，エージェント間の交渉を用いずに，$p^i(v)$による間接的なコミュニケーションを用いて，
   エージェント間の分業を促進した．
   しかし，間接的なコミュニケーションでの効率改善には限界があり，エージェントが停止した場合などの環境変化に対応できない．
@@ -528,7 +528,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
       ノード集合$V^{i, j}_R$を以下の式で定義する．
       %
       \begin{equation}
-        V^{i, j}_R = {v \in V^i_R|d(C^i, v) > d(C^j, v)}  
+        V^{i, j}_R = \{v \in V^i_R|d(C^i, v) > d(C^j, v)\}  
       \end{equation}
       %
       $i$は$V^{i, j}_R$から，$p^i(v)$の小さい$e_g$個のノードにおいて，
@@ -781,7 +781,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   %
   \begin{equation}\label{eq:ParameterK}
     \begin{cases}
-      K^i \gets (1 - \alpha_k)K^i + \alpha_k\dfrac{\Dreq}{E^i(D_t)}
+      K^i \gets (1 - \alpha_k) \times K^i + \alpha_k \times \dfrac{\Dreq}{E^i(D_t)}
       K^i & (E^i(D_t) \leq \Dreq \textrm{ のとき})\\
       K^i \gets K^i - \left( \dfrac{E^i(D_t)}{\Dreq} - 1 \right) 
       & (E^i(D_t) > \Dreq \textrm{ のとき})
@@ -1002,24 +1002,51 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   この2つのグループに分かれる前，つまりエージェントの役割分担がしっかり行われる前に
   停止を行わないようにするため，本来の使用用途とは異なるが式(\ref{eq:sillet})のように
   シルエット係数を用いている．
-
-
-  
-
-  
-
-
-
-
-  
+ 
   \subsection{AMTDS for energy saving under the requirement with communications (AMTDS/ERC)}
-  \red{subsectionなどの構成も含めて再考}
-
-
-
-  \subsubsection{イベント発生量の予測に使用するノードの範囲の変更}
+  \red{subsectionなどの構成も含めて再考}\\
+  この節では，従来手法のAMTDS/EDCと，AMTDS/ERを組み合わせた手法である．
+  しかし，AMTDS/EDCにエネルギー節約行動や学習パラメータ$K^i$を導入しただけではうまくいかない．
+  それの一番大きな理由は，AMTDS/ERでは既知であったイベント発生確率を学習し，
+  さらにそれを\ref{sec:AMTDS/EDC}で述べたように，
+  交渉を行うため，その値はエージェントによって異なる．
+  そのため，AMTDS/ERのように，式(\ref{eq:estimation})では実際の総イベント量との差が大きい．
+  つまり，現在の環境全体のイベント量を予測することが困難になった．
+  これを解決するため，以下で説明する変更・工夫を行った．
+  なお，$p^i(v)$の学習のため，エネルギー節約行動は$T_{hp}$ステップから開始する．
   
-  \subsubsection{補正係数$K^i$の更新方法の変更}
+  \subsubsection{学習パラメータ$C^i_{rate}$の導入}
+  まず，エージェント$i$のイベント発生確率の学習がどの程度ずれているのかを示す学習パラメータ$C^i_{rate}$を導入する．
+  $i$は充電基地を出発時に，イベントの期待値の総和$S^i_{est}$と実測値の総和$S^i_{real}$を0にリセットする．
+  時刻$t$にノード$v \in V^i_R$を訪問した際に，
+  期待値$E^i(L_t(v))$の計算とイベント処理による実測値$L_t(v)$の取得を行い，
+  それぞれを$S^i_{est}$と$S^i_{real}$に加算する．
+  その後，充電基地に戻った際に，以下の式に従って$C^i_{rate}$を更新する．
+  %
+    \begin{equation}
+      C^i_{rate} \gets \alpha_{rate} \times \dfrac{S^i_{real}}{S^i_{est}} + (1-\alpha_{rate}) \times C^i_{rate}
+    \end{equation}
+  %
+  
+  \subsubsection{$K^i$の更新方法の変更}
+  $C^i_{rate}$の導入に伴い，$K^i$の更新方法も式(\ref{eq:ParameterK})から変更する．
+  まず，以下の式から
+  %
+  \begin{equation}\label{eq:ParameterK/ERC}
+    K^i \gets (1 - \alpha_k) \times K^i + \alpha_k \times \dfrac{\Dreq}{E^i(D_t(V^i_R)) \times C^i_{rate}}
+  \end{equation}
+  %
+  ここで，$i$の$t$における総イベント量の推定値$E^i(D_t(V^i_R))$は，
+  $V$から壁などの障害物を表すノードを除いたノード集合$V_{access}$と$V^i_R$を用いて，以下の式に従って求められる．
+  %
+    \begin{equation}
+      E^i(D_t(V^i_R))=\sum_{v\in V^i_R} E^i(L_t(v)) \times \dfrac{|V_{access}|}{|V^i_R|}   
+    \end{equation}
+  %
+
+  \subsubsection{未来のイベント量の予測}
+  
+  
 
 
 
@@ -1079,7 +1106,8 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
         {\em Pausing} & $\PausingInt$ & 100 \\
                 & $T_\PauseTimeFactor$ & 1,000 \\ \hline  
         AMTDS/ER & $\alpha_k$ & 0.1 \\ \hline
-        AMTDS/ERC & $T_{hp}$ & 500,000 \\ \hline       
+        AMTDS/ERC & $T_{hp}$ & 1,000,000 \\
+                  & $\alpha_{rate}$ & 0.1 \\ \hline       
       \end{tabular}
       \label{tb:3}
     \end{minipage}
