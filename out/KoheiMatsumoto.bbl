@@ -44,6 +44,18 @@ Katsuya Hattori and Toshiharu Sugawara.
   and Artificial Intelligence - Volume 1: ICAART,}, pp. 281--288. INSTICC,
   SciTePress, 2021.
 
+\bibitem{Mazda2005}
+M.~Ahmadi and P.~Stone.
+\newblock Continuous area sweeping: a task definition and initial approach.
+\newblock In {\em ICAR '05. Proceedings., 12th International Conference on
+  Advanced Robotics, 2005.}, pp. 316--323, 2005.
+
+\bibitem{Agmon2011}
+Noa Agmon, Daniel Urieli, and Peter Stone.
+\newblock Multiagent patrol generalized to complex environmental conditions.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial
+  Intelligence}, Vol.~25, pp. 1090--1095, 2011.
+
 \bibitem{Tevyashov2022}
 Gleb~K Tevyashov, Mark~V Mamchenko, Andrey~N Migachev, Rinat~R Galin,
   Konstantin~A Kulagin, Petr~M Trefilov, Rodion~O Onisimov, and Nikolay~V
@@ -58,6 +70,11 @@ Bern{\'a}t Wiandt and Vilmos Simon.
 \newblock Autonomous graph partitioning for multi-agent patrolling problems.
 \newblock In {\em 2018 Federated Conference on Computer Science and Information
   Systems (FedCSIS)}, pp. 261--268. IEEE, 2018.
+
+\bibitem{Chevaleyre2004}
+Yann Chevaleyre, Francois Sempe, and Geber Ramalho.
+\newblock A theoretical analysis of multi-agent patrolling strategies.
+\newblock In {\em AAMAS}, Vol.~4, pp. 1524--1525, 2004.
 
 \bibitem{Othmani2017}
 Mehdi Othmani-Guibourg, Amal El~Fallah-Seghrouchni, Jean-Loup Farges, and Maria
@@ -88,6 +105,13 @@ Keisuke Yoneda, Chihiro Kato, and Toshiharu Sugawara.
   Intelligence (WI) and Intelligent Agent Technologies (IAT)}, Vol.~2, pp.
   216--223, 2013.
 
+\bibitem{Sugiyama2015meta}
+Ayumi Sugiyama and Toshiharu Sugawara.
+\newblock Meta-strategy for cooperative tasks with learning of environments in
+  multi-agent continuous tasks.
+\newblock In {\em Proceedings of the 30th Annual ACM Symposium on Applied
+  Computing}, pp. 494--500, 2015.
+
 \bibitem{Latif2021}
 Ehsan Latif, Yikang Gui, Aiman Munir, and Ramviyas Parasuraman.
 \newblock Energy-aware multi-robot task allocation in persistent tasks, 2021.
@@ -105,13 +129,6 @@ Hang Ma Jiaoyang Li~TK Satish and Kumar~Sven Koenig.
 \newblock Lifelong multi-agent path finding for online pickup and delivery
   tasks.
 \newblock 2017.
-
-\bibitem{Sugiyama2015meta}
-Ayumi Sugiyama and Toshiharu Sugawara.
-\newblock Meta-strategy for cooperative tasks with learning of environments in
-  multi-agent continuous tasks.
-\newblock In {\em Proceedings of the 30th Annual ACM Symposium on Applied
-  Computing}, pp. 494--500, 2015.
 
 \bibitem{Sugiyama2019}
 Ayumi Sugiyama, Vourchteang Sea, and Toshiharu Sugawara.

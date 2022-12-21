@@ -31,6 +31,7 @@
 \def\PauseCount{x_{\it pause}}
 \def\DeactCount{N_{\it deact}}
 \def\DeactThreshold{K_{\it deact}}
+\def\DeactLearnInterval{D_{\it learn}}
 
 
 
@@ -118,22 +119,38 @@ MACPPの研究では，複数のエージェントが協力・協調すること
 また，Busyグループに属するエージェントの数は，環境条件によって変化することが分かった．
 その後，品質要求を満たしつつ，Energy saveグループに属するエージェントを順次停止することで，
 活動しているエージェント数を削減することができた．
+\\ \red{ここをもっとちゃんと書く}
 \par
 
 \section{関連研究}
 \red{後で，杉山さんの研究も追加する、領域分解についても追加(SMASH参考)}\\
-MACPPとその応用に関する研究は数多く行われている\cite{Hattori2021,Tevyashov2022,Wiandt2018,Othmani2017,Zhou2019}．
-例えば， \cite{Othmani2017}では，{\em edge Markov evolution graphs}を用いた動的環境変化のモデルを提案した．
-また，\cite{Zhou2019}では，巡回問題をベイズ適応型遷移分離部分観測可能マルコフ決定過程として定式化し，
-モンテカルロ木探索法を拡張した分散型オンライン学習・計画アルゴリズムを提案している．
+MACPPとその応用に関する研究は数多く行われている．
+この問題においてエージェントの行動を考慮する手法には，
+環境を分割し，その各作業領域をエージェントに割り当て，
+その環境内を巡回する手法\cite{Hattori2021,Mazda2005,Agmon2011,Tevyashov2022,Wiandt2018}と，
+明示的に領域分割はせずに，各エージェントが自律的に適切な戦略を用いて環境を巡回する手法の2つがある．
+\cite{Chevaleyre2004}では，後者の手法は前者の手法よりも少なくとも
+同程度に優れていると述べられている．
+本研究の目的であるエネルギー削減は両者の手法で考えられるが，
+本稿では後者の手法に着目する．
+\par
+
+MACPP問題への同アプローチをとった研究として，
+例えば， \cite{Othmani2017}では，edge Markov evolution graphsを用いた動的環境変化のモデルを提案した．
+また，\cite{Zhou2019}では，巡回問題がベイズ適応型遷移分離部分観測可能マルコフ決定過程として定式化され，
+モンテカルロ木探索法を拡張した分散型オンライン学習・計画アルゴリズムが提案されている．
 さらに，\cite{Othmani2018}では，人口ニューラルネットワークを用いて，
-個人のidlnessから共用のidlnessを予測する方法を提案している．
+個人のidlnessから共用のidlnessを予測する方法が提案されている．
 しかし，これらの研究では，バッテリの放電やエネルギー消費による定期的な充電を無視し，
 効率性のみを考慮したものである．
 \cite{Yoneda2013}では，Q学習によって決定される計画戦略のもと，
-複数のエージェントが定期的に充電しながら協調して巡回するAMTDS({\em adaptive meta-target decision strategy})という手法を提案している．
-さらに，\red{ここから杉山さんの研究}．\\
-しかし，この研究もエネルギー消費量の削減を考慮せず，巡回の効率化を目的とした学習のみを行うものである．
+複数のエージェントが定期的に充電しながら協調して巡回するAMTDS(adaptive meta-target decision strategy)という手法が提案されている．
+\cite{Sugiyama2015meta}では，\cite{Yoneda2013}において既知としていた，
+各地点のイベント発生確率を学習するように拡張した手法(AMTDS with learning of dirt accumulation, AMTDS/LD)が提案され，
+さらに，エージェント間の協調作業のための分業行動を促進させるために，
+軽い処理の交渉を加えた手法(AMTDS with learning of event probabilities and enhancing divisional cooperation, AMTDS/EDC)
+が提案された．
+しかし，これら研究もエネルギー消費量の削減を考慮せず，巡回の効率化を目的とした学習のみを行うものである．
 \par
 
 一方，\cite{Kim2016,Benkrid2019,Notomista2022,Kim2016,Wu2019,Latif2021}では一部，省エネルギーに着目している．
@@ -721,9 +738,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \subsection{AMTDS for energy saving under the requirement (AMTDS/ER)}
   この節では，AMTDS/ESCをベースに，エージェントがそれぞれの視点で将来の環境状態を予測する方法を学習し，
   充電基地についた際に，未来の環境状態を予測し，待機時間を動的に決定する手法である，AMTDS/ERについて説明する．
-  また，エージェント数を減らす手法についても説明する
-  \\ \red{ここをもっとちゃんと書く}
-  
+  また，品質要求を満たした上で，不要なエージェントを停止する2通りの手法についても説明する．  
 
   \subsubsection{未来のイベント量の予測}\label{sec:predict}
   AMTDS/ERでは，\ref{sec:changeEnergySaving}項で詳しく説明するが，
@@ -864,12 +879,10 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   関数\textsf{PLength}が呼び出された回数を比較して停止する手法(CountStop)と，
   エージェントの待機時間を比較して停止する手法(TimeStop)の2つの手法を提案する．
   \\ \red{英語名については要検討}\\
-  \red{エージェントの停止の手法についての説明、icaartと最新のやつどちらも書く}\\
-
 
   \subsubsection{CountStop}\label{sec:CountStop}
   システムは$\DeactCheckInterval>0$ステップごとに，関数\textsf{PLength}が全てのエージェントによって
-  呼び出された回数である$\PauseCount$をカウントし，$\PauseCount$と$K_{i_{de}}$が大きい場合，
+  呼び出された回数である$\PauseCount$をカウントし，$\PauseCount$と$K^{i_{de}}$が大きい場合，
   すなわち，以下の式を満たすかを確認する．
   %
   \begin{equation}
@@ -881,8 +894,117 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   ここで，$\DeactThreshold > 0$は停止の閾値を示し，
   $\DeactCount$はシステムから見て，最近の$\DeactCheckInterval$の間に
   複数の{\em Pausing}が試みられたかどうかを判断する閾値を示す．
+  ここで，関数\textsf{PLeangth}によって$\PauseTimeFactor=0$の場合でもカウントすることに注意されたい．
+  これは，$\PauseCount$と$\DeactCount$の式は，要求品質をみたす際に現在どの程度余裕があるのかを確認している．
+  図\ref{fig:flowchart}より，{\em Homing}や{\em Pausing}を行うということは，
+  現在は品質要求を満たしているとエージェントが判断しているため，このようなカウント方法にしている．
   
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.6\hsize]{figures/Flowchart_stop_E.png}
+    \caption{エージェントの停止選択}
+    \label{fig:flowchart_stop}
+  \end{figure}
+
+
   \subsubsection{TimeStop}\label{sec:TimeStop}
+  \ref{sec:expAnalsis}項で詳細に説明するように，AMTDS/ERでは，イベント処理中心のグループと，
+  エネルギー節約中心のグループの2グループに分かれる．
+  TimeStopは，その性質とエージェントの待機時間を用いて停止するか否かを判断する手法である．
+  \par
+  
+  まず，エージェント$i$の待機時間の通常変化量$d^i$を導入する．
+  エージェントごとに待機時間の変化量は異なり，これを学習することにより，
+  $i$が品質要求を考慮して待機時間を変化させている途中なのか，
+  均衡状態なのかを判断できるようになる．
+  これを式(\ref{eq:learnInterval})のように$\DeactCheckInterval$に対して$\beta_s(\beta_s > 1)$で割ったステップ数である，
+  $\DeactLearnInterval$ステップごとに式(\ref{eq:ParameterD})に従って更新する．
+  %
+  \begin{equation}\label{eq:learnInterval}
+    \DeactLearnInterval = \dfrac{\DeactCheckInterval}{\beta_s}
+  \end{equation}
+  %
+  %
+  \begin{equation}\label{eq:ParameterD}
+    d^i \gets \alpha_d \times |T^i_n - T^i_{n-1}| + (1-\alpha_d) \times d^i
+  \end{equation}
+  %
+  ここで，$T^i_n$は全ての正整数$n$について，
+  $(n-1) \times \DeactLearnInterval \sim n \times \DeactLearnInterval$ステップでの$i$の総待機時間である．
+  つまり，$|T^i_n - T^i_{n-1}|$とは，$\DeactLearnInterval$ステップごとの総待機時間の変化量を表す．
+  さらに，$\alpha_l$は学習率であるが，これは以下の式に従って，2通りの値をとる($\alpha_1 > \alpha_2$)．
+  %
+    \begin{equation}
+      \alpha_d = 
+      \begin{cases}
+        \alpha_1 & (|T^i_n - T^i_{n-1}| \leq d^i \textrm{のとき}) \\
+        \alpha_2 & (|T^i_n - T^i_{n-1}| > d^i \textrm{のとき})
+      \end{cases}
+    \end{equation}
+  %  
+  \par
+
+  図\ref{fig:flowchart_stop}は，TimeStopでの停止をするかどうかの判断のフローチャートである．
+  $(n-1) \times \DeactCheckInterval \sim n \times \DeactCheckInterval$ステップでの$i$の総待機時間である
+  $P^i_n$を用いて，$\DeactCheckInterval$ステップごとに$|P^i_n - P^i_{n-1}|$と$\beta_s \times d^i$を比較する．
+  $|P^i_n - P^i_{n-1}| \leq d^i$のエージェントの集合を$A_n$として，以下の式を満たすか確認する．
+  %
+  \begin{equation}\label{eq:checkD}
+    \sum_{i \in A_n} P^i_n \geq \DeactCheckInterval
+  \end{equation}
+  %
+  この式を満たせば，$i_{de}$を停止後も残りのエージェント達は，
+  少なくとも$(\DeactLearnInterval-P^{i_{de}}_n)$ステップ待機しているため，
+  この待機時間を減らすことで$i_{de}$の分のイベント処理をカバーできる．
+  また，式(\ref{eq:ParameterD})で$\alpha_d$が2通りの値をとる理由は，
+  $\alpha_d$が固定の場合，$\DeactCheckInterval > \DeactLearnInterval$より，
+  $i$が待機時間を変化中の時でも直前の数回の更新で$d^i$に影響を与え，大きな値となってしまう．
+  これにより，本当は待機時間を変更させているのに式(\ref{eq:checkD})を満たしてしまう恐れがある．
+  これを防ぐために，$\alpha_d$は2通りの値をとり，$\alpha_1 > \alpha_2$としている．
+  さらに，エージェントを停止していき，エージェント数が少なくなっていくと，
+  品質要求を満たすために，待機時間が大きかったエージェントも，
+  イベント処理を多く行うために待機時間を小さくしていかなければならない．
+  最終的に，このエージェントの待機時間が0になり，
+  品質要求を満たす上でこれ以上エージェントを停止できなかったはずなのに停止してしまい，
+  残りのエージェント数では，全力でイベント処理を行っても品質要求を満たせないということは避けなければならない．
+  そのため式(\ref{eq:checkD})では，$\AgentSet$の総待機時間ではなく，
+  待機時間が均衡状態であるエージェントの集合である$A_n$の総待機時間を用いている．
+  \par
+
+  さらに，全ての巡回エージェントの$K^i$と$P^i_n$をそれぞれ平均0，標準偏差1に標準化し，
+  k-means法により2つのクラスターにクラスタリングする．
+  その後，以下の方法で$i$のシルエット係数$s^i$を計算し，それの平均シルエット係数$S$を求める．
+  %
+  \begin{enumerate}
+    \item[(1)] クラスタ内の凝集度として，$i$が属するクラスタ$C_{in}$の他の点までの平均距離$c^i_{in}$を計算
+    \item[(2)] 別クラスタからの乖離度として，$i$が属しないクラスタ$C_{out}$に属する点までの平均距離$c^i_{out}$を計算
+    \item[(3)] 以下の式に従って，$i$のシルエット係数$s^i$を計算
+              %
+                \begin{equation}
+                  s^i = \dfrac{c^i_{out} - c^i_{in}}{(\max(c^i_{in}, c^i_{out}))}
+                \end{equation}
+              %
+  \end{enumerate}
+  %
+  なお，$C_{in}$に属するエージェントが$i$しかいない場合，$c^i_{in} = 0$とする．
+  このようにして求めた$S$を用いて，以下の式を満たすか確認する．
+  %
+    \begin{equation}\label{eq:sillet}
+      S \geq S_{deact}
+    \end{equation}
+  %
+  ここで，$S_{deact}$平均シルエット係数の閾値である．
+  一般に，シルエット係数は，複数のクラスターに対して計算し，
+  最適なクラスター数を決めるために用いられる．
+  しかし，\ref{sec:expAnalsis}項で詳細に説明するように，
+  提案手法のAMTDS/ERは，エージェントを2つのグループに分けることができる．
+  この2つのグループに分かれる前，つまりエージェントの役割分担がしっかり行われる前に
+  停止を行わないようにするため，本来の使用用途とは異なるが式(\ref{eq:sillet})のように
+  シルエット係数を用いている．
+
+
+  
 
   
 
@@ -933,6 +1055,11 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
         AMTDS & $\alpha$ & 0.1 \\
               & $\varepsilon$ & 0.05 \\ \hline
         AMTDS/LD & $\beta$ & 0.1 \\ \hline 
+        AMTDS/EDC & $N_{gmax}$ & 100 \\
+                  & $N_{cmax}$ & 10 \\
+                  & $T_c$ & 0.05 \\
+                  & $\gamma$ & 10 \\
+                  & $\delta$ & 0.5 \\ \hline
       \end{tabular}
       \label{tb:2}
     \end{minipage}
@@ -947,18 +1074,18 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
         自己重要度評価 & $T_s$ & 20 \\
                       & $T_l$ & 50 \\
                       & $T_f$ & 10 \\ \hline
-        Homing & $\HomingCheck$ & 100 \\
+        {\em Homing} & $\HomingCheck$ & 100 \\
                & $k_{homing}$ & $1/3$ \\ \hline
-        Pausing & $\PausingInt$ & 100 \\
+        {\em Pausing} & $\PausingInt$ & 100 \\
                 & $T_\PauseTimeFactor$ & 1,000 \\ \hline  
         AMTDS/ER & $\alpha_k$ & 0.1 \\ \hline
         AMTDS/ERC & $T_{hp}$ & 500,000 \\ \hline       
       \end{tabular}
       \label{tb:3}
     \end{minipage}
-
+    %
     \hfill
-
+    %
     \begin{minipage}[t]{.55\textwidth}
       \centering
       \caption{エージェントの停止に関するパラメータ}
@@ -967,8 +1094,11 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
         CountStop & $\DeactCheckInterval$ & 250,000 \\
                   & $\DeactCount$ & 100 \\
                   & $\DeactThreshold$ & 1.0 \\ \hline
-        TimeStop & $\DeactCheckInterval$ & 250,000\\
-                  & 
+        TimeStop & $\DeactCheckInterval$ & 250,000 \\
+                  & $\beta_s$ & 10 \\
+                  & $\alpha_1$ & 0.1 \\
+                  & $\alpha_2$ & 0.05 \\
+                  & $S_{deact}$ & 0.7 \\ \hline
         \end{tabular}
       \label{tb:4}
     \end{minipage}
