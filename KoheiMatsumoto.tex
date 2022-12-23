@@ -876,11 +876,11 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \par
 
   本実験では，不要なエージェントの停止手法として，
-  関数\textsf{PLength}が呼び出された回数を比較して停止する手法(CountStop)と，
-  エージェントの待機時間を比較して停止する手法(TimeStop)の2つの手法を提案する．
+  関数\textsf{PLength}が呼び出された回数を比較して停止する手法(Deactivation with Count)と，
+  エージェントの待機時間を比較して停止する手法(Deactivation with Time)の2つの手法を提案する．
   \\ \red{英語名については要検討}\\
 
-  \subsubsection{CountStop}\label{sec:CountStop}
+  \subsubsection{Deactivation with Count}\label{sec:CountStop}
   システムは$\DeactCheckInterval>0$ステップごとに，関数\textsf{PLength}が全てのエージェントによって
   呼び出された回数である$\PauseCount$をカウントし，$\PauseCount$と$K^{i_{de}}$が大きい場合，
   すなわち，以下の式を満たすかを確認する．
@@ -908,10 +908,10 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \end{figure}
 
 
-  \subsubsection{TimeStop}\label{sec:TimeStop}
+  \subsubsection{Deactivation with Time}\label{sec:TimeStop}
   \ref{sec:expAnalsis}項で詳細に説明するように，AMTDS/ERでは，イベント処理中心のグループと，
   エネルギー節約中心のグループの2グループに分かれる．
-  TimeStopは，その性質とエージェントの待機時間を用いて停止するか否かを判断する手法である．
+  Deactivation with Timeは，その性質とエージェントの待機時間を用いて停止するか否かを判断する手法である．
   \par
   
   まず，エージェント$i$の待機時間の通常変化量$d^i$を導入する．
@@ -945,7 +945,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   %  
   \par
 
-  図\ref{fig:flowchart_stop}は，TimeStopでの停止をするかどうかの判断のフローチャートである．
+  図\ref{fig:flowchart_stop}は，Deactivation with Timeでの停止をするかどうかの判断のフローチャートである．
   $(n-1) \times \DeactCheckInterval \sim n \times \DeactCheckInterval$ステップでの$i$の総待機時間である
   $P^i_n$を用いて，$\DeactCheckInterval$ステップごとに$|P^i_n - P^i_{n-1}|$と$\beta_s \times d^i$を比較する．
   $|P^i_n - P^i_{n-1}| \leq d^i$のエージェントの集合を$A_n$として，以下の式を満たすか確認する．
@@ -1044,12 +1044,17 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
     \end{equation}
   %
 
-  \subsubsection{未来のイベント量の予測}
+  \subsubsection{未来のイベント量の予測の変更}
+  AMTDS/ERでは，式(\ref{eq:estimation})を用いて$T$ステップ後のイベント量を予測していたが，
+  AMTDS/ERCではイベント発生確率が実際とは異なるため，
+  このままでは品質要求を満たせなくなってしまう可能性がある．
+  そのため，未来のイベント量の予測を$C^i_{rate}$を用いて以下の式に変更した．
+  %
+  \begin{equation}
+    E^i(L_{t_c+T}(v)) = p(v) \times \{(t_c+T)-t^v_{vis}\} \times \dfrac{|V_{access}|}{|V^i_R|} \times C^i_{rate}
+  \end{equation}
+  %
   
-  
-
-
-
 
   \begin{table}
     \begin{minipage}[t]{.55\textwidth}
@@ -1119,14 +1124,14 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
       \caption{エージェントの停止に関するパラメータ}
       \begin{tabular}{lcrr} \\ \hline
         種類 & パラメーター & 値 \\ \hline
-        CountStop & $\DeactCheckInterval$ & 250,000 \\
-                  & $\DeactCount$ & 100 \\
-                  & $\DeactThreshold$ & 1.0 \\ \hline
-        TimeStop & $\DeactCheckInterval$ & 250,000 \\
-                  & $\beta_s$ & 10 \\
-                  & $\alpha_1$ & 0.1 \\
-                  & $\alpha_2$ & 0.05 \\
-                  & $S_{deact}$ & 0.7 \\ \hline
+        Deactivation with Count & $\DeactCheckInterval$ & 250,000 \\
+                                & $\DeactCount$ & 100 \\
+                                & $\DeactThreshold$ & 1.0 \\ \hline
+        Deactivation with Time & $\DeactCheckInterval$ & 250,000 \\
+                              & $\beta_s$ & 10 \\
+                              & $\alpha_1$ & 0.1 \\
+                              & $\alpha_2$ & 0.05 \\
+                              & $S_{deact}$ & 0.7 \\ \hline
         \end{tabular}
       \label{tb:4}
     \end{minipage}
@@ -1502,13 +1507,13 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
 
   \subsection{不要なエージェントの停止}\label{ex:deactivation}
-  この節では，\ref{sec:deactivation}節で述べたCountStopとTimeStopそれぞれの手法による，
+  この節では，\ref{sec:deactivation}節で述べたDeactivation with CountとDeactivation with Timeそれぞれの手法による，
   品質要求を満たす上で不要なエージェントを停止する実験を停止なしのAMTDS/ERと比較していく．
 
-  \subsubsection{実験5: CountStopによる不要なエージェントの停止}\label{ex:ER5}
+  \subsubsection{実験5: Deactivation with Countによる不要なエージェントの停止}\label{ex:ER5}
   \red{図はICAARTに使えるように英語にする．}\\
   この項では，\ref{sec:expAnalsis}での分析に基づき，
-  \ref{sec:CountStop}項で述べたCountStopによる不要なエージェントの停止手法を評価するために，
+  \ref{sec:CountStop}項で述べたDeactivation with Countによる不要なエージェントの停止手法を評価するために，
   実験1と同じ設定で実験を行った．
   すなわち，品質要求を満たしながら，巡回エージェントの数を減らし，エネルギー消費を抑えられるかどうかを確認した．
   表\ref{tb:4}に示すように，$\DeactCheckInterval=250,000$ごとにエージェントを停止できるかどうかを確認した．
@@ -1516,12 +1521,12 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   図\ref{fig:ds_CountStop}，\ref{fig:cs_CountStop}はそれぞれ$D(s)$と$C(s)$の
   5,000,000ステップまでの時間推移を示しており，
-  図内のCountStopというラベルがCountStopによる停止手法を用いたAMTDS/ERを示している．
-  この実験では，停止したエージェントの数は6から8の間であり，ほとんどが7出会った．
+  図内のDeactivation with CountというラベルがDeactivation with Countによる停止手法を用いたAMTDS/ERを示している．
+  この実験では，停止したエージェントの数は6から8の間であり，ほとんどが7であった．
   ここで，$D(s)$と$C(s)$の値は小さい方が良いことに再度注意されたい．
   \par
 
-  図\ref{fig:ds_CountStop}より，CountStopを用いたAMTDS/ERは，
+  図\ref{fig:ds_CountStop}より，Deactivation with Countを用いたAMTDS/ERは，
   停止手法を用いないAMTDS/ERと比較して，差は小さいが，
   品質要求を満たしつつ$D(s)$をより大きいことが分かる．
   これは，AMTDS/ERが既に$D(s)$の値を要求品質付近に維持できるためである．
@@ -1611,8 +1616,20 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   巡回エージェントの数を削減することができた．
 
   
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_TimeStop_Office_600.png}
+    \caption{$D(s)$の時間推移(実験6)}
+    \label{fig:ds_TimeStop}
+    \vspace{12pt}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_TimeStop_Office_600.png}
+    \caption{$C(s)$の時間推移(実験6)}
+    \label{fig:cs_TimeStop}
+  \end{figure}
 
-  \subsubsection{実験6: TimeStopによる不要なエージェントの停止}\label{ex:ER6}
+
+  \subsubsection{実験6: Deactivation with Timeによる不要なエージェントの停止}\label{ex:ER6}
   \red{図はICAARTに使えるように英語にする．}\\
 
 
