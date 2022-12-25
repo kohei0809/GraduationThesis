@@ -465,6 +465,46 @@ INPUT ./figures/al_graph_ER_ChangeRequirement_second.png
 INPUT ./figures/al_graph_ER_ChangeRequirement_second.png
 INPUT figures/al_graph_ER_ChangeRequirement_second.png
 INPUT extractbb -B cropbox -O figures/al_graph_ER_ChangeRequirement_second.png
+INPUT ./figures/ds_graph_3600_ave_ER_Office_randomStop.png
+INPUT ./figures/ds_graph_3600_ave_ER_Office_randomStop.png
+INPUT figures/ds_graph_3600_ave_ER_Office_randomStop.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ER_Office_randomStop.png
+INPUT ./figures/cs_graph_3600_ave_ER_Office_randomStop.png
+INPUT ./figures/cs_graph_3600_ave_ER_Office_randomStop.png
+INPUT figures/cs_graph_3600_ave_ER_Office_randomStop.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ER_Office_randomStop.png
+INPUT ./figures/CorrectionScatter_Office_RandomStop_before.png
+INPUT ./figures/CorrectionScatter_Office_RandomStop_before.png
+INPUT figures/CorrectionScatter_Office_RandomStop_before.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_RandomStop_before.png
+INPUT ./figures/CorrectionScatter_Office_RandomStop_after.png
+INPUT ./figures/CorrectionScatter_Office_RandomStop_after.png
+INPUT figures/CorrectionScatter_Office_RandomStop_after.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_RandomStop_after.png
+INPUT ./figures/CorrectionTransition_RandomStop_10.png
+INPUT ./figures/CorrectionTransition_RandomStop_10.png
+INPUT figures/CorrectionTransition_RandomStop_10.png
+INPUT extractbb -B cropbox -O figures/CorrectionTransition_RandomStop_10.png
+INPUT ./figures/CorrectionTransition_RandomStop_7.png
+INPUT ./figures/CorrectionTransition_RandomStop_7.png
+INPUT figures/CorrectionTransition_RandomStop_7.png
+INPUT extractbb -B cropbox -O figures/CorrectionTransition_RandomStop_7.png
+INPUT ./figures/ds_graph_3600_ave_ER_Office_descendingStop.png
+INPUT ./figures/ds_graph_3600_ave_ER_Office_descendingStop.png
+INPUT figures/ds_graph_3600_ave_ER_Office_descendingStop.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ER_Office_descendingStop.png
+INPUT ./figures/cs_graph_3600_ave_ER_Office_descendingStop.png
+INPUT ./figures/cs_graph_3600_ave_ER_Office_descendingStop.png
+INPUT figures/cs_graph_3600_ave_ER_Office_descendingStop.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ER_Office_descendingStop.png
+INPUT ./figures/CorrectionScatter_Office_DescendingStop_before.png
+INPUT ./figures/CorrectionScatter_Office_DescendingStop_before.png
+INPUT figures/CorrectionScatter_Office_DescendingStop_before.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_DescendingStop_before.png
+INPUT ./figures/CorrectionScatter_Office_DescendingStop_after.png
+INPUT ./figures/CorrectionScatter_Office_DescendingStop_after.png
+INPUT figures/CorrectionScatter_Office_DescendingStop_after.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_DescendingStop_after.png
 INPUT ./figures/ds_graph_3600_ave_CountStop_Office_600.png
 INPUT ./figures/ds_graph_3600_ave_CountStop_Office_600.png
 INPUT figures/ds_graph_3600_ave_CountStop_Office_600.png
@@ -501,6 +541,26 @@ INPUT ./figures/cs_graph_3600_ave_TimeStop_Office_600.png
 INPUT ./figures/cs_graph_3600_ave_TimeStop_Office_600.png
 INPUT figures/cs_graph_3600_ave_TimeStop_Office_600.png
 INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_TimeStop_Office_600.png
+INPUT ./figures/CorrectionScatter_Office_TimeStop.png
+INPUT ./figures/CorrectionScatter_Office_TimeStop.png
+INPUT figures/CorrectionScatter_Office_TimeStop.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_TimeStop.png
+INPUT ./figures/CorrectionTransition_TimeStop_18.png
+INPUT ./figures/CorrectionTransition_TimeStop_18.png
+INPUT figures/CorrectionTransition_TimeStop_18.png
+INPUT extractbb -B cropbox -O figures/CorrectionTransition_TimeStop_18.png
+INPUT ./figures/CorrectionTransition_TimeStop_7.png
+INPUT ./figures/CorrectionTransition_TimeStop_7.png
+INPUT figures/CorrectionTransition_TimeStop_7.png
+INPUT extractbb -B cropbox -O figures/CorrectionTransition_TimeStop_7.png
+INPUT ./figures/CorrectionTransition_TimeStop_2.png
+INPUT ./figures/CorrectionTransition_TimeStop_2.png
+INPUT figures/CorrectionTransition_TimeStop_2.png
+INPUT extractbb -B cropbox -O figures/CorrectionTransition_TimeStop_2.png
+INPUT ./figures/CorrectionTransition_TimeStop_16.png
+INPUT ./figures/CorrectionTransition_TimeStop_16.png
+INPUT figures/CorrectionTransition_TimeStop_16.png
+INPUT extractbb -B cropbox -O figures/CorrectionTransition_TimeStop_16.png
 INPUT out/KoheiMatsumoto.bbl
 INPUT out/KoheiMatsumoto.bbl
 INPUT out/KoheiMatsumoto.bbl

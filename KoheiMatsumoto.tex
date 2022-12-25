@@ -859,10 +859,10 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   どれだけのエージェントが必要かを事前に把握することは困難である．
   \par
 
-  \ref{sec:expAnalsis}項で詳細に説明するように，$K^i$の値はエージェントによって大きなばらつきがあり，
+  \ref{sec:expAnalsis}項で詳細に説明するように，$K^i$はエージェントによって大きなばらつきがあり，
   大きく分けて2つのグループに分かれていることが分かった．
-  特に，$K^i$の値が比較的大きいグループに属するエージェントは，エネルギー消費を抑えるために比較的長い時間{\em Pausing}を行っていたため，
-  このような$K^i$の値が最も大きいエージェント$i_{de}\in\AgentSet$を停止させる手法を提案する．
+  特に，$K^i$が比較的大きいグループに属するエージェントは，エネルギー消費を抑えるために比較的長い時間{\em Pausing}を行っていたため，
+  このような$K^i$が最も大きいエージェント$i_{de}\in\AgentSet$を停止させる手法を提案する．
   %
   \begin{equation}
     i_{de} = \argmax_{i\in\AgentSet} K^i
@@ -871,16 +871,16 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   その後，いくつかのエージェントの$K^i$がまだ大きい場合，
   品質要求が満たされているのならば，
   全てのエージェントの$K^i$が相対的に小さくなるまで同様の停止処理を繰り返す．
-  ここで，\ref{ex:ER4}項で詳細に説明するように，$K^i$の値の降順にエージェントを停止することによって，
+  ここで，\ref{ex:ER4}項で詳細に説明するように，$K^i$の降順にエージェントを停止することによって，
   停止による$D(s)$の一時的な悪化を防いでいる．
   \par
 
   本実験では，不要なエージェントの停止手法として，
-  関数\textsf{PLength}が呼び出された回数を比較して停止する手法(Deactivation with Count)と，
-  エージェントの待機時間を比較して停止する手法(Deactivation with Time)の2つの手法を提案する．
+  関数\textsf{PLength}が呼び出された回数を比較して停止する手法(Deactivation on Count)と，
+  エージェントの待機時間を比較して停止する手法(Deactivation on Time)の2つの手法を提案する．
   \\ \red{英語名については要検討}\\
 
-  \subsubsection{Deactivation with Count}\label{sec:CountStop}
+  \subsubsection{Deactivation on Count}\label{sec:CountStop}
   システムは$\DeactCheckInterval>0$ステップごとに，関数\textsf{PLength}が全てのエージェントによって
   呼び出された回数である$\PauseCount$をカウントし，$\PauseCount$と$K^{i_{de}}$が大きい場合，
   すなわち，以下の式を満たすかを確認する．
@@ -908,10 +908,10 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \end{figure}
 
 
-  \subsubsection{Deactivation with Time}\label{sec:TimeStop}
+  \subsubsection{Deactivation on Time}\label{sec:TimeStop}
   \ref{sec:expAnalsis}項で詳細に説明するように，AMTDS/ERでは，イベント処理中心のグループと，
   エネルギー節約中心のグループの2グループに分かれる．
-  Deactivation with Timeは，その性質とエージェントの待機時間を用いて停止するか否かを判断する手法である．
+  Deactivation on Timeは，その性質とエージェントの待機時間を用いて停止するか否かを判断する手法である．
   \par
   
   まず，エージェント$i$の待機時間の通常変化量$d^i$を導入する．
@@ -945,7 +945,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   %  
   \par
 
-  図\ref{fig:flowchart_stop}は，Deactivation with Timeでの停止をするかどうかの判断のフローチャートである．
+  図\ref{fig:flowchart_stop}は，Deactivation on Timeでの停止をするかどうかの判断のフローチャートである．
   $(n-1) \times \DeactCheckInterval \sim n \times \DeactCheckInterval$ステップでの$i$の総待機時間である
   $P^i_n$を用いて，$\DeactCheckInterval$ステップごとに$|P^i_n - P^i_{n-1}|$と$\beta_s \times d^i$を比較する．
   $|P^i_n - P^i_{n-1}| \leq d^i$のエージェントの集合を$A_n$として，以下の式を満たすか確認する．
@@ -1124,10 +1124,10 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
       \caption{エージェントの停止に関するパラメータ}
       \begin{tabular}{lcrr} \\ \hline
         種類 & パラメーター & 値 \\ \hline
-        Deactivation with Count & $\DeactCheckInterval$ & 250,000 \\
+        Deactivation on Count & $\DeactCheckInterval$ & 250,000 \\
                                 & $\DeactCount$ & 100 \\
                                 & $\DeactThreshold$ & 1.0 \\ \hline
-        Deactivation with Time & $\DeactCheckInterval$ & 250,000 \\
+        Deactivation on Time & $\DeactCheckInterval$ & 250,000 \\
                               & $\beta_s$ & 10 \\
                               & $\alpha_1$ & 0.1 \\
                               & $\alpha_2$ & 0.05 \\
@@ -1145,7 +1145,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   提案手法の有効性を検証する．
   評価指標$D(s)$と$C(s)$を調査することにより，提案手法が他の手法と比べて，
   エージェントが品質要求を満たしつつ，エネルギー消費を削減できることを実証する．
-  また，$\forall i\in\AgentSet$の$K^i$の値の分布を分析し，その値に応じてエージェントを2つのグループに分けた．
+  また，$\forall i\in\AgentSet$の$K^i$の分布を分析し，その値に応じてエージェントを2つのグループに分けた．
   さらに，要求値$\Dreq$を変化させたときのエージェントの対応を検証も行う．
   加えて，エージェントの停止を行う際に，停止方法による要求充足度の違いを検証し，
   それを基に，品質要求を満たしながら巡回エージェントの数を減らすことができることを実証する．
@@ -1328,7 +1328,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   \subsubsection{行動の解析}\label{sec:expAnalsis}
   この項では，実験1と実験2でのエージェントの行動を解析し，提案手法であるAMTDS/ERを定性的に評価する．
-  まず，エージェントのエージェントのエネルギー節約行動の特徴，特に各エージェントの学習パラメータ$K^i$の値に一部影響される，
+  まず，エージェントのエージェントのエネルギー節約行動の特徴，特に各エージェントの学習パラメータ$K^i$に一部影響される，
   {\em Pausing}による待機時間の総和を解析する．
   図\ref{fig:cscatter_ER_Office}と図\ref{fig:cscatter_ER_Complex}に，
   2,000,000ステップから3,000,000ステップでの総待機時間を計算し，
@@ -1337,8 +1337,8 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   特別な意図はない．
   \par
 
-  これらのグラフから，エージェントが$K^i$の値が比較的大きく(例えば$K^i\geq 10$)，総待機時間が大きいものと，
-  $K^i$の値が小さく(例えば$K^i\leq 3$)，総待機時間が比較的小さいものとに大別できることが分かる．
+  これらのグラフから，エージェントが$K^i$が比較的大きく(例えば$K^i\geq 10$)，総待機時間が大きいものと，
+  $K^i$が小さく(例えば$K^i\leq 3$)，総待機時間が比較的小さいものとに大別できることが分かる．
   前者のグループをEnergy saveグループ(ES-groupと呼ぶ)，後者のグループをBusyグループ(B-groupと呼ぶ)と名付けることにする．
   まず，$2,000,000 \sim 3,000,000$の間の長さは1,000,000であるので，
   800,000ステップ以上{\em Pausing}を行ったES-groupのエージェントはほとんど環境を巡回していないことが分かる．
@@ -1353,8 +1353,8 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   ES-groupのエージェントは待機時間を増やしており，このような分化が個人学習により発生したことが分かる．
   \par
 
-  ここで図\ref{fig:al_ER_Office_top}と図\ref{fig:al_ER_Complex_top}は，ES-groupに属し$K^i$の値が大きい上位4体を，
-  図\ref{fig:al_ER_Office_least}と図\ref{fig:al_ER_Complex_least}は，B-groupに属す$K^i$の値が小さい下位4体の行動である．
+  ここで図\ref{fig:al_ER_Office_top}と図\ref{fig:al_ER_Complex_top}は，ES-groupに属し$K^i$が大きい上位4体を，
+  図\ref{fig:al_ER_Office_least}と図\ref{fig:al_ER_Complex_least}は，B-groupに属す$K^i$が小さい下位4体の行動である．
   これらの図から，どちらの環境でも，Pausingを時間と共に多くとるようになり，
   散発的にのみ行動してイベントを処理するようになったグループと，充電時間を除いて継続的に行動し，
   イベント処理数を時間と共に増加させたグループの行動の違いが分かる．
@@ -1434,7 +1434,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \subsubsection{実験3: $\Dreq$の変化による性能の変化}\label{ex:ER3}
   この項では，要求値$\Dreq$が途中で変化した際に，提案手法は対応できるのかを検証する．
   図\ref{fig:ds_ER_ChangeRequirement}，\ref{fig:cs_ER_ChangeRequirement}は環境2で実験を行い，
-  それぞれ3,600ステップごとの$D(s)$と$C(s)$の時間推移を示したものである
+  それぞれ3,600ステップごとの$D(s)$と$C(s)$の時間推移を示したものである．
   ここで，$0 \sim 2,000,000$ステップの期間をP1，$4,000,000 \sim 6,000,000$ステップの期間をP2，
   $4,000,000 \sim 6,000,000$ステップの期間をP3として，
   $\Dreq$はP1とP3では1,000であり，P2では600と設定している．
@@ -1451,12 +1451,12 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   次に，$\Dreq$が変化したときの各エージェントの学習パラメータ$K^i$と，
   {\em Pausing}による待機時間の関係をまとめた散布図が図\ref{fig:cscatter_ChangeRequirement_2m}
   $\sim$\ref{fig:cscatter_ChangeRequirement_6m}である．
-  なお，それぞれは2,000,000ステップ，4,000,000ステップ，6,000,000ステップ時点での$K^i$の値と，
+  なお，それぞれは2,000,000ステップ，4,000,000ステップ，6,000,000ステップ時点での$K^i$と，
   直前1,000,000ステップにおける待機時間の総和をプロットしてある．
   これらの図より，品質要求によってプロットの散らばりぐらいが異なることが分かる．
-  $\Dreq$が小さくなると厳しくなった品質要求を満たすために，$K^i$の値が小さくなり，
+  $\Dreq$が小さくなると厳しくなった品質要求を満たすために，$K^i$が小さくなり，
   待機時間が短くなって巡回を多く行うようになったエージェントが存在し，
-  $\Dreq$が大きくなると品質要求に対して巡回が過剰であるため，$K^i$の値が大きくなり，
+  $\Dreq$が大きくなると品質要求に対して巡回が過剰であるため，$K^i$が大きくなり，
   待機時間が長くなったエージェントが存在することが分かる．
   また，それぞれの図でのB-goupとES-groupのエージェント数は，
   図\ref{fig:cscatter_ChangeRequirement_2m}では6体と14体，
@@ -1486,10 +1486,141 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   以上より，提案手法であるAMTDS/ERは，品質要求が世中で変化しても対応でき，
   それに応じて2つのグループの構成比を変化させることができる手法であるといえる．
+
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_ER_Office_randomStop.png}
+    \caption{ランダム停止における$D(s)$の時間推移(実験4)}
+    \label{fig:ds_RandomStop}
+    \vspace{12pt}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_ER_Office_randomStop.png}
+    \caption{ランダム停止における$C(s)$の時間推移(実験4)}
+    \label{fig:cs_RandomStop}
+  \end{figure}
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_RandomStop_before.png}
+    \caption{エージェントごとの$K^i$と待機時間の関係(ランダム停止時)}
+    \label{fig:cscatter_RandomStop_before}
+    \vspace{12pt}
+    \centering
+    \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_RandomStop_after.png}
+    \caption{エージェントごとの$K^i$と待機時間の関係(ランダム停止後)}
+    \label{fig:cscatter_RandomStop_after}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_RandomStop_10.png}
+      \subcaption{停止後にB-groupになったエージェント}
+      \label{subfig:transition_random_10}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_RandomStop_7.png}
+      \subcaption{停止後もES-groupであったエージェント}
+      \label{subfig:transition_random_7}
+    \end{minipage}
+    \caption{エージェントの$K^i$の時間推移(ランダム停止)}
+    \label{fig:transition_randomStop}
+  \end{figure}
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_ER_Office_descendingStop.png}
+    \caption{降順停止における$D(s)$の時間推移(実験4)}
+    \label{fig:ds_DescendingStop}
+    \vspace{12pt}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_ER_Office_descendingStop.png}
+    \caption{降順停止における$C(s)$の時間推移(実験4)}
+    \label{fig:cs_DescendingStop}
+  \end{figure}
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_DescendingStop_before.png}
+    \caption{エージェントごとの$K^i$と待機時間の関係(降順停止時)}
+    \label{fig:cscatter_DescendingStop_before}
+    \vspace{12pt}
+    \centering
+    \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_DescendingStop_after.png}
+    \caption{エージェントごとの$K^i$と待機時間の関係(降順停止後)}
+    \label{fig:cscatter_DescendingStop_after}
+  \end{figure}
   
 
-
   \subsubsection{実験4: エージェント数減少による性能の変化}\label{ex:ER4}
+  この節では，途中でエージェントが複数体停止したとき，提案手法のAMTDS/ERが品質要求を満たさせるかを検証する．
+  ここでは，2,000,000ステップで5体停止させ，ランダムに5体停止と$K^i$の降順に5体停止の2つの停止手法を比較する．
+  前者は巡回中のエージェントの故障を想定し，
+  後者はエージェント数を減らしたいときに{\em Pausing}による待機を多めにしているエージェントから停止する状況を想定している．
+  \par
+
+  図\ref{fig:ds_RandomStop}，\ref{fig:cs_RandomStop}は，環境1でランダムに5体停止を行い，
+  それぞれ3,600ステップごとの$D(s)$と$C(s)$を示したものである．
+  図\ref{fig:ds_RandomStop}より，2,000,000ステップでランダムに5体停止したため，
+  $D(s)$の一時的な悪化が生じてしまい，品質要求を満たすことができなくなってしまっている．
+  しかし，その後徐々に品質要求を満たせるようになった．
+  \par
+
+  図\ref{fig:cscatter_RandomStop_before}は2,000,000ステップ時点での$K^i$と，
+  1,000,000$\sim$2,000,000ステップでの総待機時間をプロットしたものであり，
+  この時に停止するエージェントを赤でプロットしている．
+  この図より，停止するエージェントは，待機時間が少ないものもあれば，多いものもあることが分かる．
+  つまり，停止エージェントはB-groupやES-groupに偏らずに選択された．
+  次に，図\ref{fig:cscatter_RandomStop_after}は4,000,000ステップ時点での$K^i$と，
+  3,000,000$\sim$4,000,000ステップでの総待機時間をプロットしたものである．
+  図\ref{fig:cscatter_RandomStop_before}，\ref{fig:cscatter_RandomStop_after}より，
+  品質要求を満たすために待機時間が短く，巡回中心であったエージェントが停止し，
+  このままでは品質要求をみたせないため，その時は待機時間が長かったエージェントも$K^i$が小さくなり，
+  待機時間も短くなったことが分かる．
+  \par
+
+  ここで，図\ref{fig:transition_randomStop}はエージェントの$K^i$の時間推移を示したものであり，
+  図\ref{subfig:transition_random_10}はランダム停止後に，品質要求を満すためにES-groupからB-goupになったエージェントであり，
+  図\ref{subfig:transition_random_7}はランダム停止後もES-groupのままであったエージェントである．
+  図\ref{subfig:transition_random_10}より，停止後に品質要求が満たさなくなったと判断し，
+  元々は$K^i$が大きかったのに，停止後に急激に減少し，B-goupになり，巡回中心になったことが分かる．
+  一方，図\ref{subfig:transition_random_7}より，このエージェントも停止後は品質要求が満たさなくなったと判断し，
+  $K^i$を減少させたが，他のエージェントも巡回を多くしたため品質要求が満たさせるようになり，
+  エネルギー消費抑制の観点から，ES-groupのままであったということが分かる．
+  \par
+
+  以上より，ランダムにエージェントを停止した際，$D(s)$の一時的な悪化は起きてしまうものの，
+  その後にエージェントが品質要求を満たさせていないと判断し，$K^i$を変化させ，
+  B-groupとES-groupの比率を変化させることにより，品質要求を満たせるようになった．
+  つまり，提案手法のAMTDS/ERは，巡回中にエージェントが故障し停止してしまっても，
+  学習パラメータ$K^i$を変化させることにより，対応できるということが分かった．
+  \par
+  
+  図\ref{fig:ds_DescendingStop}，\ref{fig:cs_DescendingStop}は，環境1で$K^i$の降順に5体停止を行い，
+  それぞれ3,600ステップごとの$D(s)$と$C(s)$を示したものである．
+  図\ref{fig:ds_RandomStop}と図\ref{fig:ds_DescendingStop}を比較すると，前述したランダム停止と比べて，
+  停止時の$D(s)$の一時的な悪化がかなり緩和されていることが分かる．
+  具体的には，ランダム停止時のピークから降順停止のピークは，約13.9\%削減することができた．
+  ランダム停止では品質要求を大幅に超えてしまっていたが，降順停止では停止による悪化をかなり抑え，
+  品質要求も満たせたままでいることができた．
+  \par
+  
+  次に，図\ref{fig:cscatter_DescendingStop_before}は2,000,000ステップ時点での$K^i$と，
+  1,000,000$\sim$2,000,000ステップでの総待機時間をプロットしたものであり，
+  この時に停止するエージェントは赤でプロットしている．
+  この図より，停止するエージェントは，$K^i$が大きいものから5体選べていることが分かる．
+  また，図\ref{fig:cscatter_DescendingStop_after}は4,000,000ステップ時点での$K^i$と，
+  3,000,000$\sim$4,000,000ステップでの総待機時間をプロットしたものである．
+  図\ref{fig:cscatter_DescendingStop_before}，\ref{fig:cscatter_DescendingStop_after}より，
+  $K^i$の大きなエージェントが停止したため，停止後にES-groupからB-groupに変更したエージェントは少なかった．
+  これは，元々待機時間が多くイベント処理をあまり行っていなかったエージェントが停止したため，
+  それをカバーするのは容易であり，ランダム停止に比べて，
+  待機時間を減らして巡回を多くやる必要があまりなかったからだと考えられる．
+
+
 
 
 
@@ -1507,26 +1638,26 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
 
   \subsection{不要なエージェントの停止}\label{ex:deactivation}
-  この節では，\ref{sec:deactivation}節で述べたDeactivation with CountとDeactivation with Timeそれぞれの手法による，
-  品質要求を満たす上で不要なエージェントを停止する実験を停止なしのAMTDS/ERと比較していく．
+  この節では，\ref{sec:deactivation}節で述べたDeactivation on CountとDeactivation on Timeそれぞれの手法による，
+  品質要求を満たす上で不要なエージェントを停止する実験を停止なしのAMTDS/ERと比較する．
 
-  \subsubsection{実験5: Deactivation with Countによる不要なエージェントの停止}\label{ex:ER5}
+  \subsubsection{実験5: Deactivation on Countによる不要なエージェントの停止}\label{ex:ER5}
   \red{図はICAARTに使えるように英語にする．}\\
-  この項では，\ref{sec:expAnalsis}での分析に基づき，
-  \ref{sec:CountStop}項で述べたDeactivation with Countによる不要なエージェントの停止手法を評価するために，
+  この項では，\ref{sec:expAnalsis}項での分析に基づき，
+  \ref{sec:CountStop}項で述べたDeactivation on Countによる不要なエージェントの停止手法を評価するために，
   実験1と同じ設定で実験を行った．
-  すなわち，品質要求を満たしながら，巡回エージェントの数を減らし，エネルギー消費を抑えられるかどうかを確認した．
-  表\ref{tb:4}に示すように，$\DeactCheckInterval=250,000$ごとにエージェントを停止できるかどうかを確認した．
+  すなわち，品質要求を満たしながら，巡回エージェントの数を減らし，エネルギー消費を抑えられるかを検証する．
+  表\ref{tb:4}に示すように，$\DeactCheckInterval=250,000$ごとにエージェントを停止できるかを確認した．
   \par
 
   図\ref{fig:ds_CountStop}，\ref{fig:cs_CountStop}はそれぞれ$D(s)$と$C(s)$の
   5,000,000ステップまでの時間推移を示しており，
-  図内のDeactivation with CountというラベルがDeactivation with Countによる停止手法を用いたAMTDS/ERを示している．
+  図内のDeactivation on CountというラベルがDeactivation on Countによる停止手法を用いたAMTDS/ERを示している．
   この実験では，停止したエージェントの数は6から8の間であり，ほとんどが7であった．
   ここで，$D(s)$と$C(s)$の値は小さい方が良いことに再度注意されたい．
   \par
 
-  図\ref{fig:ds_CountStop}より，Deactivation with Countを用いたAMTDS/ERは，
+  図\ref{fig:ds_CountStop}より，Deactivation on Countを用いたAMTDS/ERは，
   停止手法を用いないAMTDS/ERと比較して，差は小さいが，
   品質要求を満たしつつ$D(s)$をより大きいことが分かる．
   これは，AMTDS/ERが既に$D(s)$の値を要求品質付近に維持できるためである．
@@ -1556,55 +1687,56 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
       \centering
       \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_CountStop_18.png}
       \subcaption{$D= 250,000$ステップ}
-      \label{subfig:transition_18}
+      \label{subfig:transition_count_18}
     \end{minipage}
     \hfill
     \begin{minipage}{0.48\hsize}
       \centering
       \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_CountStop_7.png}
       \subcaption{$D=500,000$ステップ}
-      \label{subfig:transition_7}
+      \label{subfig:transition_count_7}
     \end{minipage}
-    \caption{$D$ステップで停止したエージェントの$K^i$の時間推移}
-    \label{fig:transition_early}
+    \caption{$D$ステップで停止したエージェントの$K^i$の時間推移(実験5)}
+    \label{fig:transition_early_count}
   \vspace{12pt}
     \begin{minipage}{0.48\hsize}
       \centering
       \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_CountStop_2.png}
       \subcaption{例1}
-      \label{subfig:transition_2}
+      \label{subfig:transition_count_2}
     \end{minipage}
     \hfill
     \begin{minipage}{0.48\hsize}
       \centering
       \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_CountStop_9.png}
       \subcaption{例2}
-      \label{subfig:transition_9}
+      \label{subfig:transition_count_9}
     \end{minipage}
-    \caption{非停止エージェントの$K^i$の時間推移}
-    \label{fig:transition_notSuspend}
+    \caption{非停止エージェントの$K^i$の時間推移(実験5)}
+    \label{fig:transition_notSuspend_count}
   \end{figure}
 
-  \subsubsection{停止エージェントと非停止エージェントの行動の解析}
-  この項では，$K^i$の推移を調べることで，停止エージェントと非停止エージェントの行動を解析する．
-  図\ref{fig:cscatter_CountStop_Office}に，実験5からランダムに選んだ独立した1つの実験における
+  \subsubsection{実験5における停止エージェントと非停止エージェントの行動の解析}\label{sec:ex5Analsis}
+  この項では，実験5における$K^i$の推移を調べることで，Deactivation on Countによる
+  停止エージェントと非停止エージェントの行動を解析する．
+  図\ref{fig:cscatter_CountStop_Office}に，実験5からランダムに選んだ，独立した1つの実験における
   $K^i$と$i$の{\em Pausing}による待機時間の関係をプロットする．
   ここで，$K^i$は5,000,000ステップでの値であり，待機時間は実験の最後の1,000,000ステップでの待機時間の総和である．
   したがって，停止したエージェント$i$の$K^i$は停止したときの値であり，
   待機時間は0である．
   図\ref{fig:cscatter_CountStop_Office}での7つの赤いプロットが停止エージェントに対応する．
-  この図より，停止エージェントは$K^i$の値が比較的大きく，
+  この図より，停止エージェントは$K^i$が比較的大きく，
   非停止エージェントは非常に短い待機時間で巡回を続けていることが分かる．
   このことから，この環境では13体のエージェントで要求品質を満たすことができたと考えられる．
   \par
 
-  図\ref{fig:transition_early}と図\ref{fig:transition_notSuspend}は，
-  250,000ステップと500,000ステップで停止したエージェント(図\ref{fig:transition_early})と，
-  非停止エージェント(図\ref{fig:transition_notSuspend})の$K^i$の時間推移をプロットしたものである．
-  図\ref{fig:transition_early}より，これらのエージェントの$K^i$は急激に増加し，
+  図\ref{fig:transition_early_count}と図\ref{fig:transition_notSuspend_count}は，
+  250,000ステップと500,000ステップで停止したエージェント(図\ref{fig:transition_early_count})と，
+  非停止エージェント(図\ref{fig:transition_notSuspend_count})の$K^i$の時間推移をプロットしたものである．
+  図\ref{fig:transition_early_count}より，これらのエージェントの$K^i$は急激に増加し，
   待機時間がその時点で最大であったため，停止の対象に選ばれたことが分かる．
   停止後は$K^i$は変化しない．
-  一方，非停止エージェントは一時的に$K^i$の値を増加させたが，
+  一方，非停止エージェントは一時的に$K^i$を増加させたが，
   その後，一部のエージェントが停止したため，$K^i$が減少し，
   比較的小さい値を維持した．
   つまり，非停止エージェントは品質要求を満たすために，
@@ -1629,10 +1761,116 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \end{figure}
 
 
-  \subsubsection{実験6: Deactivation with Timeによる不要なエージェントの停止}\label{ex:ER6}
+  \subsubsection{実験6: Deactivation on Timeによる不要なエージェントの停止}\label{ex:ER6}
   \red{図はICAARTに使えるように英語にする．}\\
+  この項では，\ref{sec:expAnalsis}項での分析に基づき，
+  \ref{sec:TimeStop}で述べたDeactivation on Timeによる不要なエージェントの停止手法を評価するために，
+  実験1と同じ設定で実験を行った．
+  すなわち，品質要求を満たしながら，巡回エージェントの数を減らし，エネルギー消費を抑えられるかを検証する．
+  表\ref{tb:4}に示すように，$\DeactCheckInterval = 250,000$ごとにエージェントを停止できるかを確認した．
+  \par
+
+  図\ref{fig:ds_TimeStop}，\ref{fig:cs_TimeStop}はそれぞれ$D(s)$，$C(s)$の5,000,000ステップまでの時間推移を示しており，
+  図内のDeactivation on TimeというラベルがDeactivation on Time による停止手法を用いたAMTDS/ERを示している．
+  この実験では，停止したエージェントの数は5から7の間であり，ほとんどが6であった．
+  ここで，$D(s)$と$C(s)$の値は小さい方がよいことに再度注意されたい．
+  \par
+
+  図\ref{fig:ds_TimeStop}より，Deactivation on Timeを用いたAMTDS/ERは，停止手法を用いないAMTDS/ERとほとんど差がなかった．
+  それに伴い，図\ref{fig:cs_TimeStop}でも差が小さいのが分かる．
+  つまり，システム全体の巡回性能をほとんど変化させることなく，エージェントの数を減らすことができた．
+  ここでも，\ref{ex:ER5}項で述べた，停止手法によるメリットを再度強調したい．
 
 
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_TimeStop.png}
+    \caption{エージェントごとの$K^i$と待機時間の関係(実験6)}
+    \label{fig:cscatter_TimeStop_Office}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_TimeStop_18.png}
+      \subcaption{$D= 1,750,000$ステップ}
+      \label{subfig:transition_time_18}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_TimeStop_7.png}
+      \subcaption{$D=2,000,000$ステップ}
+      \label{subfig:transition_time_7}
+    \end{minipage}
+    \caption{$D$ステップで停止したエージェントの$K^i$の時間推移(実験6)}
+    \label{fig:transition_early_time}
+  \vspace{12pt}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_TimeStop_2.png}
+      \subcaption{例1}
+      \label{subfig:transition_time_2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_TimeStop_16.png}
+      \subcaption{例2}
+      \label{subfig:transition_time_16}
+    \end{minipage}
+    \caption{非停止エージェントの$K^i$の時間推移(実験6)}
+    \label{fig:transition_notSuspend_time}
+  \end{figure}
+
+
+  \subsubsection{実験６における停止エージェントと非停止エージェントの行動の解析}\label{sec:ex6Analsis}
+  \red{ここで，Timeの方がよいということ、30台の追加実験について述べる}\\
+  この項では，Deactivation on Timeによる停止エージェントと非停止エージェントの行動を解析し，
+  実験5のDeactivation on Countと比較する．
+  図\ref{fig:cscatter_TimeStop_Office}に，実験6からランダムに選んだ，
+  独立した1つの実験における$K^i$と$i$の{\em Pausing}による待機時間の関係をプロットする．
+  ここで，$K^i$は5,000,000ステップでの値であり，
+  待機時間は実験の最後の1,000,000ステップでの待機時間の総和である．
+  したがって，停止したエージェント$i$の$K^i$は停止したときの値であり，
+  待機時間は0である．
+  図\ref{fig:cscatter_TimeStop_Office}での6つの赤いプロットが停止エージェントに対応する．
+  この図でも，停止エージェントは$K^i$が大きく，非停止エージェントは非常に短い待機時間で巡回を続けていることが分かる．
+  また，待機時間が500,000以上であるが停止していないエージェントが1体確認することができる．
+  これは，実験5では停止していたエージェントである．
+  他の独立した実験でも，実験設定は同じであるが，停止したエージェント数はDeactivationの方がDeactivation on Time以上であり，
+  50試行の平均では，1.1体多かった．
+  つまり，Deactivation on Countでは，図\ref{fig:cscatter_CountStop_Office}のように，
+  非停止エージェントの待機時間は0に近かったが，Deactivation on Timeでは，
+  比較的待機時間が大きいエージェントが1体残ったという結果になった．
+  しかし，停止手法の優劣を決める際に，停止したエージェント数が多いという点が必ずしも優先されるべきではない．
+  実験5と実験6では，停止したエージェントが巡回を再開することはないため，
+  停止をしすぎて品質要求を満たせないということはあってはならない．
+  このような条件の際に，Deactivation on Timeでは\ref{sec:TimeStop}項で述べたように，
+  しっかり役割分担が行われてから停止を始めるようにしており，エージェントを停止しても，
+  そのエージェントの分の巡回を残りのエージェントでカバーすることができることが保証されてから停止をするようになっている．
+  しかし，Deactivation on Countでは，現在のエージェント数では要求品質を十分に満たせていることは確認できているが，
+  エージェントの停止によって，どの程度の影響があるかは確認できずに停止している．
+  つまり，Deactivation on Countの方では，エージェントを停止しすぎてしまう可能性もある．
+  図\red{CountStopとTimeStopとのグラフを合わせる}，\red{C(s)のグラフ}に
+  Deactivation on CountとDeactivation on Timeの$D(s)$と$C(s)$の時間推移をプロットした．
+  これらの図から分かるように，両者の巡回効率やエネルギー消費量はほとんど差がないことを考慮すると，
+  停止手法としてより望ましいのはDeactivation on Timeの方であると考えられる．
+  \par
+
+  次に，実験6における$K^i$の推移を調べた．
+  図\ref{fig:transition_early_time}と図\ref{fig:transition_notSuspend_time}は，
+  1,750,000ステップと2,000,000ステップで停止したエージェント(図\ref{fig:transition_early_time})と，
+  非停止エージェント(図\ref{fig:transition_notSuspend_time})の$K^i$の時間推移をプロットしたものである．
+  式(\ref{eq:sillet})での平均シルエット係数$S$と閾値$S_{deact}$の比較のため，停止し始めた時刻は実験5よりも遅いが，
+  大まかな結果は\ref{sec:ex5Analsis}項と同様である．
+  停止エージェントは$K^i$が急激に増加し停止の対象に選ばれた一方で，
+  非停止エージェントは一時的に$K^i$を増加させたが，一部のエージェントが停止したため，$K^i$が減少した．
+  \par
+
+  さらに，Deactivation on Timeでエージェント数$|A|$を30にして実験を行った．
+
+  
   \subsection{AMTDS/ERCについての実験結果}\label{result_ERC}
   
   \subsubsection{実験5: 性能評価}\label{ex:ERC1}
