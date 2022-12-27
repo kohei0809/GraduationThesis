@@ -1501,15 +1501,21 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \end{figure}
 
   \begin{figure}
-    \centering
-    \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_RandomStop_before.png}
-    \caption{エージェントごとの$K^i$と待機時間の関係(ランダム停止時)}
-    \label{fig:cscatter_RandomStop_before}
-    \vspace{12pt}
-    \centering
-    \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_RandomStop_after.png}
-    \caption{エージェントごとの$K^i$と待機時間の関係(ランダム停止後)}
-    \label{fig:cscatter_RandomStop_after}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionScatter_Office_RandomStop_before.png}
+      \subcaption{停止時}
+      \label{subfig:cscatter_RandomStop_before}  
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionScatter_Office_RandomStop_after.png}
+      \subcaption{停止後}
+      \label{subfig:cscatter_RandomStop_after}  
+    \end{minipage}
+    \caption{エージェントごとの$K^i$と待機時間の関係(ランダム停止)}
+    \label{fig:cscatter_RandomStop}
   \end{figure}
 
   \begin{figure}
@@ -1543,15 +1549,39 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \end{figure}
 
   \begin{figure}
-    \centering
-    \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_DescendingStop_before.png}
-    \caption{エージェントごとの$K^i$と待機時間の関係(降順停止時)}
-    \label{fig:cscatter_DescendingStop_before}
-    \vspace{12pt}
-    \centering
-    \includegraphics[width=0.8\hsize]{figures/CorrectionScatter_Office_DescendingStop_after.png}
-    \caption{エージェントごとの$K^i$と待機時間の関係(降順停止後)}
-    \label{fig:cscatter_DescendingStop_after}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionScatter_Office_DescendingStop_before.png}
+      \subcaption{停止時}
+      \label{subfig:cscatter_DescendingStop_before}  
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionScatter_Office_DescendingStop_after.png}
+      \subcaption{停止後}
+      \label{subfig:cscatter_DescendingStop_after}  
+    \end{minipage}
+    \caption{エージェントごとの$K^i$と待機時間の関係(降順停止)}
+    \label{fig:cscatter_DescendingStop}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_DescendingStop_2.png}
+      \subcaption{停止後もB-groupであったエージェント}
+      \label{subfig:transition_descending_2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/CorrectionTransition_DescendingStop_10.png}
+      \subcaption{停止後もES-groupであったエージェント}
+      \label{subfig:transition_descending_10}
+    \end{minipage}
+    \caption{エージェントの$K^i$の時間推移(降順停止)}
+    \label{fig:transition_descendingStop}
   \end{figure}
   
 
@@ -1569,23 +1599,23 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   しかし，その後徐々に品質要求を満たせるようになった．
   \par
 
-  図\ref{fig:cscatter_RandomStop_before}は2,000,000ステップ時点での$K^i$と，
+  図\ref{subfig:cscatter_RandomStop_before}は2,000,000ステップ時点での$K^i$と，
   1,000,000$\sim$2,000,000ステップでの総待機時間をプロットしたものであり，
   この時に停止するエージェントを赤でプロットしている．
   この図より，停止するエージェントは，待機時間が少ないものもあれば，多いものもあることが分かる．
   つまり，停止エージェントはB-groupやES-groupに偏らずに選択された．
-  次に，図\ref{fig:cscatter_RandomStop_after}は4,000,000ステップ時点での$K^i$と，
+  次に，図\ref{subfig:cscatter_RandomStop_after}は4,000,000ステップ時点での$K^i$と，
   3,000,000$\sim$4,000,000ステップでの総待機時間をプロットしたものである．
-  図\ref{fig:cscatter_RandomStop_before}，\ref{fig:cscatter_RandomStop_after}より，
+  図\ref{subfig:cscatter_RandomStop_before}，\ref{subfig:cscatter_RandomStop_after}より，
   品質要求を満たすために待機時間が短く，巡回中心であったエージェントが停止し，
   このままでは品質要求をみたせないため，その時は待機時間が長かったエージェントも$K^i$が小さくなり，
   待機時間も短くなったことが分かる．
   \par
 
-  ここで，図\ref{fig:transition_randomStop}はエージェントの$K^i$の時間推移を示したものであり，
+  また，図\ref{fig:transition_randomStop}はエージェントの$K^i$の時間推移を示したものである．
   図\ref{subfig:transition_random_10}はランダム停止後に，品質要求を満すためにES-groupからB-goupになったエージェントであり，
   図\ref{subfig:transition_random_7}はランダム停止後もES-groupのままであったエージェントである．
-  図\ref{subfig:transition_random_10}より，停止後に品質要求が満たさなくなったと判断し，
+  図\ref{subfig:transition_random_10}より，このエージェントは停止後に品質要求が満たさなくなったと判断し，
   元々は$K^i$が大きかったのに，停止後に急激に減少し，B-goupになり，巡回中心になったことが分かる．
   一方，図\ref{subfig:transition_random_7}より，このエージェントも停止後は品質要求が満たさなくなったと判断し，
   $K^i$を減少させたが，他のエージェントも巡回を多くしたため品質要求が満たさせるようになり，
@@ -1608,17 +1638,42 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   品質要求も満たせたままでいることができた．
   \par
   
-  次に，図\ref{fig:cscatter_DescendingStop_before}は2,000,000ステップ時点での$K^i$と，
+  次に，図\ref{subfig:cscatter_DescendingStop_before}は2,000,000ステップ時点での$K^i$と，
   1,000,000$\sim$2,000,000ステップでの総待機時間をプロットしたものであり，
   この時に停止するエージェントは赤でプロットしている．
   この図より，停止するエージェントは，$K^i$が大きいものから5体選べていることが分かる．
-  また，図\ref{fig:cscatter_DescendingStop_after}は4,000,000ステップ時点での$K^i$と，
+  また，図\ref{subfig:cscatter_DescendingStop_after}は4,000,000ステップ時点での$K^i$と，
   3,000,000$\sim$4,000,000ステップでの総待機時間をプロットしたものである．
-  図\ref{fig:cscatter_DescendingStop_before}，\ref{fig:cscatter_DescendingStop_after}より，
+  図\ref{subfig:cscatter_DescendingStop_before}，\ref{subfig:cscatter_DescendingStop_after}より，
   $K^i$の大きなエージェントが停止したため，停止後にES-groupからB-groupに変更したエージェントは少なかった．
   これは，元々待機時間が多くイベント処理をあまり行っていなかったエージェントが停止したため，
   それをカバーするのは容易であり，ランダム停止に比べて，
   待機時間を減らして巡回を多くやる必要があまりなかったからだと考えられる．
+  \par
+
+  また，図\ref{fig:transition_descendingStop}はエージェントの$K^i$の時間推移を示したものである．
+  降順停止では，前述したランダム停止と比べて，停止後に大きな役割の変更はなかった．
+  しかし，同じ役割でも$K^i$の変化から，行動の変化を読み取ることができる．
+  図\ref{subfig:transition_descending_2}は，停止前後でもB-groupであったエージェントであり，
+  図\ref{subfig:transition_descending_10}は，停止前後でもES-groupであったエージェントである．
+  図\ref{subfig:transition_descending_2}より，このエージェントは停止前も$K^i$が小さく，
+  B-groupであったが，2,000,000ステップで降順停止後はさらに$K^i$を小さくしている．
+  これにより，停止前は待機時間をある程度とっていたが，停止後はほとんど待機せずに巡回するようになった．
+  一方，図\ref{subfig:transition_descending_10}より，このエージェントは停止前から$K^i$が大きく，
+  停止後も$K^i$が増加している．
+  しかし，2,000,000ステップでの停止直後はほとんど増加していない．
+  つまり，この期間では品質要求を満たすために，
+  停止していないエージェント達は図\ref{subfig:transition_descending_2}のように$K^i$を減少させ，
+  停止したエージェントの分も巡回を行おうとする．
+  それにより品質要求は十分に満たされ，これ以上待機時間を減らして巡回しなくても良くなり，
+  エネルギー抑制の観点から，$K^i$を減らさずに増加を続け，待機時間を多くするということを判断していると考えられる．
+  \par
+
+  以上より，エージェント数を減らしたいときには，提案手法で導入した学習パラメータ$K^i$の降順に停止することにより，
+  $D(s)$の一時的な悪化を最小限に留めることができるということが分かった．
+
+
+
 
 
 
@@ -1642,7 +1697,6 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   品質要求を満たす上で不要なエージェントを停止する実験を停止なしのAMTDS/ERと比較する．
 
   \subsubsection{実験5: Deactivation on Countによる不要なエージェントの停止}\label{ex:ER5}
-  \red{図はICAARTに使えるように英語にする．}\\
   この項では，\ref{sec:expAnalsis}項での分析に基づき，
   \ref{sec:CountStop}項で述べたDeactivation on Countによる不要なエージェントの停止手法を評価するために，
   実験1と同じ設定で実験を行った．
@@ -1762,7 +1816,6 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
 
   \subsubsection{実験6: Deactivation on Timeによる不要なエージェントの停止}\label{ex:ER6}
-  \red{図はICAARTに使えるように英語にする．}\\
   この項では，\ref{sec:expAnalsis}項での分析に基づき，
   \ref{sec:TimeStop}で述べたDeactivation on Timeによる不要なエージェントの停止手法を評価するために，
   実験1と同じ設定で実験を行った．

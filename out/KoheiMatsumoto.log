@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  26 DEC 2022 04:04
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  27 DEC 2022 22:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -725,8 +725,12 @@ File: figures/CorrectionScatter_Office_DescendingStop_before.png Graphic file (t
 <figures/CorrectionScatter_Office_DescendingStop_before.png>
 File: figures/CorrectionScatter_Office_DescendingStop_after.png Graphic file (type bmp)
 <figures/CorrectionScatter_Office_DescendingStop_after.png>
+File: figures/CorrectionTransition_DescendingStop_2.png Graphic file (type bmp)
+<figures/CorrectionTransition_DescendingStop_2.png>
+File: figures/CorrectionTransition_DescendingStop_10.png Graphic file (type bmp)
+<figures/CorrectionTransition_DescendingStop_10.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1562.
+(Font)              No change on input line 1592.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -751,10 +755,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [35]
-File: figures/ds_graph_3600_ave_CountStop_Office_600.png Graphic file (type bmp)
-<figures/ds_graph_3600_ave_CountStop_Office_600.png>
-File: figures/cs_graph_3600_ave_CountStop_Office_600.png Graphic file (type bmp)
-<figures/cs_graph_3600_ave_CountStop_Office_600.png>
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -771,6 +771,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [37]
+File: figures/ds_graph_3600_ave_CountStop_Office_600.png Graphic file (type bmp)
+<figures/ds_graph_3600_ave_CountStop_Office_600.png>
+File: figures/cs_graph_3600_ave_CountStop_Office_600.png Graphic file (type bmp)
+<figures/cs_graph_3600_ave_CountStop_Office_600.png>
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -787,8 +791,8 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [39]
-Overfull \hbox (29.52158pt too wide) in paragraph at lines 1660--1670
-[]\JY1/mc/m/n/12 図 \OT1/cmr/m/n/12 29 \JY1/mc/m/n/12 より， \OT1/cmr/m/n/12 De-ac-ti-va-tion on Count \JY1/mc/m/n/12 を用いた \OT1/cmr/m/n/12 AMTDS/ER \JY1/mc/m/n/12 は ， 停止手法を用いない \OT1/cmr/m/n/12 AMTDS/ER
+Overfull \hbox (29.52158pt too wide) in paragraph at lines 1714--1724
+[]\JY1/mc/m/n/12 図 \OT1/cmr/m/n/12 28 \JY1/mc/m/n/12 より， \OT1/cmr/m/n/12 De-ac-ti-va-tion on Count \JY1/mc/m/n/12 を用いた \OT1/cmr/m/n/12 AMTDS/ER \JY1/mc/m/n/12 は ， 停止手法を用いない \OT1/cmr/m/n/12 AMTDS/ER
  []
 
 File: figures/CorrectionScatter_Office_CountStop.png Graphic file (type bmp)
@@ -802,7 +806,7 @@ File: figures/CorrectionTransition_CountStop_2.png Graphic file (type bmp)
 File: figures/CorrectionTransition_CountStop_9.png Graphic file (type bmp)
 <figures/CorrectionTransition_CountStop_9.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1723.
+(Font)              No change on input line 1777.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -824,8 +828,8 @@ File: figures/ds_graph_3600_ave_TimeStop_Office_600.png Graphic file (type bmp)
 File: figures/cs_graph_3600_ave_TimeStop_Office_600.png Graphic file (type bmp)
 <figures/cs_graph_3600_ave_TimeStop_Office_600.png>
 
-Overfull \hbox (24.6258pt too wide) in paragraph at lines 1779--1783
-[]\JY1/mc/m/n/12 図 \OT1/cmr/m/n/12 34 \JY1/mc/m/n/12 より， \OT1/cmr/m/n/12 De-ac-ti-va-tion on Time \JY1/mc/m/n/12 を用いた \OT1/cmr/m/n/12 AMTDS/ER \JY1/mc/m/n/12 は ， 停止手法を用いない \OT1/cmr/m/n/12 AMTDS/ER
+Overfull \hbox (24.6258pt too wide) in paragraph at lines 1832--1836
+[]\JY1/mc/m/n/12 図 \OT1/cmr/m/n/12 33 \JY1/mc/m/n/12 より， \OT1/cmr/m/n/12 De-ac-ti-va-tion on Time \JY1/mc/m/n/12 を用いた \OT1/cmr/m/n/12 AMTDS/ER \JY1/mc/m/n/12 は ， 停止手法を用いない \OT1/cmr/m/n/12 AMTDS/ER
  []
 
 File: figures/CorrectionScatter_Office_TimeStop.png Graphic file (type bmp)
@@ -839,7 +843,7 @@ File: figures/CorrectionTransition_TimeStop_2.png Graphic file (type bmp)
 File: figures/CorrectionTransition_TimeStop_16.png Graphic file (type bmp)
 <figures/CorrectionTransition_TimeStop_16.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1832.
+(Font)              No change on input line 1885.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -932,12 +936,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4841 strings out of 475530
- 86371 string characters out of 5794171
+ 4862 strings out of 475530
+ 87297 string characters out of 5794171
  433356 words of memory out of 5000000
- 26374 multiletter control sequences out of 15000+600000
+ 26393 multiletter control sequences out of 15000+600000
  491086 words of font info for 114 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  67i,13n,77p,350b,714s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/KoheiMatsumoto.dvi (51 pages, 198020 bytes).
+Output written on out/KoheiMatsumoto.dvi (51 pages, 201416 bytes).

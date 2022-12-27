@@ -1,18 +1,18 @@
 # Fdb version 3
-["bibtex out/KoheiMatsumoto"] 1671995078 "out/KoheiMatsumoto.aux" "out/KoheiMatsumoto.bbl" "out/KoheiMatsumoto" 1671995119
+["bibtex out/KoheiMatsumoto"] 1672145718 "out/KoheiMatsumoto.aux" "out/KoheiMatsumoto.bbl" "out/KoheiMatsumoto" 1672147462
   "junsrt.bst" 0 -1 0 ""
-  "out/KoheiMatsumoto.aux" 1671995114 20219 75db549b34e9475d4b09e473f2fe921a "latex"
+  "out/KoheiMatsumoto.aux" 1672147457 20621 b263d9380dff87547bb3501bb796ec05 "latex"
   "ref.bib" 1670822715 12717 a999e24c334abcbd90895c71c1e3d5c3 ""
   (generated)
   "out/KoheiMatsumoto.bbl"
   "out/KoheiMatsumoto.blg"
-["dvipdf"] 1671995115 "out/KoheiMatsumoto.dvi" "out/KoheiMatsumoto.pdf" "out/KoheiMatsumoto" 1671995119
-  "out/KoheiMatsumoto.dvi" 1671995114 198020 771c53c6744c87c37ebe2379f00c392b "latex"
+["dvipdf"] 1672147458 "out/KoheiMatsumoto.dvi" "out/KoheiMatsumoto.pdf" "out/KoheiMatsumoto" 1672147462
+  "out/KoheiMatsumoto.dvi" 1672147457 201416 f469dd692a9191aeef5cdbe114999bdd "latex"
   (generated)
   "out/KoheiMatsumoto.pdf"
-["latex"] 1671995079 "c:/Users/Owner/Desktop/研究/卒論/KoheiMatsumoto.tex" "out/KoheiMatsumoto.dvi" "KoheiMatsumoto" 1671995119
-  "KoheiMatsumoto.tex" 1671995000 119947 ca54ef6aa9aca43391b0f89c6a1d4323 ""
-  "c:/Users/Owner/Desktop/研究/卒論/KoheiMatsumoto.tex" 1671995000 119947 ca54ef6aa9aca43391b0f89c6a1d4323 ""
+["latex"] 1672147423 "c:/Users/Owner/Desktop/研究/卒論/KoheiMatsumoto.tex" "out/KoheiMatsumoto.dvi" "KoheiMatsumoto" 1672147462
+  "KoheiMatsumoto.tex" 1672147418 122952 34208e63ff2b4ef6a76697a881c3278c ""
+  "c:/Users/Owner/Desktop/研究/卒論/KoheiMatsumoto.tex" 1672147418 122952 34208e63ff2b4ef6a76697a881c3278c ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1664807816 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1664811214 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm" 1664811214 1196 1be730212205a270378fba11a44765dc ""
@@ -99,6 +99,8 @@
   "figures/CorrectionTransition_CountStop_2.png" 1665071984 9572 957300e635d462d4d2dd832b3b027157 ""
   "figures/CorrectionTransition_CountStop_7.png" 1665071990 6519 7721a7b264e0f75ed479d34dc217fb43 ""
   "figures/CorrectionTransition_CountStop_9.png" 1665071993 12268 ac774d1d1950bf9f8eed13a4bfb8f14d ""
+  "figures/CorrectionTransition_DescendingStop_10.png" 1672135935 9548 6f0e45c94522ec25789db30a120a445e ""
+  "figures/CorrectionTransition_DescendingStop_2.png" 1672135919 12960 d4c0fe9e9a28a42df983e38cf33478e6 ""
   "figures/CorrectionTransition_RandomStop_10.png" 1671883412 10287 b6eb8102e202531d4a07b1a574387141 ""
   "figures/CorrectionTransition_RandomStop_7.png" 1671883433 10311 137bdff279fb4de1e55ed5a01feffed3 ""
   "figures/CorrectionTransition_TimeStop_16.png" 1671871158 10553 b40a6c0be2f0f602f0671f9dbbe15f7e ""
@@ -131,9 +133,9 @@
   "figures/ds_graph_3600_ave_ER_Office_randomStop.png" 1671878861 24810 ba59672a4a3caa51af2473684d83257a ""
   "figures/ds_graph_3600_ave_TimeStop_Office_600.png" 1671811633 23175 401b663b096f111d54959d3fd65a43c6 ""
   "gradthesis.sty" 1649780313 4713 b199e4d660026178e95c725be9860e67 ""
-  "out/KoheiMatsumoto.aux" 1671995114 20219 75db549b34e9475d4b09e473f2fe921a "latex"
-  "out/KoheiMatsumoto.bbl" 1671995079 5838 d27d8a9530d6e1b5654fa4c4c7d086d4 "bibtex out/KoheiMatsumoto"
-  "out/KoheiMatsumoto.toc" 1671995114 4456 6e55eb8fe8f60448ad7cb25d12d3009f "latex"
+  "out/KoheiMatsumoto.aux" 1672147457 20621 b263d9380dff87547bb3501bb796ec05 "latex"
+  "out/KoheiMatsumoto.bbl" 1672145719 5838 d27d8a9530d6e1b5654fa4c4c7d086d4 "bibtex out/KoheiMatsumoto"
+  "out/KoheiMatsumoto.toc" 1672147457 4456 6e55eb8fe8f60448ad7cb25d12d3009f "latex"
   (generated)
   "out/KoheiMatsumoto.aux"
   "out/KoheiMatsumoto.dvi"

@@ -505,6 +505,14 @@ INPUT ./figures/CorrectionScatter_Office_DescendingStop_after.png
 INPUT ./figures/CorrectionScatter_Office_DescendingStop_after.png
 INPUT figures/CorrectionScatter_Office_DescendingStop_after.png
 INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_DescendingStop_after.png
+INPUT ./figures/CorrectionTransition_DescendingStop_2.png
+INPUT ./figures/CorrectionTransition_DescendingStop_2.png
+INPUT figures/CorrectionTransition_DescendingStop_2.png
+INPUT extractbb -B cropbox -O figures/CorrectionTransition_DescendingStop_2.png
+INPUT ./figures/CorrectionTransition_DescendingStop_10.png
+INPUT ./figures/CorrectionTransition_DescendingStop_10.png
+INPUT figures/CorrectionTransition_DescendingStop_10.png
+INPUT extractbb -B cropbox -O figures/CorrectionTransition_DescendingStop_10.png
 INPUT ./figures/ds_graph_3600_ave_CountStop_Office_600.png
 INPUT ./figures/ds_graph_3600_ave_CountStop_Office_600.png
 INPUT figures/ds_graph_3600_ave_CountStop_Office_600.png
