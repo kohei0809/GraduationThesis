@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  27 DEC 2022 22:23
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  27 DEC 2022 23:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -842,8 +842,12 @@ File: figures/CorrectionTransition_TimeStop_2.png Graphic file (type bmp)
 <figures/CorrectionTransition_TimeStop_2.png>
 File: figures/CorrectionTransition_TimeStop_16.png Graphic file (type bmp)
 <figures/CorrectionTransition_TimeStop_16.png>
+File: figures/ds_graph_3600_ave_CountTime_Office_600.png Graphic file (type bmp)
+<figures/ds_graph_3600_ave_CountTime_Office_600.png>
+File: figures/cs_graph_3600_ave_CountTime_Office_600.png Graphic file (type bmp)
+<figures/cs_graph_3600_ave_CountTime_Office_600.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1885.
+(Font)              No change on input line 1897.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -875,7 +879,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[45] (out/KoheiMatsumoto.bbl
+[45]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[46] (out/KoheiMatsumoto.bbl
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 7.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -905,7 +917,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[46
+[47
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -930,18 +942,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[47] (out/KoheiMatsumoto.aux)
+[48] (out/KoheiMatsumoto.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4862 strings out of 475530
- 87297 string characters out of 5794171
+ 4874 strings out of 475530
+ 87867 string characters out of 5794171
  433356 words of memory out of 5000000
- 26393 multiletter control sequences out of 15000+600000
+ 26403 multiletter control sequences out of 15000+600000
  491086 words of font info for 114 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  67i,13n,77p,350b,714s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/KoheiMatsumoto.dvi (51 pages, 201416 bytes).
+Output written on out/KoheiMatsumoto.dvi (52 pages, 202072 bytes).

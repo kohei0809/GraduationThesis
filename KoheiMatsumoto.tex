@@ -1876,6 +1876,18 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
     \label{fig:transition_notSuspend_time}
   \end{figure}
 
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_CountTime_Office_600.png}
+    \caption{$D(s)$の時間推移(Deactivation on CountとDeactivation on Time)}
+    \label{fig:ds_CountTime}
+    \vspace{12pt}
+    \centering
+    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_CountTime_Office_600.png}
+    \caption{$C(s)$の時間推移(Deactivation on CountとDeactivation on Time)}
+    \label{fig:cs_CountTime}
+  \end{figure}
+
 
   \subsubsection{実験６における停止エージェントと非停止エージェントの行動の解析}\label{sec:ex6Analsis}
   \red{ここで，Timeの方がよいということ、30台の追加実験について述べる}\\
@@ -1905,7 +1917,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   しかし，Deactivation on Countでは，現在のエージェント数では要求品質を十分に満たせていることは確認できているが，
   エージェントの停止によって，どの程度の影響があるかは確認できずに停止している．
   つまり，Deactivation on Countの方では，エージェントを停止しすぎてしまう可能性もある．
-  図\red{CountStopとTimeStopとのグラフを合わせる}，\red{C(s)のグラフ}に
+  図\ref{fig:ds_CountTime}，\ref{fig:cs_CountTime}に
   Deactivation on CountとDeactivation on Timeの$D(s)$と$C(s)$の時間推移をプロットした．
   これらの図から分かるように，両者の巡回効率やエネルギー消費量はほとんど差がないことを考慮すると，
   停止手法としてより望ましいのはDeactivation on Timeの方であると考えられる．

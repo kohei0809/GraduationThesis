@@ -569,6 +569,14 @@ INPUT ./figures/CorrectionTransition_TimeStop_16.png
 INPUT ./figures/CorrectionTransition_TimeStop_16.png
 INPUT figures/CorrectionTransition_TimeStop_16.png
 INPUT extractbb -B cropbox -O figures/CorrectionTransition_TimeStop_16.png
+INPUT ./figures/ds_graph_3600_ave_CountTime_Office_600.png
+INPUT ./figures/ds_graph_3600_ave_CountTime_Office_600.png
+INPUT figures/ds_graph_3600_ave_CountTime_Office_600.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_CountTime_Office_600.png
+INPUT ./figures/cs_graph_3600_ave_CountTime_Office_600.png
+INPUT ./figures/cs_graph_3600_ave_CountTime_Office_600.png
+INPUT figures/cs_graph_3600_ave_CountTime_Office_600.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_CountTime_Office_600.png
 INPUT out/KoheiMatsumoto.bbl
 INPUT out/KoheiMatsumoto.bbl
 INPUT out/KoheiMatsumoto.bbl
