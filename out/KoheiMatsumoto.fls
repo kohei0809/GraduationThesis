@@ -577,6 +577,42 @@ INPUT ./figures/cs_graph_3600_ave_CountTime_Office_600.png
 INPUT ./figures/cs_graph_3600_ave_CountTime_Office_600.png
 INPUT figures/cs_graph_3600_ave_CountTime_Office_600.png
 INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_CountTime_Office_600.png
+INPUT ./figures/ds_graph_3600_ave_TimeStop30_Office_600.png
+INPUT ./figures/ds_graph_3600_ave_TimeStop30_Office_600.png
+INPUT figures/ds_graph_3600_ave_TimeStop30_Office_600.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_TimeStop30_Office_600.png
+INPUT ./figures/cs_graph_3600_ave_TimeStop30_Office_600.png
+INPUT ./figures/cs_graph_3600_ave_TimeStop30_Office_600.png
+INPUT figures/cs_graph_3600_ave_TimeStop30_Office_600.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_TimeStop30_Office_600.png
+INPUT ./figures/CorrectionScatter_Office_TimeStop30.png
+INPUT ./figures/CorrectionScatter_Office_TimeStop30.png
+INPUT figures/CorrectionScatter_Office_TimeStop30.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_TimeStop30.png
+INPUT ./figures/ds_graph_3600_ave_ERC_Office_600.png
+INPUT ./figures/ds_graph_3600_ave_ERC_Office_600.png
+INPUT figures/ds_graph_3600_ave_ERC_Office_600.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ERC_Office_600.png
+INPUT ./figures/cs_graph_3600_ave_ERC_Office_600.png
+INPUT ./figures/cs_graph_3600_ave_ERC_Office_600.png
+INPUT figures/cs_graph_3600_ave_ERC_Office_600.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ERC_Office_600.png
+INPUT ./figures/ds_graph_3600_ave_ERC_Complex_600.png
+INPUT ./figures/ds_graph_3600_ave_ERC_Complex_600.png
+INPUT figures/ds_graph_3600_ave_ERC_Complex_600.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ERC_Complex_600.png
+INPUT ./figures/cs_graph_3600_ave_ERC_Complex_600.png
+INPUT ./figures/cs_graph_3600_ave_ERC_Complex_600.png
+INPUT figures/cs_graph_3600_ave_ERC_Complex_600.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ERC_Complex_600.png
+INPUT ./figures/CorrectionScatter_Office_ERC.png
+INPUT ./figures/CorrectionScatter_Office_ERC.png
+INPUT figures/CorrectionScatter_Office_ERC.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_ERC.png
+INPUT ./figures/CorrectionScatter_Complex_ERC.png
+INPUT ./figures/CorrectionScatter_Complex_ERC.png
+INPUT figures/CorrectionScatter_Complex_ERC.png
+INPUT extractbb -B cropbox -O figures/CorrectionScatter_Complex_ERC.png
 INPUT out/KoheiMatsumoto.bbl
 INPUT out/KoheiMatsumoto.bbl
 INPUT out/KoheiMatsumoto.bbl

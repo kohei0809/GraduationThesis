@@ -116,6 +116,12 @@ Ayumi Sugiyama and Toshiharu Sugawara.
 Ehsan Latif, Yikang Gui, Aiman Munir, and Ramviyas Parasuraman.
 \newblock Energy-aware multi-robot task allocation in persistent tasks, 2021.
 
+\bibitem{Huang2022}
+Li~Huang, MengChu Zhou, Kuangrong Hao, and Hua Han.
+\newblock Multirobot cooperative patrolling strategy for moving objects.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics: Systems},
+  pp. 1--13, 2022.
+
 \bibitem{Yamauchi2022}
 Tomoki Yamauchi, Yuki Miyashita, and Toshiharu Sugawara.
 \newblock {Standby-Based Deadlock Avoidance Method for Multi-Agent Pickup and

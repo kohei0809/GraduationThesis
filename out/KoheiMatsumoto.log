@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  27 DEC 2022 23:15
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  5 JAN 2023 17:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -791,7 +791,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [39]
-Overfull \hbox (29.52158pt too wide) in paragraph at lines 1714--1724
+Overfull \hbox (29.52158pt too wide) in paragraph at lines 1708--1718
 []\JY1/mc/m/n/12 図 \OT1/cmr/m/n/12 28 \JY1/mc/m/n/12 より， \OT1/cmr/m/n/12 De-ac-ti-va-tion on Count \JY1/mc/m/n/12 を用いた \OT1/cmr/m/n/12 AMTDS/ER \JY1/mc/m/n/12 は ， 停止手法を用いない \OT1/cmr/m/n/12 AMTDS/ER
  []
 
@@ -806,7 +806,7 @@ File: figures/CorrectionTransition_CountStop_2.png Graphic file (type bmp)
 File: figures/CorrectionTransition_CountStop_9.png Graphic file (type bmp)
 <figures/CorrectionTransition_CountStop_9.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1777.
+(Font)              No change on input line 1771.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -828,7 +828,7 @@ File: figures/ds_graph_3600_ave_TimeStop_Office_600.png Graphic file (type bmp)
 File: figures/cs_graph_3600_ave_TimeStop_Office_600.png Graphic file (type bmp)
 <figures/cs_graph_3600_ave_TimeStop_Office_600.png>
 
-Overfull \hbox (24.6258pt too wide) in paragraph at lines 1832--1836
+Overfull \hbox (24.6258pt too wide) in paragraph at lines 1826--1830
 []\JY1/mc/m/n/12 図 \OT1/cmr/m/n/12 33 \JY1/mc/m/n/12 より， \OT1/cmr/m/n/12 De-ac-ti-va-tion on Time \JY1/mc/m/n/12 を用いた \OT1/cmr/m/n/12 AMTDS/ER \JY1/mc/m/n/12 は ， 停止手法を用いない \OT1/cmr/m/n/12 AMTDS/ER
  []
 
@@ -846,8 +846,14 @@ File: figures/ds_graph_3600_ave_CountTime_Office_600.png Graphic file (type bmp)
 <figures/ds_graph_3600_ave_CountTime_Office_600.png>
 File: figures/cs_graph_3600_ave_CountTime_Office_600.png Graphic file (type bmp)
 <figures/cs_graph_3600_ave_CountTime_Office_600.png>
+File: figures/ds_graph_3600_ave_TimeStop30_Office_600.png Graphic file (type bmp)
+<figures/ds_graph_3600_ave_TimeStop30_Office_600.png>
+File: figures/cs_graph_3600_ave_TimeStop30_Office_600.png Graphic file (type bmp)
+<figures/cs_graph_3600_ave_TimeStop30_Office_600.png>
+File: figures/CorrectionScatter_Office_TimeStop30.png Graphic file (type bmp)
+<figures/CorrectionScatter_Office_TimeStop30.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1897.
+(Font)              No change on input line 1909.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -887,7 +893,74 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[46] (out/KoheiMatsumoto.bbl
+[46]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[47]
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 1956.
+File: figures/ds_graph_3600_ave_ERC_Office_600.png Graphic file (type bmp)
+<figures/ds_graph_3600_ave_ERC_Office_600.png>
+File: figures/cs_graph_3600_ave_ERC_Office_600.png Graphic file (type bmp)
+<figures/cs_graph_3600_ave_ERC_Office_600.png>
+File: figures/ds_graph_3600_ave_ERC_Complex_600.png Graphic file (type bmp)
+<figures/ds_graph_3600_ave_ERC_Complex_600.png>
+File: figures/cs_graph_3600_ave_ERC_Complex_600.png Graphic file (type bmp)
+<figures/cs_graph_3600_ave_ERC_Complex_600.png>
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[48]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[49]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[50]
+File: figures/CorrectionScatter_Office_ERC.png Graphic file (type bmp)
+<figures/CorrectionScatter_Office_ERC.png>
+File: figures/CorrectionScatter_Complex_ERC.png Graphic file (type bmp)
+<figures/CorrectionScatter_Complex_ERC.png>
+
+Overfull \hbox (19.82628pt too wide) in paragraph at lines 2049--2051
+[]\JY1/mc/m/n/12 この項では ， 実験 \OT1/cmr/m/n/12 7 \JY1/mc/m/n/12 と実験 \OT1/cmr/m/n/12 8 \JY1/mc/m/n/12 でのエ ージ ェ ントの行動を解析し ， 提案手法はである \OT1/cmr/m/n/12 AMTDS/ERC
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[51]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[52] (out/KoheiMatsumoto.bbl
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 7.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -917,7 +990,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[47
+[53
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -931,9 +1004,11 @@ LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 112.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 123.
+(Font)              No change on input line 122.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 137.
+(Font)              No change on input line 129.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 143.
 )
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -942,18 +1017,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[48] (out/KoheiMatsumoto.aux)
+[54] (out/KoheiMatsumoto.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4874 strings out of 475530
- 87867 string characters out of 5794171
+ 4930 strings out of 475530
+ 90289 string characters out of 5794171
  433356 words of memory out of 5000000
- 26403 multiletter control sequences out of 15000+600000
+ 26450 multiletter control sequences out of 15000+600000
  491086 words of font info for 114 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  67i,13n,77p,350b,714s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/KoheiMatsumoto.dvi (52 pages, 202072 bytes).
+Output written on out/KoheiMatsumoto.dvi (58 pages, 212328 bytes).
