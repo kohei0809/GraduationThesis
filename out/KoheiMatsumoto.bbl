@@ -122,6 +122,13 @@ Li~Huang, MengChu Zhou, Kuangrong Hao, and Hua Han.
 \newblock {\em IEEE Transactions on Systems, Man, and Cybernetics: Systems},
   pp. 1--13, 2022.
 
+\bibitem{Sugiyama2019}
+Ayumi Sugiyama, Vourchteang Sea, and Toshiharu Sugawara.
+\newblock Emergence of divisional cooperation with negotiation and re-learning
+  and evaluation of flexibility in continuous cooperative patrol problem.
+\newblock {\em Knowledge and Information Systems}, Vol.~60, No.~3, pp.
+  1587--1609, 2019.
+
 \bibitem{Yamauchi2022}
 Tomoki Yamauchi, Yuki Miyashita, and Toshiharu Sugawara.
 \newblock {Standby-Based Deadlock Avoidance Method for Multi-Agent Pickup and
@@ -136,11 +143,12 @@ Hang Ma Jiaoyang Li~TK Satish and Kumar~Sven Koenig.
   tasks.
 \newblock 2017.
 
-\bibitem{Sugiyama2019}
-Ayumi Sugiyama, Vourchteang Sea, and Toshiharu Sugawara.
-\newblock Emergence of divisional cooperation with negotiation and re-learning
-  and evaluation of flexibility in continuous cooperative patrol problem.
-\newblock {\em Knowledge and Information Systems}, Vol.~60, No.~3, pp.
-  1587--1609, 2019.
+\bibitem{Tsuiki2022}
+Sota Tsuiki, Keisuke Yoneda, and Toshiharu Sugawara.
+\newblock Task handover negotiation protocol for planned suspension based on
+  estimated chances of negotiations in multi-agent patrolling.
+\newblock In {\em Proceedings of the 14th International Conference on Agents
+  and Artificial Intelligence - Volume 1: ICAART,}, pp. 83--93. INSTICC,
+  SciTePress, 2022.
 
 \end{thebibliography}

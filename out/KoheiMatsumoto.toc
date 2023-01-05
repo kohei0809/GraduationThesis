@@ -2,16 +2,16 @@
 \contentsline {section}{\numberline {2}関連研究}{2}{}%
 \contentsline {section}{\numberline {3}モデルの定義}{3}{}%
 \contentsline {subsection}{\numberline {3.1}環境}{3}{}%
-\contentsline {subsection}{\numberline {3.2}エージェント}{3}{}%
+\contentsline {subsection}{\numberline {3.2}エージェント}{4}{}%
 \contentsline {subsection}{\numberline {3.3}評価指標}{5}{}%
-\contentsline {section}{\numberline {4}準備}{5}{}%
+\contentsline {section}{\numberline {4}準備}{6}{}%
 \contentsline {subsection}{\numberline {4.1}Adaptive meta target decision strategy (AMTDS)}{6}{}%
 \contentsline {subsubsection}{\numberline {4.1.1}目標決定戦略}{6}{}%
 \contentsline {subsubsection}{\numberline {4.1.2}経路生成戦略}{7}{}%
 \contentsline {subsection}{\numberline {4.2}AMTDS with learning of dirt accumulation (AMTDS/LD)}{8}{}%
-\contentsline {subsection}{\numberline {4.3}AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}{8}{}%
+\contentsline {subsection}{\numberline {4.3}AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}{9}{}%
 \contentsline {subsubsection}{\numberline {4.3.1}エージェント間の交渉に用いる情報}{9}{}%
-\contentsline {subsubsection}{\numberline {4.3.2}エージェント間の交渉}{9}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}エージェント間の交渉}{10}{}%
 \contentsline {subsection}{\numberline {4.4}AMTDS for energy saving and cleanliness (AMTDS/ESC)}{11}{}%
 \contentsline {subsubsection}{\numberline {4.4.1}要求充足の判断}{13}{}%
 \contentsline {subsubsection}{\numberline {4.4.2}自己重要度評価}{13}{}%
