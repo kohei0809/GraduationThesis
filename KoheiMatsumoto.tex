@@ -63,7 +63,6 @@
 \maketitle
 
 \begin{abstract}
-  \red{後で追記する(ERCについて最後のあたりをもっと書いた方がいいかも)}\\
   本論文では，マルエージェント協調巡回問題(MACPP)において，
   品質要求を満たしながら自律的にエネルギー消費を抑える手法を提案する．
   システムにとって，できるだけ多くの巡回タスクを行う個とは重要であるが，
@@ -73,7 +72,7 @@
   エネルギー消費を削減する手法を提案する．
   また，各エージェントが学習したパラメータの値に基づいて，
   品質要求を満たす上で不要なエージェントを停止する手法を提案する．
-  さらに，イベント発生確率を学習しながらエネルギー消費を抑制する手法を提案する．
+  さらに，イベント発生確率を学習しながらエネルギー消費の抑制を試みる．
   既存手法との比較実験により，提案手法は要求条件を満たしながら，
   効果的にエネルギー消費を抑えることができることを示す．
   加えて，提案手法は更なるエネルギー消費削減のために，
@@ -82,8 +81,6 @@
 
 \vspace*{1cm}\par
 \section{序論}\label{sec:introduction}
-\red{後で追記する}\\
-
 近年，ロボット技術が発達し，巡回パトロールや清掃などといった，人間が日常的に繰り返す作業や，
 災害地や原子力発電所，宇宙などでの作業を複数の自律的ロボットで代替する動きが加速している．
 このような複数のロボットが協調して共通の作業を行う問題は，ロボットを自律的に動作するエージェントとしてモデル化し，
@@ -130,9 +127,7 @@ MACPPの研究では，複数のエージェントが協力・協調すること
 加えて，Busyグループに属するエージェントの数は，環境条件によって変化することが分かった．
 その後，品質要求を満たしつつ，Energy saveグループに属するエージェントを順次停止することで，
 活動しているエージェント数を削減することができた．
-さらに，課題点はいくつかあるものの，
-環境のイベント発生確率を学習しながらエネルギー消費を削減することができた．
-\\ \red{ここをもっとちゃんと書く}
+さらに，環境のイベント発生確率を学習しながらエネルギー消費の削減を試みた．
 \par
 
 \section{関連研究}
@@ -1054,7 +1049,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   ここで，$i$の$t$における総イベント量の推定値$E^i(D_t(V^i_R))$は，
   $V$から壁などの障害物を表すノードを除いたノード集合$V_{access}$と$V^i_R$を用いて，以下の式に従って求められる．
   %
-    \begin{equation}\label{eq:estimationERC}
+    \begin{equation}
       E^i(D_t(V^i_R))=\sum_{v\in V^i_R} E^i(L_t(v)) \times \dfrac{|V_{access}|}{|V^i_R|}   
     \end{equation}
   %
@@ -2004,15 +1999,14 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   
   \subsubsection{実験7: 性能評価}\label{ex:ERC1}
-  \red{後で図を変更する}\\
   図\ref{fig:ds_ERC_Office}，\ref{fig:cs_ERC_Office}は，
   それぞれ3,600ステップごとの$D(s)$と$C(s)$の時間推移を示したものである．
   なお，図\ref{fig:ds_ERC_Office}では$\Dreq=1,000$なので，
   エージェントは$D(s) \leq 3,600,000 (=3,600\Dreq)$を保つことが要求条件になることに注意されたい．
   図\ref{fig:ds_ERC_Office}より，提案手法は品質要求を満たせていることが分かる．
-  AMTDS/ERCはAMTDS/EDCに比べて$D(s)$は約\red{??.?}増加したが，
+  AMTDS/ERCはAMTDS/EDCに比べて$D(s)$は約$149.8\%$増加したが，
   図\ref{fig:cs_ERC_Office}より，エネルギー節約行動を行わないAMTDS/EDCよりもエネルギー消費量を削減することができ，
-  具体的には約\red{??.?}削減することができた．
+  具体的には約$61.4\%$削減することができた．
   
 
   \begin{figure}
@@ -2055,19 +2049,83 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
     \end{minipage}
   \end{figure}
 
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/ExpReal_ESgroup_0.png}
+      \subcaption{例1}
+      \label{subfig:expReal_ES_0}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/ExpReal_ESgroup_7.png}
+      \subcaption{例2}
+      \label{subfig:expReal_ES_7}
+    \end{minipage}
+    \caption{ES-groupにおけるイベント量の予測値と真値の関係(実験7)}
+    \label{fig:expReal_ES}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/ExpReal_Bgroup_2.png}
+      \subcaption{例1}
+      \label{subfig:expReal_B_0}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/ExpReal_Bgroup_6.png}
+      \subcaption{例2}
+      \label{subfig:expReal_B_7}
+    \end{minipage}
+    \caption{B-groupにおけるイベント量の予測値と真値の関係(実験7)}
+    \label{fig:expReal_B}
+  \end{figure}
+
 
 
   \subsubsection{AMTDS/ERCの行動の解析}\label{sec:expAnalsisERC}
-  \red{図変更}\\
-  この項では，実験7と実験8でのエージェントの行動を解析し，
-  提案手法であるAMTDS/ERCを定性的に評価する．
+  この項では，実験7と実験8でのエージェントの行動を解析し，提案手法であるAMTDS/ERCの課題点について述べていく．
+  実験7と実験8における各エージェントの学習パラメータ$K^i$と，{\em Pausing}による総待機時間の関係をまとめた散布図が，
+  それぞれ図\ref{fig:cscatter_ERC_Office}，\ref{fig:cscatter_ERC_Complex}である．
+  これらは，6,000,000ステップ時点での$K^i$と，5,000,000$\sim$6,000,000ステップにおける待機時間の総和をプロットしてある．
+  これらの図より，図\ref{fig:cscatter_ER_Office}，\ref{fig:cscatter_ER_Complex}よりも，$K^i$がはるかに大きくなっているが，
+  AMTDS/ERと同様にB-groupとES-groupにグループ分けされていることが確認することができる．
+  図\ref{fig:cscatter_ERC_Office}ではB-groupが8体，ES-groupが12体であり，
+  図\ref{fig:cscatter_ERC_Complex}では6体，ES-groupが14体であった．
+  つまり，環境によって2つのグループの構成比を変化させることはできていたと言える．
+  \par
 
+  次に，式(\ref{eq:ParameterK/ERC})で用いた$K^i$を更新する時刻$t$におけるイベント予測量$E^i(D_t(V^i_R)) \times C^i_{rate}$と，
+  実際のイベント量の関係をまとめたものが，
+  図\ref{fig:expReal_ES}，\ref{fig:expReal_B}である．
+  これらはそれぞれ，ES-groupとB-groupの例として2体ずつの図であり，
+  黒の線が予測値であり，赤の線が実際のイベント量である．
+  まず図\ref{fig:expReal_ES}より，予測値と実際のイベント量は差はあるものの，
+  イベント量のある程度の大小は予測できていることが分かる．
+  また，予測値は実際のイベント量よりも小さいということも確認することができる．
+  これにより，エージェントは要求条件よりも余裕があると判断したことにより，
+  $K^i$が大きくなり，{\em Pausing}による待機時間が増えたと考えられる．
+  図\ref{fig:expReal_B}でもイベント量の変化の仕方は予測できているが，
+  予測値と実際のイベント量との差が比較的大きくなっている．
+  また，図\ref{fig:expReal_ES}とは逆に，
+  予測値は実際のイベント量よりも大きいということが確認することができる．
+  これにより，エージェントは要求条件を満たせていないと判断したことにより，
+  $K^i$が小さくなり，{\em Pausing}による待機時間がほとんど0になったと考えられる．
+  \par
+
+  さらに，実験8についても同様の考察を行う．
+  \red{Complexについて同様に議論する}\\
+  \red{たぶんgeneralistとspecialistの構成比などが関係するのではないか}
 
   \section{結論}
   従来のMACPPの研究では，効率の最大化を考慮することが一般的であるが，
   品質要求を満たしながらエネルギー消費を削減することが望ましい場合が多い．
   そこで本論文では，MACPPにおいて品質要求を満たしながらエネルギー消費を削減する手法であるAMTDS/ERを提案し，
-  さらには，イベント発生確率を学習しながらエネルギー消費を削減する手法であるAMTDS/ERCを提案した．
+  さらには，イベント発生確率を学習しながらエネルギー消費の削減も試み，AMTDS/ERCを提案した．
   \par
 
   既存研究であるAMTDSとAMTDS/ESCや，AMTDS/EDCと比較した結果，AMTDS/ERとAMTDS/ERCは品質要求を満たしながら，
@@ -2080,7 +2138,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   さらに，学習パラメータ$K^i$の導入により，エージェントが2つのグループにクラスタリングされることを発見し，
   この知見を用いることで，冗長なエージェントを停止させ，
   現在の要求に対して必要最低限のエージェント数まで減らすことに成功した．
-  また，環境によってエネルギー消費の削減度合いは変わってしまうが，
+  加えて，環境によってエネルギー消費の削減度合いは変わってしまうという課題点はあるものの，
   イベント発生確率を学習しながらエネルギー消費を削減することができることが分かった．
   \par
 
