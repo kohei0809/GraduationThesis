@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  6 JAN 2023 13:40
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  8 JAN 2023 14:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Owner/Desktop/研究/卒論/KoheiMatsumoto.tex
-(c:/Users/Owner/Desktop/研究/卒論/KoheiMatsumoto.tex
+**c:/Users/Owner/Desktop/研究/卒論/KoheiMatsumotoERC.tex
+(c:/Users/Owner/Desktop/研究/卒論/KoheiMatsumotoERC.tex
 pLaTeX2e <2021-11-15> (based on LaTeX2e <2022-06-01> patch level 5)
 L3 programming layer <2022-09-28> (c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 Document Class: jarticle 2020/09/30 v1.8f Standard pLaTeX class
@@ -200,8 +200,8 @@ File: l3backend-dvips.def 2022-09-28 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count283
 \g__pdf_backend_link_int=\count284
 \g__pdf_backend_link_sf_int=\count285
-) (out/KoheiMatsumoto.aux)
-\openout1 = `KoheiMatsumoto.aux'.
+) (out/KoheiMatsumotoERC.aux)
+\openout1 = `KoheiMatsumotoERC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
@@ -239,7 +239,7 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 63.
-(out/KoheiMatsumoto.toc
+(out/KoheiMatsumotoERC.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
@@ -257,7 +257,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [1])
 \tf@toc=\write3
-\openout3 = `KoheiMatsumoto.toc'.
+\openout3 = `KoheiMatsumotoERC.toc'.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -964,7 +964,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[52] (out/KoheiMatsumoto.bbl
+[52] (out/KoheiMatsumotoERC.bbl
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 7.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -1030,18 +1030,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[55] (out/KoheiMatsumoto.aux)
+[55] (out/KoheiMatsumotoERC.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
  4932 strings out of 475530
- 90319 string characters out of 5794171
- 433356 words of memory out of 5000000
+ 90376 string characters out of 5794171
+ 433359 words of memory out of 5000000
  26452 multiletter control sequences out of 15000+600000
  491086 words of font info for 114 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 67i,13n,77p,350b,714s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,13n,77p,353b,714s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/KoheiMatsumoto.dvi (59 pages, 219344 bytes).
+Output written on out/KoheiMatsumotoERC.dvi (59 pages, 219344 bytes).

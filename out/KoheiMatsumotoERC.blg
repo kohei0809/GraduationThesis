@@ -1,0 +1,50 @@
+This is pBibTeX, Version 0.99d-j0.34 (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: KoheiMatsumotoERC.aux
+The style file: junsrt.bst
+Database file #1: ref.bib
+Warning--can't use both volume and number fields in Agmon2011
+Warning--empty journal in Satish2017
+You've used 22 entries,
+            2270 wiz_defined-function locations,
+            697 strings with 9455 characters,
+and the built_in function-call counts, 9228 in all, are:
+= -- 791
+> -- 260
+< -- 32
++ -- 101
+- -- 79
+* -- 469
+:= -- 1074
+add.period$ -- 73
+call.type$ -- 22
+change.case$ -- 22
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 570
+empty$ -- 878
+format.name$ -- 158
+if$ -- 2343
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 21
+newline$ -- 112
+num.names$ -- 24
+pop$ -- 161
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 482
+stack$ -- 0
+substring$ -- 615
+swap$ -- 225
+text.length$ -- 32
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 76
+width$ -- 24
+write$ -- 254
+is.kanji.str$ -- 281
+(There were 2 warnings)

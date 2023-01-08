@@ -136,20 +136,21 @@ MACPPの研究では，複数のエージェントが協力・協調すること
 \par
 
 \section{関連研究}
-\red{後で，杉山さんの研究も追加する、領域分解についても追加(SMASH参考)}\\
 MACPPとその応用に関する研究は数多く行われている．
 この問題においてエージェントの行動を考慮する手法には，
 環境を分割し，その各作業領域をエージェントに割り当て，
 その環境内を巡回する手法\cite{Hattori2021,Mazda2005,Agmon2011,Tevyashov2022,Wiandt2018}と，
 明示的に領域分割はせずに，各エージェントが自律的に適切な戦略を用いて環境を巡回する手法の2つがある．
+例えば\cite{Hattori2021}では，領域分割の際に，不要な飛び地をより適切なエージェントに割り振ることにより，
+効率的な協調作業を実現した．
 \cite{Chevaleyre2004}では，後者の手法は前者の手法よりも少なくとも
 同程度に優れていると述べられている．
 本研究の目的であるエネルギー削減は両者の手法で考えられるが，
-本稿では後者の手法に着目する．
+本論文では後者の手法に着目する．
 \par
 
 MACPP問題への同アプローチをとった研究として，
-例えば， \cite{Othmani2017}では，edge Markov evolution graphsを用いた動的環境変化のモデルを提案した．
+例えば\cite{Othmani2017}では，edge Markov evolution graphsを用いた動的環境変化のモデルを提案した．
 また，\cite{Zhou2019}では，巡回問題がベイズ適応型遷移分離部分観測可能マルコフ決定過程として定式化され，
 モンテカルロ木探索法を拡張した分散型オンライン学習・計画アルゴリズムが提案されている．
 さらに，\cite{Othmani2018}では，人口ニューラルネットワークを用いて，
@@ -1019,7 +1020,6 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   シルエット係数を用いている．
  
   \subsection{AMTDS for energy saving under the requirement with communications (AMTDS/ERC)}
-  \red{subsectionなどの構成も含めて再考}\\
   この節では，従来手法のAMTDS/EDCと，AMTDS/ERを組み合わせた手法である．
   しかし，AMTDS/EDCにエネルギー節約行動や学習パラメータ$K^i$を導入しただけではうまくいかない．
   それの一番大きな理由は，AMTDS/ERでは既知であったイベント発生確率を学習し，
@@ -1961,8 +1961,6 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   \par
 
   さらに，Deactivation on Timeでエージェント数$|A|$を30にして実験を行った．
-  \\\red{図はAMTDS/ER(30)を追加して変更}\\
-  \red{20台のDeactivation on Timeも追加してもいいかも}\\
   図\ref{fig:ds_TimeStop30}，\ref{fig:cs_TimeStop30}はそれぞれ$D(s)$と$C(s)$の8,000,000ステップまでの時間推移を示している．
   この実験では，停止したエージェント数は16から18の間であり，ほとんどが17であった．
   図\ref{fig:ds_TimeStop30}より，エージェント数を変化させても，品質要求を満たすことができていることが分かる．
@@ -2031,7 +2029,6 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   
    
   \subsubsection{実験8: 異なる環境による性能評価}\label{ex:ERC2}
-  \red{$\Dreq=600$にして実験をしてみる}\\
   \red{図変更}\\
   図\ref{fig:ds_ERC_Complex}，\ref{fig:cs_ERC_Complex}は，環境2で実験を行い，
   それぞれ3,600ステップごとの$D(s)$と$C(s)$の時間推移を示している．
@@ -2062,7 +2059,8 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   \subsubsection{AMTDS/ERCの行動の解析}\label{sec:expAnalsisERC}
   \red{図変更}\\
-  この項では，実験7と実験8でのエージェントの行動を解析し，提案手法はであるAMTDS/ERCを定性的に評価する．
+  この項では，実験7と実験8でのエージェントの行動を解析し，
+  提案手法であるAMTDS/ERCを定性的に評価する．
 
 
   \section{結論}
