@@ -77,6 +77,7 @@
   効果的にエネルギー消費を抑えることができることを示す．
   加えて，提案手法は更なるエネルギー消費削減のために，
   一部のエージェントを停止できることを示す．
+  最後に，エージェントの行動を解析・考察する．
 \end{abstract}
 
 \vspace*{1cm}\par
@@ -459,7 +460,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   このことによって，エージェント間の通信を用いずに$p^i(v)$を用いた間接的な分業が可能になる．
   それにより，AMTDSと比べて競合を回避し，効率も向上した．
 
-  \subsection{AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}\label{sec:AMTDS/EDC}
+  \subsection{AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}\label{subsec:AMTDS/EDC}
   AMTDS/LDでは，エージェント間の交渉を用いずに，$p^i(v)$による間接的なコミュニケーションを用いて，
   エージェント間の分業を促進した．
   しかし，間接的なコミュニケーションでの効率改善には限界があり，エージェントが停止した場合などの環境変化に対応できない．
@@ -889,7 +890,6 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   本実験では，不要なエージェントの停止手法として，
   関数\textsf{PLength}が呼び出された回数を比較して停止する手法(Deactivation on Count)と，
   エージェントの待機時間を比較して停止する手法(Deactivation on Time)の2つの手法を提案する．
-  \\ \red{英語名については要検討}\\
 
   \subsubsection{Deactivation on Count}\label{sec:CountStop}
   システムは$\DeactCheckInterval>0$ステップごとに，関数\textsf{PLength}が全てのエージェントによって
@@ -1018,7 +1018,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   この節では，従来手法のAMTDS/EDCと，AMTDS/ERを組み合わせた手法である．
   しかし，AMTDS/EDCにエネルギー節約行動や学習パラメータ$K^i$を導入しただけではうまくいかない．
   それの一番大きな理由は，AMTDS/ERでは既知であったイベント発生確率を学習し，
-  さらにそれを\ref{sec:AMTDS/EDC}で述べたように，
+  さらにそれを\ref{subsec:AMTDS/EDC}節で述べたように，
   交渉を行うため，その値はエージェントによって異なる．
   そのため，AMTDS/ERのように，式(\ref{eq:estimation})では実際の総イベント量との差が大きい．
   つまり，現在の環境全体のイベント量を予測することが困難になった．
@@ -1040,14 +1040,13 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   
   \subsubsection{$K^i$の更新方法の変更}
   $C^i_{rate}$の導入に伴い，$K^i$の更新方法も式(\ref{eq:ParameterK})から変更する．
-  まず，以下の式から
+  $V$から壁などの障害物を表すノードを除いたノード集合$V_{access}$と$V^i_R$を用いて，以下の式へと変更する．
   %
   \begin{equation}\label{eq:ParameterK/ERC}
-    K^i \gets (1 - \alpha_k) \times K^i + \alpha_k \times \dfrac{\Dreq}{E^i(D_t(V^i_R)) \times C^i_{rate}}
+    K^i \gets (1 - \alpha_k) \times K^i + \alpha_k \times \dfrac{\Dreq}{E^i(D_t(V^i_R)) \times \dfrac{|V_{access}|}{|V^i_R|} \times C^i_{rate}}
   \end{equation}
   %
-  ここで，$i$の$t$における総イベント量の推定値$E^i(D_t(V^i_R))$は，
-  $V$から壁などの障害物を表すノードを除いたノード集合$V_{access}$と$V^i_R$を用いて，以下の式に従って求められる．
+  ここで，$i$の$t$における総イベント量の推定値$E^i(D_t(V^i_R))$は，以下の式に従って求められる．
   %
     \begin{equation}
       E^i(D_t(V^i_R))=\sum_{v\in V^i_R} E^i(L_t(v)) \times \dfrac{|V_{access}|}{|V^i_R|}   
@@ -2121,6 +2120,150 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
     \label{fig:expReal_Complex_B}
   \end{figure}
 
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/Rate_Office_ESgroup_0.png}
+      \subcaption{例1}
+      \label{subfig:rate_Office_ES_0}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/Rate_Office_ESgroup_7.png}
+      \subcaption{例2}
+      \label{subfig:rate_Office_ES_7}
+    \end{minipage}
+    \caption{ES-groupにおける$C^i_{rate}$の時間推移(実験7)}
+    \label{fig:rate_Office_ES}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/Rate_Office_Bgroup_2.png}
+      \subcaption{例1}
+      \label{subfig:rate_Office_B_2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/Rate_Office_Bgroup_6.png}
+      \subcaption{例2}
+      \label{subfig:rate_Office_B_6}
+    \end{minipage}
+    \caption{B-groupにおける$C^i_{rate}$の時間推移(実験7)}
+    \label{fig:rate_Office_B}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/Rate_Complex_ESgroup_0.png}
+      \subcaption{例1}
+      \label{subfig:rate_Complex_ES_0}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/Rate_Complex_ESgroup_3.png}
+      \subcaption{例2}
+      \label{subfig:rate_Complex_ES_3}
+    \end{minipage}
+    \caption{ES-groupにおける$C^i_{rate}$の時間推移(実験8)}
+    \label{fig:rate_Complex_ES}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/Rate_Complex_Bgroup_4.png}
+      \subcaption{例1}
+      \label{subfig:rate_Complex_B_4}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/Rate_Complex_Bgroup_14.png}
+      \subcaption{例2}
+      \label{subfig:rate_Complex_B_14}
+    \end{minipage}
+    \caption{B-groupにおける$C^i_{rate}$の時間推移(実験8)}
+    \label{fig:rate_Complex_B}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/searchNum_Office_ESgroup_8.png}
+      \subcaption{例1}
+      \label{subfig:search_Office_ES_8}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/searchNum_Office_ESgroup_0.png}
+      \subcaption{例2}
+      \label{subfig:search_Office_ES_0}
+    \end{minipage}
+    \caption{ES-groupにおける$|V^i_R|$の時間推移(実験7)}
+    \label{fig:search_Office_ES}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/searchNum_Office_Bgroup_2.png}
+      \subcaption{例1}
+      \label{subfig:search_Office_B_2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/searchNum_Office_Bgroup_6.png}
+      \subcaption{例2}
+      \label{subfig:search_Office_B_6}
+    \end{minipage}
+    \caption{B-groupにおける$|V^i_R|$の時間推移(実験7)}
+    \label{fig:search_Office_B}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/searchNum_Complex_ESgroup_0.png}
+      \subcaption{例1}
+      \label{subfig:search_Complex_ES_0}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/searchNum_Complex_ESgroup_1.png}
+      \subcaption{例2}
+      \label{subfig:search_Complex_ES_1}
+    \end{minipage}
+    \caption{ES-groupにおける$|V^i_R|$の時間推移(実験8)}
+    \label{fig:search_Complex_ES}
+  \end{figure}
+
+  \begin{figure}
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/searchNum_Complex_Bgroup_4.png}
+      \subcaption{例1}
+      \label{subfig:search_Complex_B_4}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\hsize}
+      \centering
+      \includegraphics[width=0.99\hsize]{figures/searchNum_Complex_Bgroup_16.png}
+      \subcaption{例2}
+      \label{subfig:search_Complex_B_16}
+    \end{minipage}
+    \caption{B-groupにおける$|V^i_R|$の時間推移(実験8)}
+    \label{fig:search_Complex_B}
+  \end{figure}
+
 
 
   \subsubsection{AMTDS/ERCの行動の解析}\label{sec:expAnalsisERC}
@@ -2139,7 +2282,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   実際のイベント量の関係をまとめたものが，
   図\ref{fig:expReal_Office_ES}，\ref{fig:expReal_Office_B}である．
   これらはそれぞれ，ES-groupとB-groupの例として2体ずつの図であり，
-  黒の線が予測値であり，赤の線が実際のイベント量である．
+  図中の黒の線が予測値，赤の線が実際のイベント量である．
   まず，図\ref{fig:expReal_Office_ES}より，予測値と実際のイベント量は差はあるものの，
   イベント量のある程度の大小は予測できていることが分かる．
   また，予測値は実際のイベント量よりも小さいということも確認することができる．
@@ -2153,7 +2296,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   $K^i$が小さくなり，{\em Pausing}による待機時間がほとんど0になったと考えられる．
   \par
 
-  さらに，実験8についても同様の考察を行う．
+  実験8についても同様の考察を行う．
   $K^i$を更新する時刻$t$におけるイベント予測量と実際のイベント量の関係を求めたものが，
   図\ref{fig:expReal_Complex_ES}，\ref{fig:expReal_Complex_B}である．
   これらもそれぞれ，ES-groupとB-groupの例として2体ずつの図である．
@@ -2168,11 +2311,72 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   したがって，この予測方法を環境が変わっても対応できるように改善することが，今後の課題である．
   \par
 
-  最後に，AMTDS/ERCで導入した学習パラメータ$C^i_{rate}$の時間推移を調べる．
+  さらに，AMTDS/ERCで導入した学習パラメータ$C^i_{rate}$の時間推移を調べる．
+  図\ref{fig:rate_Office_ES}と図\ref{fig:rate_Office_B}はそれぞれ，
+  実験7におけるES-groupとB-groupの$C^i_{rate}$の時間推移を例として2体ずつまとめたものである．
+  図\ref{fig:rate_Office_ES}より，ES-groupのエージェントの$C^i_{rate}$は$0.5\sim1.0$の範囲に収束している．
+  一方，図\ref{fig:rate_Office_B}では1.0付近に収束している．
+  これは，実験8について同様にまとめた図\ref{fig:rate_Complex_ES}，\ref{fig:rate_Complex_B}でも確認することができる．
+  \par
 
-  
-  \red{たぶんgeneralistとspecialistの構成比などが関係するのではないか}\\
-  \red{rateの時間推移についても調べる}
+  ここで，AMTDS/ERCの既存手法であるAMTDS/EDCは\ref{subsec:AMTDS/EDC}節で述べたように，
+  エージェント間の交渉を通して，自律的にgenelalistsとspecialistsの2チームに分かれる．
+  つまり，エージェント$i$の責任ノード集合の大きさ$|V^i_R|$が大きく分けて2種類に分かれる．
+  これを調べることによって，AMTDS/ERCではどのようにチーム分けが行われているのかを調べる．
+  図\ref{fig:search_Office_ES}と図\ref{fig:search_Office_B}はそれぞれ，
+  実験7におけるES-groupとB-groupの$|V^i_R|$の時間推移を例として2体ずつまとめたものであり，
+  図中の青の点線が$|V_{access}|$を表している．
+  ES-groupでは図\ref{subfig:search_Office_ES_8}のように
+  $V_{access}$のほとんどを$V^i_R$にしているエージェントがほとんどであったが，
+  図\ref{subfig:search_Office_ES_0}のように少なくとも半分以上であるエージェントも少数いた．
+  逆にB-groupでは図\ref{subfig:search_Office_B_2}や図\ref{subfig:search_Office_B_6}のように，
+  $V^i_R$が小さかった．
+  つまり，実験7においてはエネルギー節約行動を取り始める$T_{hp}$ステップ時点でgenelalistsであったエージェントはES-groupに属し，
+  specialistsであったエージェントはB-groupに属した．
+  すなわち，specialistsがイベントが発生しやすいと学習した地点を重点的に訪問し，
+  イベントが発生しにくいと学習した地点をgenelalistsが間隔をあけて訪問するといった，
+  システム全体の観点からエネルギー消費を抑制しながら品質要求を満たすための合理的な行動がとられていたといえる．
+  \par
+
+  $C^i_{rate}$と$|V^i_R|$の時間推移を併せて考えると，$T_{hp}=1,000,000$より，
+  1,000,000ステップ時点ではgenelalistsもspecialistsも$C^i_{rate}$に大差はなく1.0付近であるが，
+  $|V^i_R|$が異なるため式(\ref{eq:ParameterK/ERC})での$K^i$の更新の際に，
+  genelalistsは第2項の分母の$\dfrac{V_{access}}{V^i_R} \times C^i_{rate}$は1.0に近く，
+  図\ref{fig:ds_ERC_Office}のように$\Dreq$よりも小さいため，
+  $K^i$が大きくなりES-groupに属するようになる．
+  一方，specialistsは$\dfrac{V_{access}}{V^i_R} \times C^i_{rate}$が大きいため，
+  予測値が$\Dreq$よりも大きくなりやすく，$K^i$が小さくなりB-groupに属するようになる．
+  以上の予測値と品質要求の関係は，
+  図\ref{fig:expReal_Office_ES}$\sim$\ref{fig:expReal_Complex_B}からも確認することができる．
+  その後，genelalists(ES-group)のエージェントは図\ref{fig:rate_Office_ES}より，
+  エージェント間の交渉によって$p^i(v) (v \in V^i_R)$が実際のイベント発生確率$p(v)$よりも大きくなり，
+  $C^i_{rate}$が0.5付近に収束し，よりイベント量の予測値が小さくなるため，$K^i$がより大きくなったと考えられる．
+  このような流れが，図\ref{fig:cscatter_ERC_Office}は図\ref{fig:cscatter_ER_Office}よりも
+  ES-groupの$K^i$がはるかに大きくなった理由であると考えられる．
+  \par
+
+  実験8においても図\ref{fig:search_Complex_ES}より，ES-groupの$|V^i_R|$は実験7と同様な時間推移であることが分かるが，
+  B-groupでは図\ref{subfig:search_Complex_B_4}のように，$V^i_R$が半分以上に上昇しているエージェントが存在した．
+  これまでの考察から，実験7では$T_{hp}$ステップ時点でのgenelalistsとspecialistsの構成比が
+  ES-groupとB-groupの構成比に近かったためエネルギー消費量の削減度合いは大きかったが，
+  巡回する環境が異なる実験8ではその構成比が近くなく，
+  それがエネルギー消費量の削減度合いが小さくなってしまった原因ではないかと考えられる．
+  \par
+
+  以上の考察から，この手法の改善方法は大きく分けて3つ考えられる．
+  1つ目は，イベント量の予測方法の改善である．
+  これを改善し，特にB-groupのエージェントが実際のイベント量と近い値を予測することができれば，
+  環境やグループの構成比に依存しなくなると考えられる．
+  2つ目は，エージェント間の交渉の変更・追加である．
+  \ref{subsec:AMTDS/EDC}節で述べたAMTDS/EDCの交渉によってエージェントの分業が促進され，巡回効率は向上しているが，
+  それにより$p^i(v)$がイベント発生確率ではなく重要度と捉えているため，$p(v)$と異なる値になり，
+  本研究のような実際のイベント量を予測するといった手法とは合わない可能性が高い．
+  そのため，交渉の変更を行い$p^i(v)$が$p(v)$へと学習できるようにすることができれば改善できると考えられる．
+  または，例えば$C^i_{rate}$を交渉によって他のエージェントとの値を考慮して変更するなどといった，
+  新たな交渉の追加によって改善する可能性も考えられる．
+  3つ目は，本研究のようなイベント量を予測しない別の手法の提案である．
+
+
   \section{結論}
   従来のMACPPの研究では，効率の最大化を考慮することが一般的であるが，
   品質要求を満たしながらエネルギー消費を削減することが望ましい場合が多い．
@@ -2189,16 +2393,16 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   充電基地に戻ったり，しばらく待機したりすることでエネルギーを節約する．
   さらに，学習パラメータ$K^i$の導入により，エージェントが2つのグループにクラスタリングされることを発見し，
   この知見を用いることで，冗長なエージェントを停止させ，
-  現在の要求に対して必要最低限のエージェント数まで減らすことに成功した．
+  品質要求に対して必要最低限のエージェント数まで減らすことに成功した．
   加えて，環境によってエネルギー消費の削減度合いは変わってしまうという課題点はあるものの，
   イベント発生確率を学習しながらエネルギー消費を削減することができることが分かった．
   \par
 
   今後の課題として，次の2つが挙げられる．
   1つ目は，本論文で提案したAMTDS/ERCの改良である．
-  \ref{ex:ERC2}項のように，AMTDS/ERCでは環境によってエネルギー消費の削減度合いが変わってしまっている．
-  これは，式(\ref{eq:ParameterK/ERC})で用いた予測イベント量$E^i(D_t(V^i_R)) \times C^i_{rate}$が，
-  実際のイベント量とは異なっていたためであると考えられる．
+  \ref{ex:ERC2}項のように，AMTDS/ERCでは環境によってエネルギー消費量の削減度合いが変わってしまっている．
+  そのため，\ref{sec:expAnalsisERC}項で述べたような改善方法によって，
+  エネルギー消費量の削減度合いが環境に依存しない手法の提案が求められる
   2つ目は，その改良後に，AMTDS/ERで行ったように品質要求を満たしたうえで不要なエージェントの停止を提案することである．
   この停止の際に，$D(s)$の一時的悪化が生じる可能性があるため，\cite{Tsuiki2022}の手法を組み合わせることで，
   その悪化を最小限に留めることができるのではないかと考えられる．
