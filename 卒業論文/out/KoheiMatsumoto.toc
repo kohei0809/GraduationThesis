@@ -28,7 +28,7 @@
 \contentsline {subsection}{\numberline {5.3}AMTDS for energy saving under the requirement with communications (AMTDS/ERC)}{20}{}%
 \contentsline {subsubsection}{\numberline {5.3.1}学習パラメータ$C^i_{rate}$の導入}{20}{}%
 \contentsline {subsubsection}{\numberline {5.3.2}$K^i$の更新方法の変更}{21}{}%
-\contentsline {subsubsection}{\numberline {5.3.3}未来のイベント量の予測の変更}{21}{}%
+\contentsline {subsubsection}{\numberline {5.3.3}未来のイベント予測量と要求条件の比較の変更}{21}{}%
 \contentsline {section}{\numberline {6}評価実験}{21}{}%
 \contentsline {subsection}{\numberline {6.1}実験環境}{21}{}%
 \contentsline {subsection}{\numberline {6.2}AMTDS/ERについての実験結果・考察}{24}{}%
