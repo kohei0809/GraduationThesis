@@ -1,0 +1,49 @@
+\contentsline {section}{\numberline {1}序論}{1}{}%
+\contentsline {section}{\numberline {2}関連研究}{2}{}%
+\contentsline {section}{\numberline {3}モデルの定義}{3}{}%
+\contentsline {subsection}{\numberline {3.1}環境}{3}{}%
+\contentsline {subsection}{\numberline {3.2}エージェント}{4}{}%
+\contentsline {subsection}{\numberline {3.3}評価指標}{5}{}%
+\contentsline {section}{\numberline {4}準備}{6}{}%
+\contentsline {subsection}{\numberline {4.1}Adaptive meta target decision strategy (AMTDS)}{6}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}目標決定戦略}{6}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}経路生成戦略}{7}{}%
+\contentsline {subsection}{\numberline {4.2}AMTDS with learning of dirt accumulation (AMTDS/LD)}{8}{}%
+\contentsline {subsection}{\numberline {4.3}AMTDS with learning of event probabilities and enhancing divisional cooperation (AMTDS/EDC)}{9}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}エージェント間の交渉に用いる情報}{9}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}エージェント間の交渉}{10}{}%
+\contentsline {subsection}{\numberline {4.4}AMTDS for energy saving and cleanliness (AMTDS/ESC)}{11}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}要求充足の判断}{13}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}自己重要度評価}{13}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}帰還動作 ({\em Homing})}{14}{}%
+\contentsline {subsubsection}{\numberline {4.4.4}待機動作 ({\em Pausing})}{14}{}%
+\contentsline {section}{\numberline {5}提案手法}{15}{}%
+\contentsline {subsection}{\numberline {5.1}AMTDS for energy saving under the requirement (AMTDS/ER)}{15}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}未来のイベント量の予測}{15}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}予測の自律的補正学習}{15}{}%
+\contentsline {subsubsection}{\numberline {5.1.3}エネルギー節約行動の修正}{16}{}%
+\contentsline {subsection}{\numberline {5.2}不要なエージェントの停止}{17}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Deactivation on Count}{17}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Deactivation on Time}{18}{}%
+\contentsline {subsection}{\numberline {5.3}AMTDS for energy saving under the requirement with communications (AMTDS/ERC)}{20}{}%
+\contentsline {subsubsection}{\numberline {5.3.1}学習パラメータ$C^i_{rate}$の導入}{20}{}%
+\contentsline {subsubsection}{\numberline {5.3.2}$K^i$の更新方法の変更}{21}{}%
+\contentsline {subsubsection}{\numberline {5.3.3}未来のイベント予測量と要求条件の比較の変更}{21}{}%
+\contentsline {section}{\numberline {6}評価実験}{21}{}%
+\contentsline {subsection}{\numberline {6.1}実験環境}{21}{}%
+\contentsline {subsection}{\numberline {6.2}AMTDS/ERについての実験結果・考察}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}実験1: 性能評価}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}実験2: 異なる環境による性能評価}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}AMTDS/ERの行動の解析}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.4}実験3: ${D_{\it req}}$の変化による性能の変化}{29}{}%
+\contentsline {subsubsection}{\numberline {6.2.5}実験4: エージェント数減少による性能の変化}{33}{}%
+\contentsline {subsection}{\numberline {6.3}不要なエージェントの停止}{40}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}実験5: Deactivation on Countによる不要なエージェントの停止}{40}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}実験5における停止エージェントと非停止エージェントの行動の解析}{40}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}実験6: Deactivation on Timeによる不要なエージェントの停止}{42}{}%
+\contentsline {subsubsection}{\numberline {6.3.4}実験6における停止エージェントと非停止エージェントの行動の解析}{42}{}%
+\contentsline {subsection}{\numberline {6.4}AMTDS/ERCについての実験結果}{48}{}%
+\contentsline {subsubsection}{\numberline {6.4.1}実験7: 性能評価}{48}{}%
+\contentsline {subsubsection}{\numberline {6.4.2}実験8: 異なる環境による性能評価}{48}{}%
+\contentsline {subsubsection}{\numberline {6.4.3}AMTDS/ERCの行動の解析}{51}{}%
+\contentsline {section}{\numberline {7}結論}{58}{}%
