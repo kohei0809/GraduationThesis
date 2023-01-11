@@ -589,22 +589,22 @@ INPUT ./figures/CorrectionScatter_Office_TimeStop30.png
 INPUT ./figures/CorrectionScatter_Office_TimeStop30.png
 INPUT figures/CorrectionScatter_Office_TimeStop30.png
 INPUT extractbb -B cropbox -O figures/CorrectionScatter_Office_TimeStop30.png
-INPUT ./figures/ds_graph_3600_ave_ERC_Office_600.png
-INPUT ./figures/ds_graph_3600_ave_ERC_Office_600.png
-INPUT figures/ds_graph_3600_ave_ERC_Office_600.png
-INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ERC_Office_600.png
-INPUT ./figures/cs_graph_3600_ave_ERC_Office_600.png
-INPUT ./figures/cs_graph_3600_ave_ERC_Office_600.png
-INPUT figures/cs_graph_3600_ave_ERC_Office_600.png
-INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ERC_Office_600.png
-INPUT ./figures/ds_graph_3600_ave_ERC_Complex_600.png
-INPUT ./figures/ds_graph_3600_ave_ERC_Complex_600.png
-INPUT figures/ds_graph_3600_ave_ERC_Complex_600.png
-INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ERC_Complex_600.png
-INPUT ./figures/cs_graph_3600_ave_ERC_Complex_600.png
-INPUT ./figures/cs_graph_3600_ave_ERC_Complex_600.png
-INPUT figures/cs_graph_3600_ave_ERC_Complex_600.png
-INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ERC_Complex_600.png
+INPUT ./figures/ds_graph_3600_ave_ERC_Office_1000.png
+INPUT ./figures/ds_graph_3600_ave_ERC_Office_1000.png
+INPUT figures/ds_graph_3600_ave_ERC_Office_1000.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ERC_Office_1000.png
+INPUT ./figures/cs_graph_3600_ave_ERC_Office_1000.png
+INPUT ./figures/cs_graph_3600_ave_ERC_Office_1000.png
+INPUT figures/cs_graph_3600_ave_ERC_Office_1000.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ERC_Office_1000.png
+INPUT ./figures/ds_graph_3600_ave_ERC_Complex_1000.png
+INPUT ./figures/ds_graph_3600_ave_ERC_Complex_1000.png
+INPUT figures/ds_graph_3600_ave_ERC_Complex_1000.png
+INPUT extractbb -B cropbox -O figures/ds_graph_3600_ave_ERC_Complex_1000.png
+INPUT ./figures/cs_graph_3600_ave_ERC_Complex_1000.png
+INPUT ./figures/cs_graph_3600_ave_ERC_Complex_1000.png
+INPUT figures/cs_graph_3600_ave_ERC_Complex_1000.png
+INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ERC_Complex_1000.png
 INPUT ./figures/CorrectionScatter_Office_ERC.png
 INPUT ./figures/CorrectionScatter_Office_ERC.png
 INPUT figures/CorrectionScatter_Office_ERC.png
@@ -661,56 +661,3 @@ INPUT ./figures/Rate_Office_Bgroup_6.png
 INPUT ./figures/Rate_Office_Bgroup_6.png
 INPUT figures/Rate_Office_Bgroup_6.png
 INPUT extractbb -B cropbox -O figures/Rate_Office_Bgroup_6.png
-INPUT ./figures/Rate_Complex_ESgroup_0.png
-INPUT ./figures/Rate_Complex_ESgroup_0.png
-INPUT figures/Rate_Complex_ESgroup_0.png
-INPUT extractbb -B cropbox -O figures/Rate_Complex_ESgroup_0.png
-INPUT ./figures/Rate_Complex_ESgroup_3.png
-INPUT ./figures/Rate_Complex_ESgroup_3.png
-INPUT figures/Rate_Complex_ESgroup_3.png
-INPUT extractbb -B cropbox -O figures/Rate_Complex_ESgroup_3.png
-INPUT ./figures/Rate_Complex_Bgroup_4.png
-INPUT ./figures/Rate_Complex_Bgroup_4.png
-INPUT figures/Rate_Complex_Bgroup_4.png
-INPUT extractbb -B cropbox -O figures/Rate_Complex_Bgroup_4.png
-INPUT ./figures/Rate_Complex_Bgroup_14.png
-INPUT ./figures/Rate_Complex_Bgroup_14.png
-INPUT figures/Rate_Complex_Bgroup_14.png
-INPUT extractbb -B cropbox -O figures/Rate_Complex_Bgroup_14.png
-INPUT ./figures/searchNum_Office_ESgroup_8.png
-INPUT ./figures/searchNum_Office_ESgroup_8.png
-INPUT figures/searchNum_Office_ESgroup_8.png
-INPUT extractbb -B cropbox -O figures/searchNum_Office_ESgroup_8.png
-INPUT ./figures/searchNum_Office_ESgroup_0.png
-INPUT ./figures/searchNum_Office_ESgroup_0.png
-INPUT figures/searchNum_Office_ESgroup_0.png
-INPUT extractbb -B cropbox -O figures/searchNum_Office_ESgroup_0.png
-INPUT ./figures/searchNum_Office_Bgroup_2.png
-INPUT ./figures/searchNum_Office_Bgroup_2.png
-INPUT figures/searchNum_Office_Bgroup_2.png
-INPUT extractbb -B cropbox -O figures/searchNum_Office_Bgroup_2.png
-INPUT ./figures/searchNum_Office_Bgroup_6.png
-INPUT ./figures/searchNum_Office_Bgroup_6.png
-INPUT figures/searchNum_Office_Bgroup_6.png
-INPUT extractbb -B cropbox -O figures/searchNum_Office_Bgroup_6.png
-INPUT ./figures/searchNum_Complex_ESgroup_0.png
-INPUT ./figures/searchNum_Complex_ESgroup_0.png
-INPUT figures/searchNum_Complex_ESgroup_0.png
-INPUT extractbb -B cropbox -O figures/searchNum_Complex_ESgroup_0.png
-INPUT ./figures/searchNum_Complex_ESgroup_1.png
-INPUT ./figures/searchNum_Complex_ESgroup_1.png
-INPUT figures/searchNum_Complex_ESgroup_1.png
-INPUT extractbb -B cropbox -O figures/searchNum_Complex_ESgroup_1.png
-INPUT ./figures/searchNum_Complex_Bgroup_4.png
-INPUT ./figures/searchNum_Complex_Bgroup_4.png
-INPUT figures/searchNum_Complex_Bgroup_4.png
-INPUT extractbb -B cropbox -O figures/searchNum_Complex_Bgroup_4.png
-INPUT ./figures/searchNum_Complex_Bgroup_16.png
-INPUT ./figures/searchNum_Complex_Bgroup_16.png
-INPUT figures/searchNum_Complex_Bgroup_16.png
-INPUT extractbb -B cropbox -O figures/searchNum_Complex_Bgroup_16.png
-INPUT out/KoheiMatsumoto.bbl
-INPUT out/KoheiMatsumoto.bbl
-INPUT out/KoheiMatsumoto.bbl
-INPUT out/KoheiMatsumoto.bbl
-INPUT out/KoheiMatsumoto.aux

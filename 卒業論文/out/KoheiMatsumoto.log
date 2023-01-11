@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  11 JAN 2023 04:24
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  12 JAN 2023 02:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -899,73 +899,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 [47]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 1963.
-File: figures/ds_graph_3600_ave_ERC_Office_600.png Graphic file (type bmp)
-<figures/ds_graph_3600_ave_ERC_Office_600.png>
-File: figures/cs_graph_3600_ave_ERC_Office_600.png Graphic file (type bmp)
-<figures/cs_graph_3600_ave_ERC_Office_600.png>
-File: figures/ds_graph_3600_ave_ERC_Complex_600.png Graphic file (type bmp)
-<figures/ds_graph_3600_ave_ERC_Complex_600.png>
-File: figures/cs_graph_3600_ave_ERC_Complex_600.png Graphic file (type bmp)
-<figures/cs_graph_3600_ave_ERC_Complex_600.png>
+File: figures/ds_graph_3600_ave_ERC_Office_1000.png Graphic file (type bmp)
+<figures/ds_graph_3600_ave_ERC_Office_1000.png>
+File: figures/cs_graph_3600_ave_ERC_Office_1000.png Graphic file (type bmp)
+<figures/cs_graph_3600_ave_ERC_Office_1000.png>
+File: figures/ds_graph_3600_ave_ERC_Complex_1000.png Graphic file (type bmp)
+<figures/ds_graph_3600_ave_ERC_Complex_1000.png>
+File: figures/cs_graph_3600_ave_ERC_Complex_1000.png Graphic file (type bmp)
+<figures/cs_graph_3600_ave_ERC_Complex_1000.png>
 File: figures/CorrectionScatter_Office_ERC.png Graphic file (type bmp)
 <figures/CorrectionScatter_Office_ERC.png>
 File: figures/CorrectionScatter_Complex_ERC.png Graphic file (type bmp)
 <figures/CorrectionScatter_Complex_ERC.png>
-File: figures/ExpReal_Office_ESgroup_0.png Graphic file (type bmp)
-<figures/ExpReal_Office_ESgroup_0.png>
-File: figures/ExpReal_Office_ESgroup_7.png Graphic file (type bmp)
-<figures/ExpReal_Office_ESgroup_7.png>
-File: figures/ExpReal_Office_Bgroup_2.png Graphic file (type bmp)
-<figures/ExpReal_Office_Bgroup_2.png>
-File: figures/ExpReal_Office_Bgroup_6.png Graphic file (type bmp)
-<figures/ExpReal_Office_Bgroup_6.png>
-File: figures/ExpReal_Complex_ESgroup_0.png Graphic file (type bmp)
-<figures/ExpReal_Complex_ESgroup_0.png>
-File: figures/ExpReal_Complex_ESgroup_3.png Graphic file (type bmp)
-<figures/ExpReal_Complex_ESgroup_3.png>
-File: figures/ExpReal_Complex_Bgroup_4.png Graphic file (type bmp)
-<figures/ExpReal_Complex_Bgroup_4.png>
-File: figures/ExpReal_Complex_Bgroup_14.png Graphic file (type bmp)
-<figures/ExpReal_Complex_Bgroup_14.png>
-File: figures/Rate_Office_ESgroup_0.png Graphic file (type bmp)
-<figures/Rate_Office_ESgroup_0.png>
-File: figures/Rate_Office_ESgroup_7.png Graphic file (type bmp)
-<figures/Rate_Office_ESgroup_7.png>
-File: figures/Rate_Office_Bgroup_2.png Graphic file (type bmp)
-<figures/Rate_Office_Bgroup_2.png>
-File: figures/Rate_Office_Bgroup_6.png Graphic file (type bmp)
-<figures/Rate_Office_Bgroup_6.png>
-File: figures/Rate_Complex_ESgroup_0.png Graphic file (type bmp)
-<figures/Rate_Complex_ESgroup_0.png>
-File: figures/Rate_Complex_ESgroup_3.png Graphic file (type bmp)
-<figures/Rate_Complex_ESgroup_3.png>
-File: figures/Rate_Complex_Bgroup_4.png Graphic file (type bmp)
-<figures/Rate_Complex_Bgroup_4.png>
-File: figures/Rate_Complex_Bgroup_14.png Graphic file (type bmp)
-<figures/Rate_Complex_Bgroup_14.png>
-File: figures/searchNum_Office_ESgroup_8.png Graphic file (type bmp)
-<figures/searchNum_Office_ESgroup_8.png>
-File: figures/searchNum_Office_ESgroup_0.png Graphic file (type bmp)
-<figures/searchNum_Office_ESgroup_0.png>
-File: figures/searchNum_Office_Bgroup_2.png Graphic file (type bmp)
-<figures/searchNum_Office_Bgroup_2.png>
-File: figures/searchNum_Office_Bgroup_6.png Graphic file (type bmp)
-<figures/searchNum_Office_Bgroup_6.png>
-File: figures/searchNum_Complex_ESgroup_0.png Graphic file (type bmp)
-<figures/searchNum_Complex_ESgroup_0.png>
-File: figures/searchNum_Complex_ESgroup_1.png Graphic file (type bmp)
-<figures/searchNum_Complex_ESgroup_1.png>
-File: figures/searchNum_Complex_Bgroup_4.png Graphic file (type bmp)
-<figures/searchNum_Complex_Bgroup_4.png>
-File: figures/searchNum_Complex_Bgroup_16.png Graphic file (type bmp)
-<figures/searchNum_Complex_Bgroup_16.png>
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 2271.
-
-Overfull \hbox (20.32628pt too wide) in paragraph at lines 2270--2279
-[]\JY1/mc/m/n/12 この項では ， 実験 \OT1/cmr/m/n/12 7 \JY1/mc/m/n/12 と実験 \OT1/cmr/m/n/12 8 \JY1/mc/m/n/12 でのエ ージ ェ ントの行動を解析し ， 提案手法である \OT1/cmr/m/n/12 AMTDS/ERC
- []
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -990,155 +935,21 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [50]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[51]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[52]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[53]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[54]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[55]
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 2290.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 2296.
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[56]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[57]
-Overfull \hbox (15.64687pt too wide) in paragraph at lines 2387--2399
-[]\JY1/mc/m/n/12 既存研究である \OT1/cmr/m/n/12 AMTDS \JY1/mc/m/n/12 と \OT1/cmr/m/n/12 AMTDS/ESC \JY1/mc/m/n/12 や ， \OT1/cmr/m/n/12 AMTDS/EDC \JY1/mc/m/n/12 と比較した結果 ， \OT1/cmr/m/n/12 AMTDS/ER
- []
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[58] (out/KoheiMatsumoto.bbl
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 7.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 13.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 21.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 29.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 37.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 43.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 50.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 56.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 65.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 71.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 77.
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[59
-
-]
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 83.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 90.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 97.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 104.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 112.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 122.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 129.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 136.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 150.
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[60])
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[61] (out/KoheiMatsumoto.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
-Here is how much of TeX's memory you used:
- 5112 strings out of 475530
- 96700 string characters out of 5794171
- 434356 words of memory out of 5000000
- 26608 multiletter control sequences out of 15000+600000
- 491086 words of font info for 114 fonts, out of 8000000 for 9000
- 929 hyphenation exceptions out of 8191
- 67i,13n,77p,359b,714s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on out/KoheiMatsumoto.dvi (65 pages, 240888 bytes).
+File: figures/ExpReal_Office_ESgroup_0.png Graphic file (type bmp)
+<figures/ExpReal_Office_ESgroup_0.png>
+File: figures/ExpReal_Office_ESgroup_7.png Graphic file (type bmp)
+<figures/ExpReal_Office_ESgroup_7.png>
+File: figures/ExpReal_Office_Bgroup_2.png Graphic file (type bmp)
+<figures/ExpReal_Office_Bgroup_2.png>
+File: figures/ExpReal_Office_Bgroup_6.png Graphic file (type bmp)
+<figures/ExpReal_Office_Bgroup_6.png>
+File: figures/ExpReal_Complex_ESgroup_0.png Graphic file (type bmp)
+<figures/ExpReal_Complex_ESgroup_0.png>
+File: figures/ExpReal_Complex_ESgroup_3.png Graphic file (type bmp)
+<figures/ExpReal_Complex_ESgroup_3.png>
+File: figures/ExpReal_Complex_Bgroup_4.png Graphic file (type bmp)
+<figures/ExpReal_Complex_Bgroup_4.png>
+File: figures/ExpReal_Complex_Bgroup_14.png Graphic file (type bmp)
+<figures/ExpReal_Complex_Bgroup_14.png>
+File: figures/Rate_Office_ESgroup_0.png Graphic file (type bmp)
+<figures/Rate_Office_ESgrou

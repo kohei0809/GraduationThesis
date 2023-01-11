@@ -947,7 +947,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
     \begin{equation}
       \alpha_d = 
       \begin{cases}
-        \alpha_1 & (|T^i_n - T^i_{n-1}| \leq d^i \textrm{のとき}) \\
+        \alpha_1  & (|T^i_n - T^i_{n-1}| \leq d^i \textrm{のとき}) \\
         \alpha_2 & (|T^i_n - T^i_{n-1}| > d^i \textrm{のとき})
       \end{cases}
     \end{equation}
@@ -1243,11 +1243,11 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   それぞれ3,600ステップごとのイベント残存時間の総和$D(s)$と，エージェントの総エネルギー消費量$C(s)$の時間推移を示したものである．
   なお，図\ref{fig:ds_ER_Office}では，$\Dreq=600$なので，エージェントは$D(s)\leq 2,160,000$ ($=3,600\Dreq$)を保つことが
   要求条件であることに注意されたい．
-  図\ref{fig:ds_ER_Office}に示すように，全ての手法が品質要求を満たしていることがわかる．
+  図\ref{fig:ds_ER_Office}より，全ての手法が品質要求を満たしていることが分かる．
   特に，従来手法であるAMTDSとAMTDS/ESCは，$D(s)$が要求値よりもかなり小さい値を維持している．
   \par
 
-  しかし，これは要求値以上の巡回による過剰なエネルギー消費を示唆しており，
+  しかし，これは要求値以上の巡回による，過剰なエネルギー消費を示唆しており，
   これを図\ref{fig:cs_ER_Office}で確認することができる．
   この図から，提案手法AMTDS/ERは，AMTDSに比べて$D(s)$は約$40.3\%$増加しているが，
   $C(s)$を約$30.9\%$削減することができた．
@@ -1337,7 +1337,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   \subsubsection{AMTDS/ERの行動の解析}\label{sec:expAnalsis}
   この項では，実験1と実験2でのエージェントの行動を解析し，提案手法であるAMTDS/ERを定性的に評価する．
-  まず，エージェントのエージェントのエネルギー節約行動の特徴，特に各エージェントの学習パラメータ$K^i$に一部影響される，
+  まず，エージェントのエネルギー節約行動の特徴，特に各エージェントの学習パラメータ$K^i$に一部影響される行動である，
   {\em Pausing}による待機時間の総和を解析する．
   図\ref{fig:cscatter_ER_Office}と図\ref{fig:cscatter_ER_Complex}に，
   2,000,000ステップから3,000,000ステップでの総待機時間を計算し，
@@ -1450,7 +1450,7 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   つまり，エージェントはP1とP3では$D(s) \leq 3,600,000 (= 3600\Dreq)$を保ち，
   P2では$D(s) \leq 2,160,000 (= 3600\Dreq)$を保つことが要求条件であることに注意されたい．
   図\ref{fig:ds_ER_ChangeRequirement}より，提案手法であるAMTDS/ERは，
-  途中で品質要求が変化してもしっかり対応できていることがわかる．
+  途中で品質要求が変化してもしっかり対応できていることが分かる．
   従来手法であるAMTDS/ESCも$\Dreq$が変化した際に$D(s)$を変化させているが，
   その変化量は$\Dreq$の変化量と比べると小さい．
   このことから，エネルギー節約行動を調整する学習パラメータ$K^i$の導入により，
@@ -1986,12 +1986,12 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
 
   \begin{figure}
     \centering
-    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_ERC_Office_600.png}
+    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_ERC_Office_1000.png}
     \caption{$D(s)$の時間推移(実験7)}
     \label{fig:ds_ERC_Office}
     \vspace{40pt}
     \centering
-    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_ERC_Office_600.png}
+    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_ERC_Office_1000.png}
     \caption{$C(s)$の時間推移(実験7)}
     \label{fig:cs_ERC_Office}
   \end{figure}
@@ -2006,26 +2006,27 @@ $\varepsilon$-Greedy法では，$s_{next}$を確率$\varepsilon$でランダム�
   AMTDS/ERCはAMTDS/EDCに比べて$D(s)$は約$149.8\%$増加したが，
   図\ref{fig:cs_ERC_Office}より，エネルギー節約行動を行わないAMTDS/EDCよりもエネルギー消費量を削減することができ，
   具体的には約$61.4\%$削減することができた．
+  なお，このデータは5,000,000ステップから6,000,000ステップの平均値である．
   
 
   \begin{figure}
     \centering
-    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_ERC_Complex_600.png}
+    \includegraphics[width=0.9\hsize]{figures/ds_graph_3600_ave_ERC_Complex_1000.png}
     \caption{$D(s)$の時間推移(実験8)}
     \label{fig:ds_ERC_Complex}
     \vspace{40pt}
     \centering
-    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_ERC_Complex_600.png}
+    \includegraphics[width=0.9\hsize]{figures/cs_graph_3600_ave_ERC_Complex_1000.png}
     \caption{$C(s)$の時間推移(実験8)}
     \label{fig:cs_ERC_Complex}
   \end{figure}
   
    
   \subsubsection{実験8: 異なる環境による性能評価}\label{ex:ERC2}
-  \red{図変更}\\
   図\ref{fig:ds_ERC_Complex}，\ref{fig:cs_ERC_Complex}は，環境2で実験を行い，
   それぞれ3,600ステップごとの$D(s)$と$C(s)$の時間推移を示している．
   これらの図より，品質要求を満たしながらAMTDS/EDCよりもエネルギー消費量を削減することができた．
+  具体的には，$D(s)$を約$155.1\%$増加させ，$C(s)$を約$63.1\%$削減することができた．
   しかし，実験7のように最大限削減できたとは言えない．
   $D(s)$は品質要求よりもまだ余裕があるため，要求条件よりも過剰な巡回を行ってしまっていると言える．
 
