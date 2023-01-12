@@ -4,7 +4,6 @@
 \usepackage{amsmath}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{amssymb}
-%\usepackage{color}
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{subcaption}
@@ -56,7 +55,7 @@
 \department{情報理工学科}
 \type{卒業論文}
 \nendo{2022}
-\hizuke{2023/}
+\hizuke{\today}
 \advisor{菅原~俊治}
 
 \begin{document}
@@ -188,7 +187,7 @@ MACPP問題への同アプローチをとった研究として，
 エージェントの巡回環境を，2次元ユークリッド空間に埋め込み可能なグラフ$G = (V,E)$で表す．
 ここで，$V = \{v_1, \dots, v_n \}$はノード集合を表し，
 各ノード乗にエージェントやイベント，障害物が存在する．
-また，$E$はエージェントが移動する経路に対応するノード$v_i$と$v_j$間のエッジ$e_{i,j}$である．
+また，$E$はエージェントが移動する経路に対応するノード$v_i$と$v_j$間のエッジ$e_{i,j}$の集合である．
 \par
 
 さらに，ステップを単位とする離散時間を導入する．
@@ -200,14 +199,14 @@ MACPP問題への同アプローチをとった研究として，
 全てのノード$v\in V$上でイベントが発生し，そのイベント発生確率を$p(v)~(0\leq p(v)\leq 1)$とする．
 毎時刻$t$において，ノード$v$に蓄積されたイベント数$L_t(v)$は以下の式で更新される．
 %
-\[
-L_t(v) = \left\{
-\begin{array}{ll}
-  L_{t-1}(v) + 1 & \textrm{(確率$p(v)$のイベント発生時)} \\
-  L_{t-1}(v) & \textrm{(その他)}
-\end{array}
-\right.
-\]
+\begin{equation}
+  L_t(v) = \left\{
+  \begin{array}{ll}
+    L_{t-1}(v) + 1 & \textrm{(確率$p(v)$のイベント発生時)} \\
+    L_{t-1}(v) & \textrm{(その他)}
+  \end{array}
+  \right.  
+\end{equation}
 %
 時刻$t$にエージェントがノード$v$を訪れた時に$v$上のイベントは処理され，$L_t(v) = 0$となる．
 イベントの解釈は，アプリケーションによって異なり，例えば，掃除のアプリケーションでは，
