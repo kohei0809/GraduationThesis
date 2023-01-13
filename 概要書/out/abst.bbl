@@ -1,5 +1,13 @@
 \begin{thebibliography}{1}
 
+\bibitem{Yoneda2013}
+Keisuke Yoneda, Chihiro Kato, and Toshiharu Sugawara.
+\newblock Autonomous learning of target decision strategies without
+  communications for continuous coordinated cleaning tasks.
+\newblock In {\em 2013 IEEE/WIC/ACM International Joint Conferences on Web
+  Intelligence (WI) and Intelligent Agent Technologies (IAT)}, Vol.~2, pp.
+  216--223, 2013.
+
 \bibitem{Wu2019}
 Lingying Wu, Ayumi Sugiyama, and Toshiharu Sugawara.
 \newblock Energy-efficient strategies for multi-agent continuous cooperative

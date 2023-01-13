@@ -370,6 +370,7 @@ INPUT ./figures/cs_graph_3600_ave_ER_Office_600.png
 INPUT ./figures/cs_graph_3600_ave_ER_Office_600.png
 INPUT figures/cs_graph_3600_ave_ER_Office_600.png
 INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ER_Office_600.png
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT out/abst.bbl
 INPUT out/abst.bbl
 INPUT out/abst.bbl
