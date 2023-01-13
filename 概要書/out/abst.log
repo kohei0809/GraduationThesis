@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  13 JAN 2023 16:30
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  14 JAN 2023 04:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -255,15 +255,15 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 46.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 60.
+(Font)              No change on input line 58.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 61.
+(Font)              No change on input line 58.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 66.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 62.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 66.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 62.
 
-Overfull \hbox (14.27327pt too wide) detected at line 85
+Overfull \hbox (14.27327pt too wide) detected at line 81
 \OML/cmm/m/it/10.95 L[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v\OT1/cmr/m/n/10.95 ) = []
  []
 
@@ -272,18 +272,18 @@ Overfull \hbox (14.27327pt too wide) detected at line 85
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 131.
+(Font)              No change on input line 124.
 
-Overfull \hbox (24.19409pt too wide) detected at line 140
+Overfull \hbox (24.19409pt too wide) detected at line 133
 []
  []
 
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 142.
+(Font)              No change on input line 135.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 145.
+(Font)              No change on input line 137.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 145.
+(Font)              No change on input line 137.
 File: figures/Graph_Office.png Graphic file (type bmp)
 <figures/Graph_Office.png>
 File: figures/ds_graph_3600_ave_ER_Office_600.png Graphic file (type bmp)

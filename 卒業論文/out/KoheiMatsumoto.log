@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  13 JAN 2023 16:27
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.10.4)  14 JAN 2023 06:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -272,7 +272,7 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 64.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 87.
+(Font)              No change on input line 78.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -292,11 +292,11 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [2]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 180.
+(Font)              No change on input line 139.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 186.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 143.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 186.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 143.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -313,8 +313,8 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [4]
-Overfull \hbox (14.16913pt too wide) in paragraph at lines 325--328
-[]\JY1/mc/m/n/12 この章では ， 提案手法の基にな っ た \OT1/cmr/m/n/12 AMTDS\JY1/mc/m/n/12 ， \OT1/cmr/m/n/12 AMTDS/LD\JY1/mc/m/n/12 ， \OT1/cmr/m/n/12 AMTDS/EDC\JY1/mc/m/n/12 ， \OT1/cmr/m/n/12 AMTDS/ESC
+Overfull \hbox (19.7294pt too wide) in paragraph at lines 264--267
+[]\JY1/mc/m/n/12 この章では ， 提案手法の基にな っ た \OT1/cmr/m/n/12 AMTDS \JY1/mc/m/n/12 や \OT1/cmr/m/n/12 AMTDS/LD\JY1/mc/m/n/12 ， \OT1/cmr/m/n/12 AMTDS/EDC\JY1/mc/m/n/12 ， \OT1/cmr/m/n/12 AMTDS/ESC
  []
 
 
@@ -334,7 +334,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [6]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 402.
+(Font)              No change on input line 336.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -386,9 +386,9 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [12]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 642.
+(Font)              No change on input line 534.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 642.
+(Font)              No change on input line 534.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -398,27 +398,19 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [13]
 LaTeX Font Info:    Font shape `JT1/gt/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 712.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 599.
 LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 712.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 599.
 LaTeX Font Info:    Kanji font shape `JY1/gt/bx/it' undefined
-(Font)              No change on input line 712.
+(Font)              No change on input line 599.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 713.
+(Font)              No change on input line 600.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 721.
+(Font)              No change on input line 607.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 724.
+(Font)              No change on input line 608.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 726.
-LaTeX Font Info:    Kanji font shape `JY1/gt/bx/it' undefined
-(Font)              No change on input line 729.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 730.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 739.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 739.
+(Font)              No change on input line 609.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -427,12 +419,21 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [14]
-Overfull \hbox (31.02707pt too wide) in paragraph at lines 749--749
+LaTeX Font Info:    Kanji font shape `JY1/gt/bx/it' undefined
+(Font)              No change on input line 612.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 613.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 620.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 620.
+
+Overfull \hbox (31.02707pt too wide) in paragraph at lines 625--625
 []\OT1/cmr/bx/n/14.4 AMTDS for en-ergy sav-ing un-der the re-quire-ment (AMTDS/ER) 
  []
 
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 756.
+(Font)              No change on input line 630.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -442,27 +443,21 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [15]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 820.
+(Font)              No change on input line 694.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 831.
+(Font)              No change on input line 696.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 835.
+(Font)              No change on input line 697.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 836.
+(Font)              No change on input line 697.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 837.
+(Font)              No change on input line 698.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 838.
+(Font)              No change on input line 699.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 840.
+(Font)              No change on input line 700.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 841.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 844.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 855.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 856.
+(Font)              No change on input line 700.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -472,15 +467,21 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [16]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 859.
+(Font)              No change on input line 703.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 860.
+(Font)              No change on input line 711.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 862.
+(Font)              No change on input line 712.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 862.
+(Font)              No change on input line 715.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 875.
+(Font)              No change on input line 715.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 717.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 717.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 726.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -490,11 +491,11 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [17]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 903.
+(Font)              No change on input line 747.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 907.
+(Font)              No change on input line 750.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 907.
+(Font)              No change on input line 750.
 File: figures/Flowchart_stop_E.png Graphic file (type bmp)
 <figures/Flowchart_stop_E.png>
 
@@ -521,28 +522,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [20]
-Overfull \hbox (48.13824pt too wide) in paragraph at lines 1067--1106
-[][]  [] 
- []
-
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1116.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1118.
-
-Overfull \hbox (10.08817pt too wide) in paragraph at lines 1132--1144
- [][][][] 
- []
-
-
-Overfull \hbox (48.13824pt too wide) in paragraph at lines 1108--1145
-[][]  [] 
- []
-
-File: figures/Graph_Office.png Graphic file (type bmp)
-<figures/Graph_Office.png>
-File: figures/Graph_Complex.png Graphic file (type bmp)
-<figures/Graph_Complex.png>
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -551,6 +530,23 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [21]
+Overfull \hbox (48.13824pt too wide) in paragraph at lines 885--924
+[][]  [] 
+ []
+
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 934.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 936.
+
+Overfull \hbox (48.13824pt too wide) in paragraph at lines 926--963
+[][]  [] 
+ []
+
+File: figures/Graph_Office.png Graphic file (type bmp)
+<figures/Graph_Office.png>
+File: figures/Graph_Complex.png Graphic file (type bmp)
+<figures/Graph_Complex.png>
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -571,6 +567,22 @@ File: figures/ds_graph_3600_ave_ER_Office_600.png Graphic file (type bmp)
 <figures/ds_graph_3600_ave_ER_Office_600.png>
 File: figures/cs_graph_3600_ave_ER_Office_600.png Graphic file (type bmp)
 <figures/cs_graph_3600_ave_ER_Office_600.png>
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[25]
 File: figures/ds_graph_3600_ave_ER_Complex_600.png Graphic file (type bmp)
 <figures/ds_graph_3600_ave_ER_Complex_600.png>
 File: figures/cs_graph_3600_ave_ER_Complex_600.png Graphic file (type bmp)
@@ -588,28 +600,22 @@ File: figures/al_graph_ER_Complex_top.png Graphic file (type bmp)
 File: figures/al_graph_ER_Complex_worst.png Graphic file (type bmp)
 <figures/al_graph_ER_Complex_worst.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1340.
+(Font)              No change on input line 1136.
 
-Overfull \hbox (12.16664pt too wide) in paragraph at lines 1338--1346
+Overfull \hbox (12.16664pt too wide) in paragraph at lines 1135--1139
 []\JY1/mc/m/n/12 この項では ， 実験 \OT1/cmr/m/n/12 1 \JY1/mc/m/n/12 と実験 \OT1/cmr/m/n/12 2 \JY1/mc/m/n/12 でのエ ージ ェ ントの行動を解析し ， 提案手法である \OT1/cmr/m/n/12 AMTDS/ER
  []
 
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[24]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[25]
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 1143.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 1144.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 1147.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 1148.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 1149.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -626,16 +632,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [27]
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1352.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1353.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1357.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1358.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1359.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -644,6 +640,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [28]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[29]
 File: figures/ds_graph_3600_ave_ER_Office_600&1000.png Graphic file (type bmp)
 <figures/ds_graph_3600_ave_ER_Office_600&1000.png>
 File: figures/cs_graph_3600_ave_ER_Office_600&1000.png Graphic file (type bmp)
@@ -655,7 +659,7 @@ File: figures/CorrectionScatter_ChangeRequirement_4m.png Graphic file (type bmp)
 File: figures/CorrectionScatter_ChangeRequirement_6m.png Graphic file (type bmp)
 <figures/CorrectionScatter_ChangeRequirement_6m.png>
 
-LaTeX Warning: Float too large for page by 12.25668pt on input line 1415.
+LaTeX Warning: Float too large for page by 12.25668pt on input line 1198.
 
 File: figures/al_graph_ER_ChangeRequirement_dual.png Graphic file (type bmp)
 <figures/al_graph_ER_ChangeRequirement_dual.png>
@@ -664,18 +668,7 @@ File: figures/al_graph_ER_ChangeRequirement_first.png Graphic file (type bmp)
 File: figures/al_graph_ER_ChangeRequirement_second.png Graphic file (type bmp)
 <figures/al_graph_ER_ChangeRequirement_second.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1460.
-
-LaTeX Warning: Reference `fig:fig:al_ChangeRequirement_first' on page 29 undefined on input line 1486.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[29]
+(Font)              No change on input line 1235.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -700,6 +693,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [32]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[33]
 File: figures/ds_graph_3600_ave_ER_Office_randomStop.png Graphic file (type bmp)
 <figures/ds_graph_3600_ave_ER_Office_randomStop.png>
 File: figures/cs_graph_3600_ave_ER_Office_randomStop.png Graphic file (type bmp)
@@ -725,15 +726,7 @@ File: figures/CorrectionTransition_DescendingStop_2.png Graphic file (type bmp)
 File: figures/CorrectionTransition_DescendingStop_10.png Graphic file (type bmp)
 <figures/CorrectionTransition_DescendingStop_10.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1600.
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[33]
+(Font)              No change on input line 1357.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -766,6 +759,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [37]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[38]
 File: figures/ds_graph_3600_ave_CountStop_Office_600.png Graphic file (type bmp)
 <figures/ds_graph_3600_ave_CountStop_Office_600.png>
 File: figures/cs_graph_3600_ave_CountStop_Office_600.png Graphic file (type bmp)
@@ -777,7 +778,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[38]
+[39]
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -785,8 +786,8 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[39]
-Overfull \hbox (29.52158pt too wide) in paragraph at lines 1716--1726
+[40]
+Overfull \hbox (29.52158pt too wide) in paragraph at lines 1473--1483
 []\JY1/mc/m/n/12 図 \OT1/cmr/m/n/12 28 \JY1/mc/m/n/12 より， \OT1/cmr/m/n/12 De-ac-ti-va-tion on Count \JY1/mc/m/n/12 を用いた \OT1/cmr/m/n/12 AMTDS/ER \JY1/mc/m/n/12 は ， 停止手法を用いない \OT1/cmr/m/n/12 AMTDS/ER
  []
 
@@ -801,15 +802,7 @@ File: figures/CorrectionTransition_CountStop_2.png Graphic file (type bmp)
 File: figures/CorrectionTransition_CountStop_9.png Graphic file (type bmp)
 <figures/CorrectionTransition_CountStop_9.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1779.
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[40]
+(Font)              No change on input line 1536.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -818,12 +811,20 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [41]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[42]
 File: figures/ds_graph_3600_ave_TimeStop_Office_600.png Graphic file (type bmp)
 <figures/ds_graph_3600_ave_TimeStop_Office_600.png>
 File: figures/cs_graph_3600_ave_TimeStop_Office_600.png Graphic file (type bmp)
 <figures/cs_graph_3600_ave_TimeStop_Office_600.png>
 
-Overfull \hbox (24.6258pt too wide) in paragraph at lines 1834--1838
+Overfull \hbox (24.6258pt too wide) in paragraph at lines 1591--1595
 []\JY1/mc/m/n/12 図 \OT1/cmr/m/n/12 33 \JY1/mc/m/n/12 より， \OT1/cmr/m/n/12 De-ac-ti-va-tion on Time \JY1/mc/m/n/12 を用いた \OT1/cmr/m/n/12 AMTDS/ER \JY1/mc/m/n/12 は ， 停止手法を用いない \OT1/cmr/m/n/12 AMTDS/ER
  []
 
@@ -848,15 +849,7 @@ File: figures/cs_graph_3600_ave_TimeStop30_Office_600.png Graphic file (type bmp
 File: figures/CorrectionScatter_Office_TimeStop30.png Graphic file (type bmp)
 <figures/CorrectionScatter_Office_TimeStop30.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1917.
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[42]
+(Font)              No change on input line 1674.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -897,20 +890,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [47]
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 1962.
-File: figures/ds_graph_3600_ave_ERC_Office_1000.png Graphic file (type bmp)
-<figures/ds_graph_3600_ave_ERC_Office_1000.png>
-File: figures/cs_graph_3600_ave_ERC_Office_1000.png Graphic file (type bmp)
-<figures/cs_graph_3600_ave_ERC_Office_1000.png>
-File: figures/ds_graph_3600_ave_ERC_Complex_1000.png Graphic file (type bmp)
-<figures/ds_graph_3600_ave_ERC_Complex_1000.png>
-File: figures/cs_graph_3600_ave_ERC_Complex_1000.png Graphic file (type bmp)
-<figures/cs_graph_3600_ave_ERC_Complex_1000.png>
-File: figures/CorrectionScatter_Office_ERC.png Graphic file (type bmp)
-<figures/CorrectionScatter_Office_ERC.png>
-File: figures/CorrectionScatter_Complex_ERC.png Graphic file (type bmp)
-<figures/CorrectionScatter_Complex_ERC.png>
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -919,6 +898,16 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [48]
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 1719.
+File: figures/ds_graph_3600_ave_ERC_Office_1000.png Graphic file (type bmp)
+<figures/ds_graph_3600_ave_ERC_Office_1000.png>
+File: figures/cs_graph_3600_ave_ERC_Office_1000.png Graphic file (type bmp)
+<figures/cs_graph_3600_ave_ERC_Office_1000.png>
+File: figures/ds_graph_3600_ave_ERC_Complex_1000.png Graphic file (type bmp)
+<figures/ds_graph_3600_ave_ERC_Complex_1000.png>
+File: figures/cs_graph_3600_ave_ERC_Complex_1000.png Graphic file (type bmp)
+<figures/cs_graph_3600_ave_ERC_Complex_1000.png>
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -935,6 +924,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [50]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[51]
+File: figures/CorrectionScatter_Office_ERC.png Graphic file (type bmp)
+<figures/CorrectionScatter_Office_ERC.png>
+File: figures/CorrectionScatter_Complex_ERC.png Graphic file (type bmp)
+<figures/CorrectionScatter_Complex_ERC.png>
 File: figures/ExpReal_Office_ESgroup_0.png Graphic file (type bmp)
 <figures/ExpReal_Office_ESgroup_0.png>
 File: figures/ExpReal_Office_ESgroup_7.png Graphic file (type bmp)
@@ -984,24 +985,16 @@ File: figures/searchNum_Complex_Bgroup_4.png Graphic file (type bmp)
 File: figures/searchNum_Complex_Bgroup_16.png Graphic file (type bmp)
 <figures/searchNum_Complex_Bgroup_16.png>
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 2271.
+(Font)              No change on input line 2028.
 
-Overfull \hbox (20.32628pt too wide) in paragraph at lines 2270--2279
+Overfull \hbox (20.32628pt too wide) in paragraph at lines 2027--2036
 []\JY1/mc/m/n/12 この項では ， 実験 \OT1/cmr/m/n/12 7 \JY1/mc/m/n/12 と実験 \OT1/cmr/m/n/12 8 \JY1/mc/m/n/12 でのエ ージ ェ ントの行動を解析し ， 提案手法である \OT1/cmr/m/n/12 AMTDS/ERC
  []
 
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 2290.
+(Font)              No change on input line 2047.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 2296.
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 16.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{16.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
-
-[51]
+(Font)              No change on input line 2053.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -1050,7 +1043,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
 [57]
-Overfull \hbox (15.64687pt too wide) in paragraph at lines 2387--2399
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 16.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{16.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
+
+[58]
+Overfull \hbox (15.64687pt too wide) in paragraph at lines 2144--2156
 []\JY1/mc/m/n/12 既存研究である \OT1/cmr/m/n/12 AMTDS \JY1/mc/m/n/12 と \OT1/cmr/m/n/12 AMTDS/ESC \JY1/mc/m/n/12 や ， \OT1/cmr/m/n/12 AMTDS/EDC \JY1/mc/m/n/12 と比較した結果 ， \OT1/cmr/m/n/12 AMTDS/ER
  []
 
@@ -1061,7 +1062,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[58] (out/KoheiMatsumoto.bbl
+[59] (out/KoheiMatsumoto.bbl
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 7.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -1091,7 +1092,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[59
+[60
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -1119,7 +1120,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[60])
+[61])
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 16.49998pt, for example:
@@ -1127,18 +1128,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.27362pt}.
 
-[61] (out/KoheiMatsumoto.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[62] (out/KoheiMatsumoto.aux) ) 
 Here is how much of TeX's memory you used:
- 5112 strings out of 475530
- 96720 string characters out of 5794171
- 433356 words of memory out of 5000000
- 26608 multiletter control sequences out of 15000+600000
+ 5111 strings out of 475530
+ 96688 string characters out of 5794171
+ 432356 words of memory out of 5000000
+ 26607 multiletter control sequences out of 15000+600000
  491086 words of font info for 114 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 67i,13n,77p,359b,714s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,13n,77p,389b,714s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/KoheiMatsumoto.dvi (65 pages, 241212 bytes).
+Output written on out/KoheiMatsumoto.dvi (66 pages, 243788 bytes).
