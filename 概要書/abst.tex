@@ -11,23 +11,9 @@
 \def\AgentSet{A}
 \def\Dreq{{D_{\it req}}}
 \def\En{\mathcal{E}}
-\def\SelfAss{{S_{\it ass}}}
 
-\def\BatteryMax{{B_{\it max}}}
-\def\BatteryLevel{b}
-
-\def\HomingCheck{{T_{\it homing}}}
-\def\HomingBattery{{k_{\it homing}}}
 \def\PausingInt{{S_{\it pause}}}
-
 \def\PauseTimeFactor{{\gamma_{\it p}}}
-
-\def\DeactCheckStartTime{D_{\it st}}
-\def\DeactCheckInterval{D_{\it int}}
-\def\PauseCount{x_{\it pause}}
-\def\DeactCount{N_{\it deact}}
-\def\DeactThreshold{K_{\it deact}}
-\def\DeactLearnInterval{D_{\it learn}}
 
 
 \title{マルチエージェント協調巡回問題におけるエネルギー消費抑制手法の提案}
@@ -55,13 +41,13 @@ MACPPでは，複数のエージェントが協力・協調することで，与
 例えば清掃問題では，ある程度環境がきれいになっていれば十分であり，過度の巡回作業はかえって単位エネルギー当たりの作業効率を低下させる．
 \par
 
-\cite{Wu2019}では，エージェントが要求を満たせば自律的に充電基地への帰還({\em Homing})や，充電基地での待機({\em Pausing})を行い，エネルギーを節約する手法を提案している，
+\cite{Wu2019}では，エージェントが要求を満たせば自律的に充電基地への帰還({\em Homing})や，充電基地での待機({\em Pausing})を行い，エネルギーを節約する手法を提案している．
 本研究では，\cite{Wu2019}の手法を拡張し，その後の行動によって起こりうる貢献を自律的に予測し，環境の現状を推定することで品質要求の全体的な達成度を把握しながら，品質要求の充足とエネルギー消費の削減を両立する手法を提案する．
 
 \section{モデルの定義}
 \subsection{環境}
 エージェントの巡回環境をグラフ$G = (V,E)$で表す．
-ここで，$V = \{v_1, \dots, v_n \}$はノード集合を表し，各ノード乗にエージェントやイベント，障害物が存在する．
+ここで，$V = \{v_1, \dots, v_n \}$はノード集合を表し，各ノード上にエージェントやイベント，障害物が存在する．
 また，$E$はノード$v_i$と$v_j$間のエッジ$e_{i,j}$である．
 本研究では，エッジの長さはすべて1とする．
 さらに，ステップを単位とする離散時間を導入する．
@@ -112,8 +98,8 @@ $n$個のエージェントの集合を$\AgentSet=\{1,\dots ,n\}$と表す．
   D_{t_s,t_e}\leq \Dreq \times (t_e - t_s)
 \]
 %
-本研究では，品質要求(上式)を満たしつつ，$C_{t_s, t_e}$をできるだけ小さくすることが目的である．
-以降，それぞれを$D(s), C(s)$と表す．
+本研究では，この品質要求を満たしつつ，$C_{t_s, t_e}$をできるだけ小さくすることが目的である．
+以降，$D_{t_s,t_e}$と$C_{t_s,t_e}$をそれぞれ$D(s), C(s)$と表す．
 
 
 \section{提案手法}
@@ -153,9 +139,6 @@ $n$個のエージェントの集合を$\AgentSet=\{1,\dots ,n\}$と表す．
   \includegraphics[width=0.8\hsize]{figures/ds_graph_3600_ave_ER_Office_600.png}
   \caption{$D(s)$の時間推移}
   \label{fig:ds_ER_Office}
-\end{figure}
-
-\begin{figure}
   \centering
   \includegraphics[width=0.8\hsize]{figures/cs_graph_3600_ave_ER_Office_600.png}
   \caption{$C(s)$の時間推移}
@@ -177,20 +160,20 @@ $n$個のエージェントの集合を$\AgentSet=\{1,\dots ,n\}$と表す．
     \end{cases}
   \]
   %
-  エージェント数は20体である．
+  エージェント数$|A|$は20体である．
   $D(s)$と$C(s)$の値は，独立した50回の試行による平均値である．
 
   \subsection{実験結果}
   従来手法であるAMTDSやAMTDS/ESCと，提案手法であるAMTDS/ERの$D(s)$と$C(s)$の時間推移を比較した結果を図\ref{fig:ds_ER_Office}，\ref{fig:cs_ER_Office}に示す．
   なお，図\ref{fig:ds_ER_Office}内の緑色の直線が品質要求値である．
-  これらの図より，AMTDS/ERは従来手法よりも，品質要求を満たしながらエネルギー消費量を削減することができたといえる．
+  これらの図より，AMTDS/ERは従来手法よりも，品質要求を満たしながら，より多くのエネルギー消費を削減することができたことが分かる．
 
 \section{結論}
-本研究では，MACPPにおいて，各エージェントがエネルギー節約行動を調整する手法を提案した．
-実験の結果，品質要求を満たしながらエネルギー消費量を削減できることを示した．
+本研究では，MACPPにおいて，各エージェントが学習したパラメータに基づいて，エネルギー節約行動を調整する手法を提案した．
+実験の結果，提案手法は品質要求を満たしながら，より多くのエネルギー消費を削減できることを示した．
 \par
 
-今後はエージェントが$p(v)$を学習しながらエネルギー消費量の削減を図る必要がある．
+今後は，エージェントが$p(v)$を学習しながらエネルギー消費量の削減を図る必要がある．
 
 \bibliographystyle{junsrt}
 \bibliography{ref}

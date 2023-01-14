@@ -44,6 +44,6 @@
 \contentsline {subsubsection}{\numberline {6.3.4}実験6における停止エージェントと非停止エージェントの行動の解析}{43}{}%
 \contentsline {subsection}{\numberline {6.4}AMTDS/ERCについての実験結果}{49}{}%
 \contentsline {subsubsection}{\numberline {6.4.1}実験7: 性能評価}{49}{}%
-\contentsline {subsubsection}{\numberline {6.4.2}実験8: 異なる環境による性能評価}{52}{}%
+\contentsline {subsubsection}{\numberline {6.4.2}実験8: 異なる環境による性能評価}{49}{}%
 \contentsline {subsubsection}{\numberline {6.4.3}AMTDS/ERCの行動の解析}{52}{}%
 \contentsline {section}{\numberline {7}結論}{59}{}%

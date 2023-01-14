@@ -50,6 +50,12 @@ M.~Ahmadi and P.~Stone.
 \newblock In {\em ICAR '05. Proceedings., 12th International Conference on
   Advanced Robotics, 2005.}, pp. 316--323, 2005.
 
+\bibitem{Ahmadi2006}
+Mazda Ahmadi and Peter Stone.
+\newblock A multi-robot system for continuous area sweeping tasks.
+\newblock In {\em Proceedings 2006 IEEE International Conference on Robotics
+  and Automation, 2006. ICRA 2006.}, pp. 1724--1729. IEEE, 2006.
+
 \bibitem{Agmon2011}
 Noa Agmon, Daniel Urieli, and Peter Stone.
 \newblock Multiagent patrol generalized to complex environmental conditions.
@@ -96,6 +102,12 @@ Mehdi Othmani-Guibourg, Amal~El Fallah-Seghrouchni, and Jean-Loup Farges.
   estimation.
 \newblock In {\em International Conference on Principles and Practice of
   Multi-Agent Systems}, pp. 603--611. Springer, 2018.
+
+\bibitem{Park2021}
+Bumjin Park, Cheongwoong Kang, and Jaesik Choi.
+\newblock Generating multi-agent patrol areas by reinforcement learning.
+\newblock In {\em 2021 21st International Conference on Control, Automation and
+  Systems (ICCAS)}, pp. 104--107, 2021.
 
 \bibitem{Yoneda2013}
 Keisuke Yoneda, Chihiro Kato, and Toshiharu Sugawara.
