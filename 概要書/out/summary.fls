@@ -1,9 +1,9 @@
-PWD c:/Users/Owner/Desktop/研究/卒論/概要書
+PWD c:/Users/Owner/Desktop/研究/卒業論文/概要書
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/eptex/platex.fmt
-INPUT c:/Users/Owner/Desktop/研究/卒論/概要書/abst.tex
-OUTPUT out/abst.log
+INPUT c:/Users/Owner/Desktop/研究/卒業論文/概要書/summary.tex
+OUTPUT out/summary.log
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
@@ -305,10 +305,10 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 INPUT c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
-INPUT out/abst.aux
-INPUT out/abst.aux
-INPUT out/abst.aux
-OUTPUT out/abst.aux
+INPUT out/summary.aux
+INPUT out/summary.aux
+INPUT out/summary.aux
+OUTPUT out/summary.aux
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
@@ -357,7 +357,7 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin6.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
-OUTPUT out/abst.dvi
+OUTPUT out/summary.dvi
 INPUT ./figures/Graph_Office.png
 INPUT ./figures/Graph_Office.png
 INPUT figures/Graph_Office.png
@@ -371,8 +371,8 @@ INPUT ./figures/cs_graph_3600_ave_ER_Office_600.png
 INPUT figures/cs_graph_3600_ave_ER_Office_600.png
 INPUT extractbb -B cropbox -O figures/cs_graph_3600_ave_ER_Office_600.png
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
-INPUT out/abst.bbl
-INPUT out/abst.bbl
-INPUT out/abst.bbl
-INPUT out/abst.bbl
-INPUT out/abst.aux
+INPUT out/summary.bbl
+INPUT out/summary.bbl
+INPUT out/summary.bbl
+INPUT out/summary.bbl
+INPUT out/summary.aux
